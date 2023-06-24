@@ -2,7 +2,7 @@ import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
 
-const postsDirectory = join(process.cwd(), "src/data");
+const postsDirectory = join(process.cwd(), "/data");
 
 const emptyPost = {
   slug: "",

@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+p {
+  @apply my-6;
+}
+
+ul,
+ol {
+  @apply ml-5 list-disc;
+}
+
+a {
+  @apply text-blue-500;
+}
