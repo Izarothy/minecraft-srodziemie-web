@@ -13,7 +13,7 @@ Pełna paczka modów do pobrania [tutaj](https://bit.ly/3gHQPmd).
 
 Społeczność graczy zaprasza na serwer Minecraft RP osadzony **w Śródziemiu J. R. R. Tolkiena**! Całość rozgrywki odbywa się w Śródziemiu, ale **nie trzeba znać historii** świata Tolkiena by dołączyć – na razie **budujemy** miasta i wioski, zaludniamy wsie i drążymy podziemne osady, a większość osób skupia się na **podróżowaniu** po ogromnym świecie, **walczeniu** z NPCami i innymi graczami, **wypełnianiu zadań i zleceń**, budowaniu **relacji** z innymi ludami i ludźmi, a także po prostu swoich posiadłości.
 
-# Co można robić?
+<!-- # Co można robić?
 
 Całkowita dowolność w rozgrywce dała wielu osobom pojedynczo lub w grupach eksplorującym pola, lasy, góry, cieki i zbiorniki wodne, wiele zajęć:
 
@@ -104,4 +104,4 @@ Struktury złożone, obejmujące domy mieszkalne i inne rodzaje zabudowy:
 - Czarna Brama
 - dom Bëorna
 - Elostirion
-- Ostatnia Gospoda (Bree)
+- Ostatnia Gospoda (Bree) -->
