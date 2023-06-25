@@ -1,19 +1,12 @@
 import Head from "next/head";
-import { useState } from "react";
 import { api } from "~/utils/api";
 import markdownToHtml from "~/utils/markdownToHtml";
+import { getPostBySlug } from "~/utils/markdownUtils";
 
-export default function Home() {
-  const pages = api.page.getAllPages.useQuery().data;
-  const [pageContent, setPageContent] = useState("");
-
-  if (pages) {
-    markdownToHtml(pages[0]?.content || "")
-      .then((html) => {
-        setPageContent(html);
-      })
-      .catch(console.log);
-  }
+type Props = {
+  content: string;
+};
+export default function Home({ content }: Props) {
   return (
     <>
       <Head>
@@ -22,13 +15,26 @@ export default function Home() {
       </Head>
       <>
         <h1 className="text-3xl font-semibold">Minecraft Śródziemie</h1>
-        {pages?.length && (
+        {content && (
           <article
             className="w-1/3 text-justify"
-            dangerouslySetInnerHTML={{ __html: pageContent }}
+            dangerouslySetInnerHTML={{ __html: content }}
           ></article>
         )}
       </>
     </>
   );
 }
+
+export const getStaticProps = async () => {
+  const page = getPostBySlug("index");
+
+  if (typeof page?.content === "string") {
+    const htmlContent = await markdownToHtml(page?.content);
+    return {
+      props: {
+        content: htmlContent,
+      },
+    };
+  }
+};
