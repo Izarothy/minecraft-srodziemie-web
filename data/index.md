@@ -33,12 +33,10 @@ Całkowita dowolność w rozgrywce dała wielu osobom pojedynczo lub w grupach e
   - barkami i statkami morskimi
   - po całym świecie za pomocą systemu Szybkiej Podróży
 - tzw. slow life, np.:
-
   - hodowlą zwierząt
   - uprawą ziemi i opieką nad sadami owocowymi
   - leśnictwem (wycinką drzew i ponownymi nasadzeniami)
   - destylacją alkoholi
-
     (Należy podkreślić, że powyższa lista nie jest wyczerpująca)
 
 Różnorodność zajęć doprowadziła do tego, że niektórzy gracze zaczęli się specjalizować w produktach i usługach związanych z tymi aktywnościami, m.in. hodowlą możliwie najlepszych koni,
