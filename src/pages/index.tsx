@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { api } from "~/utils/api";
 import markdownToHtml from "~/utils/markdownToHtml";
 import { getPostBySlug } from "~/utils/markdownUtils";
 
@@ -14,10 +13,12 @@ export default function Home({ content }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <>
-        <h1 className="text-3xl font-semibold">Minecraft Śródziemie</h1>
+        <h1 className="text-3xl font-semibold lg:mb-16 lg:text-5xl">
+          Minecraft Śródziemie
+        </h1>
         {content && (
           <article
-            className="w-1/3 text-justify"
+            className="text-justify xl:w-1/2"
             dangerouslySetInnerHTML={{ __html: content }}
           ></article>
         )}
