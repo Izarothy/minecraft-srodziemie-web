@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 p {
-  @apply my-6;
+  @apply my-6 text-gray-300;
 }
 
 ul,
@@ -13,4 +13,12 @@ ol {
 
 a {
   @apply text-blue-500;
+}
+
+h2 {
+  @apply mt-8 text-xl font-semibold;
+}
+
+h1 {
+  @apply text-3xl font-bold;
 }
