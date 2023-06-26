@@ -9,6 +9,10 @@ type Props = {
 };
 export default function Home({ content }: Props) {
   const [screenWidth, setScreenWidth] = useState(0);
+  const [hoverText, setTooltipText] = useState("Kliknij, by skopiować");
+
+  const [isTooltipShown, setTooltipShown] = useState(false);
+
   useEffect(() => {
     setScreenWidth(window.innerWidth);
 
@@ -50,16 +54,37 @@ export default function Home({ content }: Props) {
           <span className="relative top-1/3 flex h-full flex-col items-center gap-4">
             <h1 className="mb-8 text-3xl sm:text-5xl">Minecraft Śródziemie</h1>
             <span className="font-semibold">
-              <button
-                className="border-0 bg-dark/40"
-                onClick={() => {
-                  navigator.clipboard
-                    .writeText("tawerna-srodziemie.tasrv.com")
-                    .catch(console.log);
-                }}
-              >
-                tawerna-srodziemie.tasrv.com
-              </button>
+              <span className="relative flex flex-col">
+                <div
+                  className={`${
+                    isTooltipShown ? ` ` : `invisible`
+                  } mx-auto mb-2 flex-1 rounded-md bg-dark/80 px-6 py-1 text-center text-sm`}
+                >
+                  {hoverText}
+                </div>
+                <button
+                  className="border-0 bg-dark/40"
+                  onMouseEnter={() => {
+                    if (screenWidth < 1024) return;
+                    setTooltipText("Kliknij, by skopiować");
+                    setTooltipShown(true);
+                  }}
+                  onMouseLeave={() => setTooltipShown(false)}
+                  onClick={() => {
+                    setTooltipText("Skopiowano ✔");
+                    navigator.clipboard
+                      .writeText("tawerna-srodziemie.tasrv.com")
+                      .catch(console.log);
+
+                    setTooltipShown(true);
+                    setTimeout(() => {
+                      setTooltipShown(false);
+                    }, 1500);
+                  }}
+                >
+                  tawerna-srodziemie.tasrv.com
+                </button>
+              </span>
             </span>
             <span className="flex gap-2">
               <a href="#" className="btn text-white">
