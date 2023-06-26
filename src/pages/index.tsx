@@ -44,14 +44,14 @@ export default function Home({ content }: Props) {
         <meta />
       </Head>
       <>
-        <header className="relative flex h-screen w-full flex-col items-center lg:h-3/4">
+        <header className="relative flex h-screen w-full flex-col items-center">
           <Image
             src={"/images/hero.png"}
             fill
             alt="Tło"
             className="object-cover opacity-80"
           />
-          <span className="relative top-1/3 flex h-full flex-col items-center gap-4">
+          <span className="relative top-1/3 flex flex-col items-center gap-4">
             <h1 className="mb-8 text-3xl sm:text-5xl">Minecraft Śródziemie</h1>
             <span className="font-semibold">
               <span className="relative flex flex-col">
@@ -73,7 +73,7 @@ export default function Home({ content }: Props) {
                   onClick={() => {
                     setTooltipText("Skopiowano ✔");
                     navigator.clipboard
-                      .writeText("tawerna-srodziemie.tasrv.com")
+                      .writeText("minecraft-srodziemie.tasrv.com")
                       .catch(console.log);
 
                     setTooltipShown(true);
@@ -82,12 +82,12 @@ export default function Home({ content }: Props) {
                     }, 1500);
                   }}
                 >
-                  tawerna-srodziemie.tasrv.com
+                  minecraft-srodziemie.tasrv.com
                 </button>
               </span>
             </span>
             <span className="flex gap-2">
-              <a href="#" className="btn text-white">
+              <a href="#install" className="btn text-white">
                 Instalacja
               </a>
               <button className="border-discord bg-discord">
@@ -113,7 +113,13 @@ export const getStaticProps = async () => {
   const page = getPostBySlug("index");
 
   if (typeof page?.content === "string") {
-    const htmlContent = await markdownToHtml(page?.content);
+    let htmlContent = await markdownToHtml(page?.content);
+    // temp solution before switching to mdx
+
+    htmlContent = htmlContent.replace(
+      "<h2>Instalacja</h2>",
+      '<h2 id="install">Instalacja</h2>'
+    );
     return {
       props: {
         content: htmlContent,
