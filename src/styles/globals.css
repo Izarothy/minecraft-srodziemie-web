@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 p {
-  @apply my-6 text-gray-300;
+  @apply my-6 text-lg text-gray-300;
 }
 
 ul,
@@ -21,4 +21,9 @@ h2 {
 
 h1 {
   @apply text-2xl font-bold lg:text-3xl;
+}
+
+button,
+.btn {
+  @apply rounded-md border px-6 py-2 outline-none;
 }
