@@ -40,6 +40,10 @@ export default function Home({ content }: Props) {
       <Head>
         <title>Minecraft Śródziemie</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Społeczność graczy zaprasza na serwer Minecraft RP osadzony w Śródziemiu J. R. R. Tolkiena! Całość rozgrywki odbywa się w Śródziemiu, ale nie trzeba znać historii świata Tolkiena by dołączyć – na razie budujemy miasta i wioski, zaludniamy wsie i drążymy podziemne osady"
+        />
         <meta property="og:title" content="Minecraft Śródziemie" />
         <meta
           property="og:description"
@@ -149,3 +153,12 @@ export const getStaticProps = async () => {
     };
   }
 };
+
+/*
+merge to mdx
+
+left - page list
+right - section list - comes from 
+
+
+*/
