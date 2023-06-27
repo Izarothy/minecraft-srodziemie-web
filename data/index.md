@@ -8,7 +8,7 @@ Społeczność graczy zaprasza na serwer Minecraft RP osadzony **w Śródziemiu 
 
 - wersja Minecrafta - **1.7.10**
 - **non-premium**
-- Oparty głównie na modzie **The Lord of the Rings Mod:: Legacy**
+- Oparty głównie na modzie **The Lord of the Rings Mod: Legacy**
 - IP serwera jest do skopiowania na górze strony
   Pełna paczka modów do pobrania jest [tutaj](https://bit.ly/3gHQPmd)
 
