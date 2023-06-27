@@ -99,7 +99,10 @@ export default function Home({ content }: Props) {
               </span>
             </span>
             <span className="flex gap-2">
-              <a href="#install" className="btn text-white">
+              <a
+                href="#install"
+                className="btn text-white transition hover:bg-white hover:font-bold hover:text-dark"
+              >
                 Instalacja
               </a>
               <button className="border-discord bg-discord">
