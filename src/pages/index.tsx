@@ -4,16 +4,15 @@ import { useEffect, useState } from "react";
 import markdownToHtml from "~/utils/markdownToHtml";
 import { getPostBySlug } from "~/utils/markdownUtils";
 
-const imageNames = ["dale-gosciniec", "dale-sala", "linhir-karczma"] as const;
+const imageNames: string[] = ["dale-gosciniec", "dale-sala", "linhir-karczma"];
 
 type Props = {
   content: string;
 };
-
 export default function Home({ content }: Props) {
   const [screenWidth, setScreenWidth] = useState(0);
   const [hoverText, setTooltipText] = useState("Kliknij, by skopiować");
-  const [currentImage, setCurrentImage] = useState("");
+  const [currentImage, setCurrentImage] = useState<string>();
   const [isTooltipShown, setTooltipShown] = useState(false);
 
   useEffect(() => {
@@ -51,7 +50,7 @@ export default function Home({ content }: Props) {
           content="https://minecraft-srodziemie.vercel.app/"
         />
       </Head>
-      {currentImage.length > 1 ? (
+      {currentImage ? (
         <>
           <header className="relative flex h-screen w-full flex-col items-center">
             <Image
