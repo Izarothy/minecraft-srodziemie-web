@@ -52,7 +52,7 @@ export default function Home({ content }: Props) {
       </Head>
       {currentImage ? (
         <>
-          <header className="relative flex h-screen w-full flex-col items-center">
+          <header className=" relative flex h-screen w-full flex-col items-center ">
             <Image
               src={`/images/${currentImage}.png`}
               fill
@@ -74,7 +74,7 @@ export default function Home({ content }: Props) {
                     {hoverText}
                   </div>
                   <button
-                    className="border-0 bg-dark/40"
+                    className="border-0 bg-dark/60"
                     onMouseEnter={() => {
                       if (screenWidth < 1024) return;
                       setTooltipText("Kliknij, by skopiować");
@@ -100,12 +100,15 @@ export default function Home({ content }: Props) {
               <span className="flex gap-2">
                 <a
                   href="#install"
-                  className="btn text-white transition hover:bg-white hover:font-bold hover:text-dark"
+                  className="btn  bg-cta  transition  hover:font-bold"
                 >
                   Instalacja
                 </a>
-                <button className="border-discord bg-discord">
-                  <a href="https://discord.gg/6uddsDd" className="text-white">
+                <button className="border-discord bg-discord ">
+                  <a
+                    href="https://discord.gg/6uddsDd"
+                    className=" text-white hover:font-bold"
+                  >
                     Discord
                   </a>
                 </button>

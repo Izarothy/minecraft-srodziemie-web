@@ -7,6 +7,7 @@ export default {
       colors: {
         discord: "#7389db",
         dark: "#0f0f0e",
+        cta: "#000097",
       },
     },
   },
