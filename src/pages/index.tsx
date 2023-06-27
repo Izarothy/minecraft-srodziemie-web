@@ -4,16 +4,25 @@ import { useEffect, useState } from "react";
 import markdownToHtml from "~/utils/markdownToHtml";
 import { getPostBySlug } from "~/utils/markdownUtils";
 
+const imageNames = ["dale-gosciniec", "dale-sala", "linhir-karczma"] as const;
+
 type Props = {
   content: string;
 };
+
 export default function Home({ content }: Props) {
   const [screenWidth, setScreenWidth] = useState(0);
   const [hoverText, setTooltipText] = useState("Kliknij, by skopiować");
-
+  const [currentImage, setCurrentImage] = useState("");
   const [isTooltipShown, setTooltipShown] = useState(false);
 
   useEffect(() => {
+    const imageInterval = setInterval(() => {
+      const currentSeconds = new Date().getSeconds();
+      if (currentSeconds > 40) setCurrentImage(imageNames[2]);
+      else if (currentSeconds > 20) setCurrentImage(imageNames[1]);
+      else setCurrentImage(imageNames[0]);
+    }, 500);
     setScreenWidth(window.innerWidth);
 
     const handleResize = () => {
@@ -23,6 +32,7 @@ export default function Home({ content }: Props) {
 
     return () => {
       window.removeEventListener("resize", handleResize);
+      clearInterval(imageInterval);
     };
   }, []);
 
@@ -46,10 +56,10 @@ export default function Home({ content }: Props) {
       <>
         <header className="relative flex h-screen w-full flex-col items-center">
           <Image
-            src={"/images/hero.png"}
+            src={`/images/${currentImage}.png`}
             fill
             alt="Tło"
-            className="object-cover opacity-80"
+            className="object-cover opacity-70"
           />
           <span className="relative top-1/3 flex flex-col items-center gap-4">
             <h1 className="mb-8 text-3xl sm:text-5xl">Minecraft Śródziemie</h1>
