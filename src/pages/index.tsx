@@ -62,7 +62,9 @@ export default function Home({ content }: Props) {
             className="object-cover opacity-70"
           />
           <span className="relative top-1/3 flex flex-col items-center gap-4">
-            <h1 className="mb-8 text-3xl sm:text-5xl">Minecraft Śródziemie</h1>
+            <h1 className="mb-8 text-3xl drop-shadow-lg sm:text-5xl lg:text-7xl">
+              Minecraft Śródziemie
+            </h1>
             <span className="font-semibold">
               <span className="relative flex flex-col">
                 <div
