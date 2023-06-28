@@ -1,9 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import markdownToHtml from "~/utils/markdownToHtml";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { getPostBySlug } from "~/utils/markdownUtils";
-
 const imageNames: string[] = ["dale-gosciniec", "dale-sala", "linhir-karczma"];
 
 type Props = {
@@ -120,10 +119,26 @@ export default function Home({ content }: Props) {
             </span>
           </header>
           {content && (
-            <article
-              className="px-8 text-justify text-gray-300 md:w-1/2 md:p-0"
-              dangerouslySetInnerHTML={{ __html: content }}
-            ></article>
+            <article className="px-8 text-justify text-gray-300 md:w-1/2 md:p-0">
+              <ReactMarkdown
+                components={{
+                  h2: ({ children }) => {
+                    return (
+                      <h2 id={String(children).toLowerCase()}>{children}</h2>
+                    );
+                  },
+                  a: ({ children, href }) => {
+                    return (
+                      <a target="_blank" href={href}>
+                        {children}
+                      </a>
+                    );
+                  },
+                }}
+              >
+                {content}
+              </ReactMarkdown>
+            </article>
           )}
         </>
       ) : (
@@ -135,20 +150,14 @@ export default function Home({ content }: Props) {
   );
 }
 
+// eslint-disable-next-line @typescript-eslint/require-await
 export const getStaticProps = async () => {
-  const page = getPostBySlug("index");
+  const { content } = getPostBySlug("index");
 
-  if (typeof page?.content === "string") {
-    let htmlContent = await markdownToHtml(page?.content);
-    // temp solution before switching to mdx
-
-    htmlContent = htmlContent.replace(
-      "<h2>Instalacja</h2>",
-      '<h2 id="install">Instalacja</h2>'
-    );
+  if (typeof content === "string") {
     return {
       props: {
-        content: htmlContent,
+        content,
       },
     };
   }
