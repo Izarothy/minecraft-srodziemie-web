@@ -2,13 +2,18 @@ import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import PageList from "~/components/PageList";
+import SectionList from "~/components/SectionList";
+import getSectionList from "~/utils/getSectionList";
 import { getPostBySlug } from "~/utils/markdownUtils";
+import slugify from "~/utils/slugify";
 const imageNames: string[] = ["dale-gosciniec", "dale-sala", "linhir-karczma"];
 
 type Props = {
   content: string;
+  sectionList: string[];
 };
-export default function Home({ content }: Props) {
+export default function Home({ content, sectionList }: Props) {
   const [screenWidth, setScreenWidth] = useState(0);
   const [hoverText, setTooltipText] = useState("Kliknij, by skopiować");
   const [currentImage, setCurrentImage] = useState<string>();
@@ -102,7 +107,7 @@ export default function Home({ content }: Props) {
               </span>
               <span className="flex gap-2">
                 <a
-                  href="#install"
+                  href="#instalacja"
                   className="btn  bg-cta  transition  hover:font-bold"
                 >
                   Instalacja
@@ -119,26 +124,28 @@ export default function Home({ content }: Props) {
             </span>
           </header>
           {content && (
-            <article className="px-8 text-justify text-gray-300 md:w-1/2 md:p-0">
-              <ReactMarkdown
-                components={{
-                  h2: ({ children }) => {
-                    return (
-                      <h2 id={String(children).toLowerCase()}>{children}</h2>
-                    );
-                  },
-                  a: ({ children, href }) => {
-                    return (
-                      <a target="_blank" href={href}>
-                        {children}
-                      </a>
-                    );
-                  },
-                }}
-              >
-                {content}
-              </ReactMarkdown>
-            </article>
+            <main className="relative flex w-[90%] justify-between gap-16 pt-12 lg:w-[70%]">
+              <PageList />
+              <article className="flex-[3] px-8 text-gray-300 md:p-0">
+                <ReactMarkdown
+                  components={{
+                    h2: ({ children }) => {
+                      return <h2 id={slugify(String(children))}>{children}</h2>;
+                    },
+                    a: ({ children, href }) => {
+                      return (
+                        <a target="_blank" href={href}>
+                          {children}
+                        </a>
+                      );
+                    },
+                  }}
+                >
+                  {content}
+                </ReactMarkdown>
+              </article>
+              <SectionList sectionList={sectionList} />
+            </main>
           )}
         </>
       ) : (
@@ -154,20 +161,13 @@ export default function Home({ content }: Props) {
 export const getStaticProps = async () => {
   const { content } = getPostBySlug("index");
 
+  const sectionList = getSectionList(content);
   if (typeof content === "string") {
     return {
       props: {
         content,
+        sectionList,
       },
     };
   }
 };
-
-/*
-merge to mdx
-
-left - page list
-right - section list - comes from 
-
-
-*/
