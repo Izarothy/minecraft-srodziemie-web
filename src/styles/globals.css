@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 p {
-  @apply my-6 text-lg text-gray-300;
+  @apply text-lg text-gray-300;
 }
 
 ul,
