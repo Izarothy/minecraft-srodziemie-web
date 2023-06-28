@@ -3,9 +3,12 @@
 @tailwind utilities;
 
 p {
-  @apply text-lg text-gray-300;
+  @apply mb-4 text-lg text-gray-300;
 }
 
+ul {
+  @apply mb-4;
+}
 ul,
 ol {
   @apply ml-5 list-disc;
@@ -16,11 +19,11 @@ a {
 }
 
 h2 {
-  @apply mb-2 mt-8 text-2xl font-semibold text-white;
+  @apply mb-6 text-2xl font-semibold text-white;
 }
 
 h1 {
-  @apply text-2xl font-bold text-white lg:text-3xl;
+  @apply mb-4 text-center text-2xl font-bold text-white lg:text-4xl;
 }
 
 button,
