@@ -10,3 +10,13 @@ Społeczność graczy zaprasza na serwer Minecraft RP osadzony **w Śródziemiu 
 - **non-premium**
 - Oparty na modzie **The Lord of the Rings Mod: Legacy**  
   Pełna paczka modów do pobrania jest [tutaj](https://bit.ly/3gHQPmd)
+
+## Dalsze czytanie
+
+Poniżej kilka artykułów związanych z elementami rozgrywki:
+
+- [Co można robić?](/artykuly/aktywnosci)
+- [Jaki jest cel gry?](/artykuly/cel-gry)
+- [Co można zwiedzić?](/artykuly/zwiedzanie)
+- [Lista wydarzeń serwerowych](/artykuly/wydarzenia-serwerowe)
+- [Lista frakcji i organizacji graczy](/artykuly/frakcje-i-organizacje)
