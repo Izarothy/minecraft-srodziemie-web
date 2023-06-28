@@ -7,9 +7,6 @@ const PageList = () => {
       <Link href="/">
         <span className=" text-white">Strona główna</span>
       </Link>
-      <Link href="/mapa">
-        <span className="font-semibold text-[#C0B6AA]">Mapa</span>
-      </Link>
     </aside>
   );
 };
