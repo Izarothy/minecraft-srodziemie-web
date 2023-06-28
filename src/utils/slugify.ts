@@ -3,7 +3,9 @@ const slugify = (name: string): string => {
     .toLowerCase()
     .trim()
     .replace(".md", "")
-    .replace(" ", "-");
+    .replace(" ", "-")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
   return slugifiedName;
 };
 
