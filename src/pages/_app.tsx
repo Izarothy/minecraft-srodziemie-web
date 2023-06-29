@@ -1,10 +1,10 @@
 import { type AppType } from "next/app";
 import { api } from "~/utils/api";
 import "~/styles/globals.css";
-import { Montserrat } from "next/font/google";
+import { Poppins } from "next/font/google";
 import Layout from "~/components/Layout";
 
-const montserrat = Montserrat({
+const poppins = Poppins({
   weight: ["400", "500", "600", "700", "800"],
   style: ["normal", "italic"],
   display: "swap",
@@ -17,7 +17,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
       <style jsx global>
         {`
           html {
-            font-family: ${montserrat.style.fontFamily};
+            font-family: ${poppins.style.fontFamily};
           }
         `}
       </style>
