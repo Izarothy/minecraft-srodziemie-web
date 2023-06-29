@@ -17,7 +17,7 @@ const LocationImage = ({ src, name }: Props) => {
         height={280}
         className={`${
           imageHovered ? `opacity-50 transition-all  duration-[400ms]` : ``
-        } w-full rounded-sm object-cover shadow-lg`}
+        }  h-full w-full rounded-sm object-cover shadow-lg`}
         src={src}
         alt={name}
       />
