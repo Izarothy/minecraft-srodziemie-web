@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import ImageShowcase from "~/components/ImageShowcase";
 import PageList from "~/components/PageList";
 import SectionList from "~/components/SectionList";
 import getSectionList from "~/utils/getSectionList";
@@ -147,6 +148,7 @@ export default function Home({ content, sectionList }: Props) {
               <SectionList sectionList={sectionList} />
             </main>
           )}
+          <ImageShowcase />
         </>
       ) : (
         <div className="flex h-screen items-center justify-center text-3xl font-bold">
