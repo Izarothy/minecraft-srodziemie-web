@@ -6,7 +6,8 @@ export default {
     extend: {
       colors: {
         discord: "#7389db",
-        dark: "#0f0f0e",
+        dark: "#050003",
+        "dark-lighter": "#171718",
         cta: "#000097",
       },
     },
