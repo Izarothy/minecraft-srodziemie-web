@@ -66,6 +66,7 @@ export default function Home({ content, sectionList }: Props) {
               src={`/images/${currentImage}.png`}
               fill
               priority
+              quality={100}
               alt="Tło"
               className="object-cover opacity-70"
             />
