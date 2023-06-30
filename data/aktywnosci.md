@@ -2,8 +2,6 @@
 title: Co można robić?
 ---
 
-## Co można robić?
-
 Całkowita dowolność w rozgrywce dała wielu osobom pojedynczo lub w grupach eksplorującym pola, lasy, góry, cieki i zbiorniki wodne, wiele zajęć:
 
 - wchodzenia w interakcje z wybranymi ludami (NPC: ludźmi, elfami, krasnoludami, orkami i innymi, zorganizowanymi w 25 frakcji, początkowo neutralnymi dla nowego gracza):
