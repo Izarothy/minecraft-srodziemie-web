@@ -2,8 +2,6 @@
 title: Co można zwiedzić?
 ---
 
-# Co można zwiedzić?
-
 Zwieść może system punktów Szybkiej Podróży, który może sugerować istnienie lokacji znanych z tekstów Tolkiena i filmów na nich opartych. Mapa naszego serwera została wygenerowana od zera, przez co ma jedynie kształt i właściwości Śródziemia: lądy i oceany, jeziora i rzeki, lasy i pustynie, ale nie ma rzeczy wzniesionych rękami jego mieszkańców. Nie oznacza to, że świat na serwerze jest pustynią, wręcz przeciwnie. Poza losowo wygenerowanymi strukturami z moda głównego (np. domami w Shire, miastami w Gondorze, czy osadami nomadów w Haradzie), wielu graczy pozostawiło już po sobie pewne trwałe ślady. Poniżej lista tych, o których istnieniu wiadomo.
 
 ## Osady

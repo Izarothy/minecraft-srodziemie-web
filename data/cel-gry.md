@@ -2,8 +2,6 @@
 title: Cel gry
 ---
 
-# Cel gry
-
 Jako że nie dotrzesz do Endu i nie zwalczysz Smoka, nie może to być **celem rozgrywki**. Najprostszym celem, o ile go potrzebujesz w graniu, jest **podróż**: wybierz kierunek geograficzny i zacznij iść. Możesz robić wszystko: budować i niszczyć, dawać i okradać, podróżować i walczyć – licz się jednak z konsekwencjami.
 
 ## Osiedl się

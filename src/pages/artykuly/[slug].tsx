@@ -7,6 +7,7 @@ import SectionList from "~/components/SectionList";
 import getSectionList from "~/utils/getSectionList";
 import { getAllPosts, getPostBySlug } from "~/utils/markdownUtils";
 import slugify from "~/utils/slugify";
+
 type Props = {
   content: string;
   title: string;
@@ -33,9 +34,12 @@ const Post = ({ content, title, sectionList }: Props) => {
         />
       </Head>
       <>
-        <main className="mt-8 flex gap-4 px-8 sm:px-16 xl:mt-48 xl:w-[70%]">
+        <main className="mt-8 flex gap-4 px-8 pb-16 sm:px-16 xl:mt-48 xl:w-[70%]">
           <PageList />
           <article className="flex-[3]">
+            <header className="mb-4 flex flex-col justify-center">
+              <h1 className="text-left text-4xl">{title}</h1>
+            </header>
             <ReactMarkdown
               components={{
                 h2: ({ children }) => {
