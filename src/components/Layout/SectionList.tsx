@@ -14,7 +14,7 @@ const SectionList = ({ sectionList }: Props) => {
             <a
               key={section}
               href={`#${slugify(section)}`}
-              className=" mb-3 text-sm text-[#A1A1A1]"
+              className=" mb-1 text-sm text-[#A1A1A1]"
             >
               {section}
             </a>
