@@ -6,7 +6,7 @@ Jako że nie dotrzesz do Endu i nie zwalczysz Smoka, nie może to być **celem r
 
 ## Osiedl się
 
-Możesz wybrać się na poszukiwanie dogodnego miejsca na **wybudowanie domu**, albo nawet całej posiadłości. <span style="text-decoration:underline;">Nie musisz</span> ograniczać się do budowy jednego mieszkania: możesz postawić sobie schronienia w każdym miejscu, do którego podróżujesz, albo które po prostu ładnie wygląda. Im więcej zabudowań, tym ciekawszy będzie świat!
+Możesz wybrać się na poszukiwanie dogodnego miejsca na **wybudowanie domu**, albo nawet całej posiadłości. **Nie musisz** ograniczać się do budowy jednego mieszkania: możesz postawić sobie schronienia w każdym miejscu, do którego podróżujesz, albo które po prostu ładnie wygląda. Im więcej zabudowań, tym ciekawszy będzie świat!
 
 ## Zasmakuj świata
 
