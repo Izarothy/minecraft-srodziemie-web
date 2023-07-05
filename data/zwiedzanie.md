@@ -9,7 +9,7 @@ Zwieść może system punktów Szybkiej Podróży, który może sugerować istni
 
 Czyli zabudowy składające się z kilku luźno powiązanych struktur:
 
-- warownia na Tol Morwen
+- [warownia na Tol Morwen](/artykuly/tol-morwen)
 - kryjówka grupy Lambenómë w Górach Białych i porzucone wzgórze u ujścia Anduiny
 - leśna osada w Lórien
 
@@ -26,7 +26,7 @@ Struktury złożone, obejmujące domy mieszkalne i inne rodzaje zabudowy:
 - Grimslade
 - Woldhall
 - Aldburg
-- Linhir
+- [Linhir](/artykuly/linhir)
 - Dale
 
 ## Lokacje naziemne
@@ -40,5 +40,5 @@ Struktury złożone, obejmujące domy mieszkalne i inne rodzaje zabudowy:
 ## Lokacje podziemne
 
 - Moria
-- lochy i miasto pod Górą Gram
+- [lochy i miasto pod Górą Gram](/artykuly/gora-gram)
 - Gundabad
