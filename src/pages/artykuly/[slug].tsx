@@ -1,7 +1,9 @@
 import Head from "next/head";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import remarkGfm from "remark-gfm";
 import PageList from "~/components/Layout/PageList";
 import SectionList from "~/components/Layout/SectionList";
 import getSectionList from "~/utils/getSectionList";
@@ -41,6 +43,7 @@ const Post = ({ content, title, sectionList }: Props) => {
               <h1 className="text-left text-4xl">{title}</h1>
             </header>
             <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
               components={{
                 h2: ({ children }) => {
                   return <h2 id={slugify(String(children))}>{children}</h2>;
@@ -50,6 +53,19 @@ const Post = ({ content, title, sectionList }: Props) => {
                     <a target="_blank" href={href}>
                       {children}
                     </a>
+                  );
+                },
+                img: ({ src, alt }) => {
+                  if (!src || !alt) return;
+                  const [altText, width, height] = alt.split(";");
+
+                  return (
+                    <Image
+                      src={src}
+                      alt={altText || "Zdjęcie"}
+                      width={Number(width) || 700}
+                      height={Number(height) || 300}
+                    />
                   );
                 },
               }}
