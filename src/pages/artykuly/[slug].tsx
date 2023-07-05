@@ -40,7 +40,10 @@ const Post = ({ content, title, sectionList }: Props) => {
           <PageList />
           <article className="flex-[3]">
             <header className="mb-4 flex flex-col justify-center">
-              <h1 className="text-left text-4xl">{title}</h1>
+              <h1 className="text-center text-4xl lg:text-left">{title}</h1>{" "}
+              <span className="text-sm font-bold text-gray-400">
+                Autor: Carastamo
+              </span>
             </header>
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
