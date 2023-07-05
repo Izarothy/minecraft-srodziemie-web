@@ -9,6 +9,7 @@ const emptyPost = {
   slug: "",
   title: "",
   content: "",
+  category: "",
 };
 
 export function getPostSlugs() {
@@ -21,10 +22,11 @@ export function getPostBySlug(slug: string) {
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
   const { data, content } = matter(fileContents);
-  if (typeof data.title === "string") {
+  if (typeof data.title === "string" && typeof data.category === "string") {
     const pageContents = {
       slug: realSlug,
       title: data.title,
+      category: data.category,
       content,
     };
     return pageContents;

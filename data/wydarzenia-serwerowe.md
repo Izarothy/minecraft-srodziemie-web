@@ -1,5 +1,6 @@
 ---
 title: Lista wydarzeń serwerowych
+category: General
 ---
 
 ## Otwarte Targi Wolnych Ludów Śródziemia

@@ -1,5 +1,6 @@
 ---
 title: Góra Gram
+category: Lokacje
 ---
 
 ![Zdjęcie - Góra Gram;700;300](/images/locations/mt-gram.png)

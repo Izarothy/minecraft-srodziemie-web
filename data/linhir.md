@@ -1,5 +1,6 @@
 ---
 title: Linhir
+category: Lokacje
 ---
 
 ![Zdjęcie Linhiru;700;300](/images/locations/linhir.png)

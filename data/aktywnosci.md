@@ -1,5 +1,6 @@
 ---
 title: Co można robić?
+category: General
 ---
 
 Całkowita dowolność w rozgrywce dała wielu osobom pojedynczo lub w grupach eksplorującym pola, lasy, góry, cieki i zbiorniki wodne, wiele zajęć:

@@ -1,5 +1,6 @@
 ---
 title: Tol Morwen
+category: Lokacje
 ---
 
 ![alt text {{ w: 600, h: 300 }}](/images/locations/tol-morwen.png)
