@@ -3,7 +3,8 @@ title: Minecraft Śródziemie
 category: Lokacje
 ---
 
-Społeczność graczy zaprasza na serwer Minecraft RP osadzony **w Śródziemiu J. R. R. Tolkiena**! Całość rozgrywki odbywa się w Śródziemiu, ale **nie trzeba znać historii** świata Tolkiena by dołączyć – na razie **budujemy** miasta i wioski, zaludniamy wsie i drążymy podziemne osady, a większość osób skupia się na **podróżowaniu** po ogromnym świecie, **walczeniu** z NPCami i innymi graczami, **wypełnianiu zadań i zleceń**, budowaniu **relacji** z innymi ludami i ludźmi, a także po prostu swoich posiadłości.
+Społeczność graczy zaprasza na serwer Minecraft RP osadzony w **Śródziemiu J. R. R. Tolkiena**! Całość rozgrywki odbywa się w Śródziemiu, ale **nie trzeba znać moda LotR, ani historii** świata Tolkiena by dołączyć – na razie **budujemy** miasta i wioski, zaludniamy wsie i drążymy podziemne osady, a większość osób skupia się na **podróżowaniu** po ogromnym świecie, **walczeniu** z NPCami i innymi graczami, **wypełnianiu zadań i zleceń**, budowaniu **relacji** z innymi ludami i ludźmi, a także po prostu swoich posiadłości.
+Dołącz do nas i zacznij tworzyć swoją historię!
 
 ## Instalacja
 
