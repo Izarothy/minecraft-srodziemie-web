@@ -6,28 +6,27 @@ category: General
 Całkowita dowolność w rozgrywce dała wielu osobom pojedynczo lub w grupach eksplorującym pola, lasy, góry, cieki i zbiorniki wodne, wiele zajęć:
 
 - wchodzenia w interakcje z wybranymi ludami (NPC: ludźmi, elfami, krasnoludami, orkami i innymi, zorganizowanymi w 25 frakcji, początkowo neutralnymi dla nowego gracza):
+
   - walczenie z nimi
   - wypełnianie zadań i misji
   - handlowanie
   - okradanie ich
+
 - budowania:
+
   - kryjówek, własnych domów (pojedynczy gracze)
   - obozów i małych osad (grupy graczy)
   - wsi i miast – zarówno na powierzchni i pod ziemią
   - lokacji znanych z historii Śródziemia
+
 - podróżowania:
+
   - na piechotę
   - konno (lub na innych ujeżdżalnych stworzeniach)
   - barkami i statkami morskimi
   - po całym świecie za pomocą systemu Szybkiej Podróży
-- tzw. slow life, np.:
 
-  - hodowlą zwierząt, uprawą ziemi i opieką nad sadami owocowymi
-  - leśnictwem (wycinką drzew i ponownymi nasadzeniami)
-  - górnictwem i wydobywaniem kamienia
-  - destylacją alkoholi
-
-    (Należy podkreślić, że powyższa lista nie jest wyczerpująca)
+  (Należy podkreślić, że powyższa lista nie jest wyczerpująca)
 
 Różnorodność zajęć doprowadziła do tego, że niektórzy gracze zaczęli się specjalizować w produktach i usługach związanych z tymi aktywnościami, m.in. hodowlą możliwie najlepszych koni, budowaniem statków, tworzeniem kopalni, czy eksperymentalną produkcją możliwie najmocniejszego alkoholu.
 
