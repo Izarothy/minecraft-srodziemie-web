@@ -3,7 +3,7 @@ import { join } from "path";
 import matter from "gray-matter";
 import slugify from "./slugify";
 
-const postsDirectory = join(process.cwd(), "/data");
+const postsDirectory = join(process.cwd(), "/data/posts");
 
 const emptyPost = {
   slug: "",
