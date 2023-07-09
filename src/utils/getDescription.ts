@@ -13,8 +13,8 @@ const getDescription = (content: string) => {
     }
   });
 
-  if (description.length > 140)
-    description = `${description.substring(0, 140)}...`;
+  if (description.length > 240)
+    description = `${description.substring(0, 240)}...`;
 
   return description;
 };
