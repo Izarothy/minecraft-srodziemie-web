@@ -6,6 +6,7 @@ import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import remarkGfm from "remark-gfm";
 import PageList from "~/components/Layout/PageList";
 import SectionList from "~/components/Layout/SectionList";
+import getDescription from "~/utils/getDescription";
 import getSectionList from "~/utils/getSectionList";
 import { getAllPosts, getPostBySlug } from "~/utils/markdownUtils";
 import slugify from "~/utils/slugify";
@@ -18,11 +19,12 @@ type Props = {
 
 const Post = ({ content, title, sectionList }: Props) => {
   const router = useRouter();
-
+  const pageDescription = getDescription(content);
   return (
     <>
       <Head>
         <title>{title}</title>
+        <meta name="description" content={pageDescription} />
         <meta property="og:title" content={title} />
         {process.env.VERCEL_URL && (
           <meta
@@ -30,10 +32,7 @@ const Post = ({ content, title, sectionList }: Props) => {
             content={`${process.env.VERCEL_URL}/${router.asPath}`}
           />
         )}
-        <meta
-          property="og:description"
-          content="Społeczność graczy zaprasza na serwer Minecraft RP osadzony w Śródziemiu J. R. R. Tolkiena! Całość rozgrywki odbywa się w Śródziemiu, ale nie trzeba znać historii świata Tolkiena by dołączyć – na razie budujemy miasta i wioski, zaludniamy wsie i drążymy podziemne osady"
-        />
+        <meta property="og:description" content={pageDescription} />
       </Head>
       <>
         <main className="mt-8 flex min-h-screen gap-4 px-8 pb-16 sm:px-16 xl:mt-48 xl:w-[80%]">
