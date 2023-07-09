@@ -27,7 +27,9 @@ Pomimo trudnych warunków, miejscowa populacja utrzymuje się dalej z handlu wew
 ## Architektura
 
 W niektórych miejscach widać ślady prób naśladownictwa architektonicznego i wzorowania się na budownictwie krasnoludzkim. Pobliskie miasto pod górą Gundabad, a także położona dalej na południe Moria to najbardziej prawdopodobne źródła inspiracji. Niemniej jednak niewiele jest przykładów świadomej twórczości i przemyślanego budownictwa, jako że sam lud orkowy wiele konceptów przejął od innych bez ich uprzedniego zrozumienia, a także nie opracował zasad bezpiecznego budownictwa. Tym samym tubylcy mieszkają głównie w jamach wydrapanych płytko w żywym kamieniu, a większe mieszkania prawie nie istnieją. Wiele ścieżek i pomieszczeń zostało też zasypane obrywami żwiru naruszonego przy nieostrożnym drążeniu.
-##Przestępczość
+
+## Przestępczość
+
 Prawo nie istnieje w tych czeluściach, ale na szkodników, którzy nie umrą w wyniku wszczętej bójki, albo nie wykonają rozkazu, czekają więzienia. Jedna taka placówka znajduje się w rogu Wielkiego Kanionu Północnego i oferuje cele kamienne (z oknami i bez), a uciekinierów kara podwieszeniem pod sklepieniem kanionu w klatce.
 
 ![Zdjęcie - Góra Gram;680;350](/images/articles/gora-gram-3.png)
