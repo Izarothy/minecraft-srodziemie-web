@@ -6,15 +6,15 @@ type Props = {
 };
 const SectionList = ({ sectionList }: Props) => {
   return (
-    <aside className="sticky top-10 hidden flex-1 flex-col text-[0.95rem] lg:flex">
-      <h3 className=" mb-1 font-semibold text-white">Na tej stronie</h3>
+    <aside className="sticky top-10 hidden flex-1 flex-col gap-1 lg:flex">
+      <h3 className="mb-1 mt-0 font-semibold text-white">Na tej stronie</h3>
       {sectionList &&
         sectionList.map((section) => {
           return (
             <a
               key={section}
               href={`#${slugify(section)}`}
-              className=" mb-1 text-sm text-[#A1A1A1]"
+              className=" mb-1 text-sm font-medium text-gray-400"
             >
               {section}
             </a>
