@@ -125,7 +125,7 @@ export default function Home({ content, sectionList }: Props) {
             </span>
           </header>
           {content && (
-            <main className="relative flex w-[90%] justify-between gap-16 pt-12 lg:w-[70%]">
+            <main className="relative flex w-[90%] justify-between gap-16 pt-12 lg:w-[80%]">
               <PageList />
               <article className="flex-[3] px-8 text-gray-300 md:p-0">
                 <ReactMarkdown

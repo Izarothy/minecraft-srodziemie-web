@@ -36,7 +36,7 @@ const Post = ({ content, title, sectionList }: Props) => {
         />
       </Head>
       <>
-        <main className="mt-8 flex min-h-screen gap-4 px-8 pb-16 sm:px-16 xl:mt-48 xl:w-[70%]">
+        <main className="mt-8 flex min-h-screen gap-4 px-8 pb-16 sm:px-16 xl:mt-48 xl:w-[80%]">
           <PageList />
           <article className="flex-[3]">
             <header className="mb-4 flex flex-col justify-center">
