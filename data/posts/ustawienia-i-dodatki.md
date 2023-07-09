@@ -3,23 +3,27 @@ title: Ustawienia i dodatki
 category: General
 ---
 
-Minecraft jako gra pozwala na wiele, jednak pod względem własnych dodatków, optymizacji, grafiki lub tzw. "quality of life" z pomocą przychodzi społeczeństwo moderów, twórców shaderów, texturepacków oraz dostosowanie pewnych ustawień. Efektem tych dodatków jest znacznie lepsza grafika, wydajność gry i mniejsze systemy, które mają wpływ na przyjemność z gry i eksplorację świata. Warto przy tym zaznaczyć, że je jest ich znacznie więcej i zachęcamy do szukania na własną rękę - to tylko nasze rekomendacje.
+Minecraft jako gra pozwala na wiele, ale pewne jej aspekty można zmieniać za pomocą własnych: dodatków, optymalizacji, grafik lub tzw. zmian typu "quality of life". Tu z pomocą przychodzi społeczeństwo moderów, twórców shaderów, texturepacków, a także samodzielne dostosowanie pewnych ustawień. Efektem tych zmian może być znacznie lepsza grafika i wydajność gry, które mają wpływ na przyjemność z gry i eksplorację świata. Warto przy tym zaznaczyć, że je jest ich znacznie więcej i zachęcamy do szukania na własną rękę - poniższe listy to tylko nasze rekomendacje.
 
 ## Ustawienia ogólne
 
 ### Ustawienia graficzne:
 
-- Render Distance - zmienia w zakresie 2-16 chunków (16x16 bloków) pole naszego widzenia, ma to duży wpływ na zarówno wydajność jak i to, ile danej lokacji widzimy, także zachęcamy eksperymentować na własną rękę
-- Brightness - zalecamy zostawić na Moody, oświetlenie i cienie wyglądają przez to znacznie lepiej
+- Render Distance - zmienia w zakresie 2-16 chunków (16x16 bloków) zasięg naszego widzenia i ma duży wpływ zarówno na wydajność jak i to, ile świata widzimy, także zachęcamy do eksperymentowania na własną rękę
+- Brightness - zalecamy zostawić najniższą, tzw. _Moody_, oświetlenie i cienie wyglądają wtedy znacznie lepiej
 
 ### Ustawienia modów:
 
-- wyłączenie domyślnego nieba z LoTR moda. Zapobiega to bugom związanym z m. in. shaderami. Instrukcja: główne menu -> mods -> The Lord of the Rings mod -> config -> environment & world -> zmieniamy middle-earth sky na false
+- LotR Mod: wyłączenie domyślnego nieba - zapobiega to bugom związanym z m. in. shaderami.  
+  Gdzie: główne menu -> mods -> The Lord of the Rings mod -> config -> environment & world -> zmieniamy **Middle-earth sky** na _false_
+- LotR Mod: wyłączenie kompasu – znacznie wpływa na wydajność gry.  
+  Gdzie: główne menu → Mods → The Lord of the Rings mod → Config → Display & GUI → zmieniamy **On-screen compass** i **On-screen compass info** na false
+- LotR Mod: wyłączenie sprawdzania aktualizacji – przyśpiesza wejście na serwer.  
+  Gdzie: główne menu → Mods → The Lord of the Rings mod → Config → Miscellaneous → zmieniamy **Check for updates** na false
 
 ## Texturepacki
 
-Texturepacki zmieniają zazwyczaj domyślne tekstury lub dźwięki bloków, przedmiotów itd. Zainstalować je można poprzez pobranie dowolnej paczki klikając na niebieską nazwę i umieszczenie jej w folderze "resourcepacks", który znajduje się w katalogu gry. Następnie powinna ona pojawić się do wybrania w opcjach gry.  
-Poniższa lista na ogół dotyczy paczek, które bezpośrednio działają z modem LoTR.
+Texturepacki zmieniają domyślne tekstury lub dźwięki bloków i przedmiotów. Poniżej przedstawiamy listę paczek, które według nas najlepiej pasują na naszym serwerze. Zainstalować je można poprzez pobranie dowolnej paczki klikając na niebieską nazwę z listy poniżej i umieszczenie pobranej zawartości w folderze "resourcepacks"w katalogu gry. Poprawnie zainstalowana paczka powinna pojawić się do wybrania w opcjach gry.
 
 - [Renewed Textures](https://cdn.discordapp.com/attachments/600767010317795331/1127547880882851920/Renewed_Textures_v2.0.zip) - tekstury z nowej wersji LoTR moda
 - [Autumnal](https://cdn.discordapp.com/attachments/600767010317795331/1127547881570697337/Autumnal_2_1.7.10.zip) - nadaje światu wygląd jesieni
