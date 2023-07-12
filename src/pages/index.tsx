@@ -5,30 +5,26 @@ import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import ImageShowcase from "~/components/Index/ImageShowcase";
 import PageList from "~/components/Layout/PageList";
 import SectionList from "~/components/Layout/SectionList";
+import { imageNames, chooseImage } from "~/utils/chooseImage";
 import copyToClipboard from "~/utils/copyToClipboard";
 import getSectionList from "~/utils/getSectionList";
 import handleIPTooltip from "~/utils/handleIPCopy";
 import { getPostBySlug } from "~/utils/markdownUtils";
 import slugify from "~/utils/slugify";
-const imageNames: string[] = ["dale-gosciniec", "dale-sala", "linhir-karczma"];
 
 type Props = {
   content: string;
   sectionList: string[];
 };
+
 export default function Home({ content, sectionList }: Props) {
   const [screenWidth, setScreenWidth] = useState(0);
   const [hoverText, setTooltipText] = useState("Kliknij, by skopiować");
-  const [currentImage, setCurrentImage] = useState<string>();
+  const [currentImage, setCurrentImage] = useState<string>(imageNames[0]);
   const [isTooltipShown, setTooltipShown] = useState(false);
 
   useEffect(() => {
-    const imageInterval = setInterval(() => {
-      const currentSeconds = new Date().getSeconds();
-      if (currentSeconds > 40) setCurrentImage(imageNames[2]);
-      else if (currentSeconds > 20) setCurrentImage(imageNames[1]);
-      else setCurrentImage(imageNames[0]);
-    }, 500);
+    const imageInterval = chooseImage(setCurrentImage);
     setScreenWidth(window.innerWidth);
 
     const handleResize = () => {
