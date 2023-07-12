@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        discord: "#7389db",
+        discord: "#5368ee",
         dark: "#050003",
         "dark-lighter": "#171718",
         cta: "#000097",
