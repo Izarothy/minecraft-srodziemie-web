@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import ArrowDown from "~/components/Icons/ArrowDown";
 import ImageShowcase from "~/components/Index/ImageShowcase";
 import PageList from "~/components/Layout/PageList";
 import SectionList from "~/components/Layout/SectionList";
@@ -59,7 +60,7 @@ export default function Home({ content, sectionList }: Props) {
       </Head>
       {currentImage ? (
         <>
-          <header className=" relative flex h-screen w-full flex-col items-center ">
+          <header className=" relative flex h-screen w-full flex-col">
             <Image
               src={`/images/${currentImage}.png`}
               fill
@@ -81,7 +82,7 @@ export default function Home({ content, sectionList }: Props) {
                     {hoverText}
                   </div>
                   <button
-                    className="border-0 bg-dark/60"
+                    className=" border-0 bg-dark/60 py-2"
                     onMouseEnter={() => {
                       if (screenWidth < 1024) return;
                       setTooltipText("Kliknij, by skopiować");
@@ -100,15 +101,12 @@ export default function Home({ content, sectionList }: Props) {
               <span className="flex gap-2">
                 <a
                   href="#instalacja"
-                  className="btn  bg-cta  transition  hover:font-bold"
+                  className="btn inline-flex items-center gap-2 bg-cta px-4"
                 >
-                  Instalacja
+                  Instalacja <ArrowDown />
                 </a>
                 <button className="border-discord bg-discord ">
-                  <a
-                    href="https://discord.gg/6uddsDd"
-                    className=" text-white hover:font-bold"
-                  >
+                  <a href="https://discord.gg/6uddsDd" className=" text-white">
                     Discord
                   </a>
                 </button>
