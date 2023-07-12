@@ -7,7 +7,13 @@ type Props = {
 const SectionList = ({ sectionList }: Props) => {
   return (
     <aside className="sticky top-10 hidden flex-1 flex-col gap-1 lg:flex">
-      <h3 className="mb-1 mt-0 font-semibold text-white">Na tej stronie</h3>
+      <h3
+        className={`mb-1 mt-0 font-semibold text-white ${
+          sectionList.length ? `` : `hidden`
+        }`}
+      >
+        Na tej stronie
+      </h3>
       {sectionList &&
         sectionList.map((section) => {
           return (
