@@ -5,7 +5,9 @@ import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import ImageShowcase from "~/components/Index/ImageShowcase";
 import PageList from "~/components/Layout/PageList";
 import SectionList from "~/components/Layout/SectionList";
+import copyToClipboard from "~/utils/copyToClipboard";
 import getSectionList from "~/utils/getSectionList";
+import handleIPTooltip from "~/utils/handleIPCopy";
 import { getPostBySlug } from "~/utils/markdownUtils";
 import slugify from "~/utils/slugify";
 const imageNames: string[] = ["dale-gosciniec", "dale-sala", "linhir-karczma"];
@@ -91,15 +93,8 @@ export default function Home({ content, sectionList }: Props) {
                     }}
                     onMouseLeave={() => setTooltipShown(false)}
                     onClick={() => {
-                      setTooltipText("Skopiowano ✔");
-                      navigator.clipboard
-                        .writeText("minecraft-srodziemie.tasrv.com")
-                        .catch(console.log);
-
-                      setTooltipShown(true);
-                      setTimeout(() => {
-                        setTooltipShown(false);
-                      }, 1500);
+                      copyToClipboard("minecraft-srodziemie.tasrv.com");
+                      handleIPTooltip(setTooltipText, setTooltipShown);
                     }}
                   >
                     minecraft-srodziemie.tasrv.com
