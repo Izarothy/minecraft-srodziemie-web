@@ -51,6 +51,15 @@
   label {
     @apply flex flex-col;
   }
+
+  th,
+  table {
+    @apply border border-gray-500;
+  }
+
+  tr {
+    @apply leading-8;
+  }
 }
 
 @layer components {

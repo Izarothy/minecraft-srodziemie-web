@@ -4,11 +4,13 @@ import { api } from "~/utils/api";
 
 const PageList = () => {
   const allPages = api.page.getAllPages.useQuery().data;
-
   return (
     <aside className="sticky top-10 hidden flex-1 flex-col gap-4 md:flex">
       <Link href={"/"} className="order-first ">
         <span className="font-bold text-white">Strona Główna</span>
+      </Link>
+      <Link href={"/projekty"} className="order-first ">
+        <span className="font-bold text-white">Projekty</span>
       </Link>
       <span className="flex flex-col gap-2  text-sm text-white">
         <span className="font-bold text-slate-200">Artykuły</span>
@@ -16,7 +18,6 @@ const PageList = () => {
           {allPages?.map(({ title, slug }) => {
             const isHomepage = slug === "index";
             const path = isHomepage ? "/" : `/artykuly/${slug}`;
-
             if (!isHomepage)
               return (
                 <Link href={path} key={title}>

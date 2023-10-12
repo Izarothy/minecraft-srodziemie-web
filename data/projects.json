@@ -1,0 +1,110 @@
+[
+  {
+    "name": "Linhir",
+    "status": "Skończone",
+    "type": "Test",
+    "author": "Carastamo"
+  },
+  {
+    "name": "Dale",
+    "status": "W trakcie",
+    "type": "Miasto",
+    "author": "Demonize"
+  },
+  {
+    "name": "Esgaroth",
+    "status": "W trakcie",
+    "type": "Miasto",
+    "author": "-"
+  },
+  {
+    "name": "Góra Gram",
+    "status": "Skończone",
+    "type": "Loch",
+    "author": "Carastamo"
+  },
+  {
+    "name": "Tol Morwen",
+    "status": "Skończone",
+    "type": "Twierdza / port",
+    "author": "Eletherion"
+  },
+  {
+    "name": "Hale Thranduila",
+    "status": "W trakcie",
+    "type": "Twierdza",
+    "author": "-"
+  },
+  {
+    "name": "Bree",
+    "status": "W trakcie",
+    "type": "Wioska",
+    "author": "Ederwolf"
+  },
+  {
+    "name": "Gundabad",
+    "status": "W trakcie",
+    "type": "Twierdza",
+    "author": "Kaptor"
+  },
+  {
+    "name": "Morannon",
+    "status": "Skończone",
+    "type": "Brama",
+    "author": "Kaptor"
+  },
+  {
+    "name": "Bardhaven",
+    "status": "Skończone",
+    "type": "Port",
+    "author": "Demonize"
+  },
+  {
+    "name": "Dom beorna",
+    "status": "Skończone",
+    "type": "Gospodarstwo",
+    "author": "Kaptor"
+  },
+  {
+    "name": "Brama leśna",
+    "status": "Skończone",
+    "type": "Brama",
+    "author": "Eletherion"
+  },
+  {
+    "name": "Elostirion",
+    "status": "Skończone",
+    "type": "Wieże",
+    "author": "Eletherion"
+  },
+  {
+    "name": "Harlond",
+    "status": "W trakcie",
+    "type": "Port",
+    "author": "Eletherion"
+  },
+  {
+    "name": "Wzgórza sygnałowe",
+    "status": "Skończone",
+    "type": "Wzgórze",
+    "author": "Eletherion"
+  },
+  {
+    "name": "Orocarni",
+    "status": "Skończone",
+    "type": "Kopalnia",
+    "author": "Eletherion / Demonize"
+  },
+  {
+    "name": "Moria",
+    "status": "W trakcie",
+    "type": "Miasto",
+    "author": "Kaptor"
+  },
+  {
+    "name": "Woldhall",
+    "status": "Skończone",
+    "type": "Wioska",
+    "author": "-"
+  }
+]
