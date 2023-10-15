@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  * {
+  body {
     @apply text-[#C0C0C0];
   }
 

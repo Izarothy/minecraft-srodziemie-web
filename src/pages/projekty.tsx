@@ -31,15 +31,22 @@ const Narzedzia = () => {
               </thead>
               <tbody>
                 {projectList?.map(({ name, status, type, author }, idx) => {
+                  const isProjectFinished = status === "Skończone";
                   return (
                     <tr
                       key={idx}
                       className={`${
                         idx % 2 ? `bg-inherit` : `bg-zinc-800`
-                      } text-center`}
+                      } text-center font-medium text-gray-200`}
                     >
                       <td>{name}</td>
-                      <td>{status}</td>
+                      <td
+                        className={
+                          isProjectFinished ? `text-green-500` : `text-red-500`
+                        }
+                      >
+                        {status}
+                      </td>
                       <td>{type}</td>
                       <td>{author}</td>
                     </tr>
