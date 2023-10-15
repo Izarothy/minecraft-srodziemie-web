@@ -4,6 +4,13 @@ import PageList from "~/components/Layout/PageList";
 import projectList from "../../data/projects.json";
 
 const Narzedzia = () => {
+  const sortedProjects = projectList?.sort((a, b) => {
+    if (a.name < b.name) return -1;
+    if (a.name > b.name) return 1;
+
+    return 0;
+  });
+
   return (
     <>
       <Head>
@@ -30,7 +37,7 @@ const Narzedzia = () => {
                 </tr>
               </thead>
               <tbody>
-                {projectList?.map(({ name, status, type, author }, idx) => {
+                {sortedProjects?.map(({ name, status, type, author }, idx) => {
                   const isProjectFinished = status === "Skończone";
                   return (
                     <tr
