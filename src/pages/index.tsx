@@ -12,6 +12,7 @@ import getSectionList from "~/utils/getSectionList";
 import handleIPTooltip from "~/utils/handleIPCopy";
 import { getPostBySlug } from "~/utils/markdownUtils";
 import slugify from "~/utils/slugify";
+import discordIcon from "../../public/images/discord-icon.svg";
 
 type Props = {
   content: string;
@@ -98,15 +99,20 @@ export default function Home({ content, sectionList }: Props) {
                   </button>
                 </span>
               </span>
-              <span className="flex gap-2">
+              <span className="flex items-center gap-2">
                 <a
                   href="#instalacja"
-                  className="btn inline-flex items-center gap-2 bg-cta px-4"
+                  className="inline-flex items-center gap-2 border border-yellow-600 bg-dark/70 from-yellow-600/30 to-yellow-600 to-70%  px-4 py-1 font-semibold text-white  hover:bg-gradient-to-br "
                 >
                   Instalacja <ArrowDown />
                 </a>
-                <button className="border-discord bg-discord ">
-                  <a href="https://discord.gg/6uddsDd" className=" text-white">
+                <button className="border-discord ">
+                  <a
+                    href="https://discord.gg/6uddsDd"
+                    className=" flex gap-2 py-1 text-white "
+                  >
+                    {/* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment */}
+                    <Image src={discordIcon} alt="Discord icon" priority />
                     Discord
                   </a>
                 </button>
