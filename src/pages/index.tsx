@@ -61,13 +61,13 @@ export default function Home({ content, sectionList }: Props) {
       </Head>
       {currentImage ? (
         <>
-          <header className=" relative flex h-screen w-full flex-col sm:h-[75vh]">
+          <header className=" relative mx-auto flex h-[90vh] w-full flex-col ">
             <Image
               src={`/images/${currentImage}.png`}
               fill
               priority
               alt="Tło"
-              className="object-cover opacity-50"
+              className="object-cover opacity-30"
             />
             <span className="relative top-1/3 flex flex-col items-center gap-4">
               <h1 className="mb-8 text-3xl drop-shadow-lg sm:text-5xl lg:text-7xl">

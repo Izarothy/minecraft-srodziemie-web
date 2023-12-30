@@ -1,8 +1,8 @@
 import { type Dispatch } from "react";
 export const imageNames: [string, string, string] = [
-  "dale-gosciniec",
-  "dale-sala",
-  "linhir-karczma",
+  "header-1",
+  "header-1",
+  "header-1",
 ];
 
 export const chooseImage = (setCurrentImage: Dispatch<string>) => {
