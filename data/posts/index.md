@@ -11,7 +11,7 @@ Dołącz do nas i zacznij tworzyć swoją historię!
 - wersja Minecrafta - **1.7.10**
 - **non-premium**
 - Oparty na modzie **The Lord of the Rings Mod: Legacy**  
-  Pełna paczka modów do pobrania jest [tutaj](https://bit.ly/3gHQPmd)
+  Paczka modów potrzebnych do grania na serwerze jest dostępna do pobrania [tutaj](https://minecraft-srodziemie.vercel.app/artykuly/modyfikacje)
 
 ## Dalsze czytanie
 
