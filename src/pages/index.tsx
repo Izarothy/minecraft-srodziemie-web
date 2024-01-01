@@ -67,7 +67,8 @@ export default function Home({ content, sectionList }: Props) {
               fill
               priority
               alt="Tło"
-              className="object-cover opacity-30"
+              quality={100}
+              className="object-cover opacity-50"
             />
             <span className="relative top-1/3 flex flex-col items-center gap-4">
               <h1 className="mb-8 text-3xl drop-shadow-lg sm:text-5xl lg:text-7xl">
