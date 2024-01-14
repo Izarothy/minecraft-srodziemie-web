@@ -5,7 +5,7 @@ category: General
 
 Poniżej znajdziesz paczki modów, których zawartość należy rozpakować w folderze _mods_.
 
-- **[Obowiązkowe.rar](http://bit.ly/4aCPEOZ)** = mody konieczne do tego, by móc grać na serwerze, a także client-side'owe wspomagacze wydajności
+- **[Mody obowiązkowe](https://bit.ly/3gHQPmd)** = mody konieczne do tego, by móc grać na serwerze, a także client-side'owe wspomagacze wydajności
 - **[Opcjonalne-QoL.rar](https://bit.ly/3NHZcyA)** = mody dodatkowe, które działają i poprawiają pewne elementy rozgrywki:
   - _Autowalk_ = umożliwia przełączanie trybu stania i sprintu, dzięki czemu nie trzeba trzymać W przez całą drogę
   - _Better Horse HUD_ = dodaje paski zdrowia i głodu, które do tej pory znikały przy ujeżdżaniu zwierząt
