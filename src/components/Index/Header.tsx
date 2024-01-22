@@ -6,11 +6,7 @@ import discordIcon from "public/images/discord-icon.svg";
 import { chooseImage, imageNames } from "~/utils/chooseImage";
 import handleIPTooltip from "~/utils/handleIPCopy";
 
-type TProps = {
-  screenWidth: number;
-};
-
-const Header = ({ screenWidth }: TProps) => {
+const Header = () => {
   const [isTooltipShown, setTooltipShown] = useState(false);
   const [hoverText, setTooltipText] = useState("Kliknij, by skopiować");
   const [currentImage, setCurrentImage] = useState<string>(imageNames[0]);
@@ -49,6 +45,7 @@ const Header = ({ screenWidth }: TProps) => {
             <button
               className=" border-0 bg-dark/60 py-2"
               onMouseEnter={() => {
+                const screenWidth = window.innerWidth;
                 if (screenWidth < 1024) return;
                 setTooltipText("Kliknij, by skopiować");
                 setTooltipShown(true);

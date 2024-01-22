@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { useEffect, useState } from "react";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import ImageShowcase from "~/components/Index/ImageShowcase";
 import PageList from "~/components/Layout/PageList";
@@ -15,21 +14,6 @@ type Props = {
 };
 
 export default function Home({ content, sectionList }: Props) {
-  const [screenWidth, setScreenWidth] = useState(0);
-
-  useEffect(() => {
-    setScreenWidth(window.innerWidth);
-
-    const handleResize = () => {
-      setScreenWidth(window.innerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
     <>
       <Head>
@@ -50,7 +34,7 @@ export default function Home({ content, sectionList }: Props) {
         />
       </Head>
       <>
-        <Header screenWidth={screenWidth} />
+        <Header />
         {content && (
           <main className="relative flex w-[90%] justify-between gap-16 pt-12 lg:w-[80%]">
             <PageList />
