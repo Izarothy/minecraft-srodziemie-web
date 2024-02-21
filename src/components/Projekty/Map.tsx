@@ -1,7 +1,19 @@
 import React from "react";
 import { CRS, type LatLngTuple } from "leaflet";
-import { ImageOverlay, MapContainer } from "react-leaflet";
+import {
+  ImageOverlay,
+  MapContainer,
+  Marker,
+  Popup,
+  Rectangle,
+} from "react-leaflet";
+import convertCoordinatesToLatLng from "~/lib/convertCoordinatesToLatLng";
+import worldGuardRegions from "data/regions.json";
+
+// leaflet
 import "leaflet/dist/leaflet.css";
+import L from "leaflet";
+L.Icon.Default.imagePath = "images/";
 
 export default function Map() {
   const bounds = [[0, 0] as LatLngTuple, [125, 100] as LatLngTuple];
@@ -12,16 +24,38 @@ export default function Map() {
       <MapContainer
         crs={CRS.Simple}
         minZoom={4}
-        maxZoom={5}
         zoom={4}
-        className="h-screen w-full"
+        id="mapContainer"
+        className="h-screen w-full rounded-sm border-4 border-yellow-600 "
         center={[90, 50]}
         maxBounds={maxBounds}
       >
-        <ImageOverlay
-          url="https://cdn.discordapp.com/attachments/720275065740066867/1209498445077807154/lotrModMap.png?ex=65e72434&is=65d4af34&hm=e2eedd58b24ce210fadf2cbbec2514d77fed2fe9287bcaa780d50e5419d010ff&"
-          bounds={bounds}
-        />
+        <ImageOverlay url="images/lotrModMap.png" bounds={bounds} />
+        {Object.entries(worldGuardRegions.regions).map(([key, val]) => {
+          const [minLatLong, maxLatLong] = convertCoordinatesToLatLng(
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
+            [val.min.x, val.min.z],
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
+            [val.max.x, val.max.z]
+          );
+
+          const centerLatLong = [
+            (minLatLong[0] + maxLatLong[0]) / 2,
+            (minLatLong[1] + maxLatLong[1]) / 2,
+          ] as LatLngTuple;
+          return (
+            <>
+              <Marker position={centerLatLong}>
+                <Popup>{`${key.charAt(0).toUpperCase()}${key.slice(1)}`}</Popup>
+              </Marker>
+              <Rectangle
+                key={key}
+                bounds={[minLatLong, maxLatLong]}
+                color="yellow"
+              />
+            </>
+          );
+        })}
       </MapContainer>
     </>
   );
