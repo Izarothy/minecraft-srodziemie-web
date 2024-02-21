@@ -7,8 +7,8 @@ type Props = {
 
 const Layout = ({ children }: Props) => {
   return (
-    <div className="flex flex-col bg-dark-lighter text-white">
-      <main className="flex w-full flex-col items-center gap-8  bg-dark-lighter text-white">
+    <div className="flex flex-col bg-dark text-white">
+      <main className="flex w-full flex-col items-center gap-8  bg-dark text-white">
         {children}
       </main>
       <Footer />
