@@ -9,6 +9,7 @@ import {
 } from "react-leaflet";
 import convertCoordinatesToLatLng from "~/lib/convertCoordinatesToLatLng";
 import worldGuardRegions from "data/regions.json";
+import privateRegions from "data/privateRegions.json";
 
 // leaflet
 import "leaflet/dist/leaflet.css";
@@ -32,6 +33,8 @@ export default function Map() {
       >
         <ImageOverlay url="images/lotrModMap.png" bounds={bounds} />
         {Object.entries(worldGuardRegions.regions).map(([key, val]) => {
+          if (privateRegions.includes(key)) return;
+
           const [minLatLong, maxLatLong] = convertCoordinatesToLatLng(
             // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
             [val.min.x, val.min.z],
