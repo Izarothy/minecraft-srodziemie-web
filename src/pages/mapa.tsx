@@ -3,7 +3,7 @@ import React from "react";
 import PageList from "~/components/Layout/PageList";
 import dynamic from "next/dynamic";
 
-const Map = dynamic(() => import("../components/Projekty/Map"), {
+const Map = dynamic(() => import("../components/Mapa/Map"), {
   ssr: false,
 });
 

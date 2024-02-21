@@ -6,6 +6,7 @@ import {
   Marker,
   Popup,
   Rectangle,
+  Tooltip,
 } from "react-leaflet";
 import convertCoordinatesToLatLng from "~/lib/convertCoordinatesToLatLng";
 import worldGuardRegions from "data/regions.json";
@@ -42,20 +43,17 @@ export default function Map() {
             [val.max.x, val.max.z]
           );
 
-          const centerLatLong = [
-            (minLatLong[0] + maxLatLong[0]) / 2,
-            (minLatLong[1] + maxLatLong[1]) / 2,
-          ] as LatLngTuple;
           return (
             <>
-              <Marker position={centerLatLong}>
-                <Popup>{`${key.charAt(0).toUpperCase()}${key.slice(1)}`}</Popup>
-              </Marker>
               <Rectangle
                 key={key}
                 bounds={[minLatLong, maxLatLong]}
                 color="yellow"
-              />
+              >
+                <Tooltip direction="right" permanent opacity={0.9}>
+                  {`${key.charAt(0).toUpperCase()}${key.slice(1)}`}
+                </Tooltip>
+              </Rectangle>
             </>
           );
         })}
