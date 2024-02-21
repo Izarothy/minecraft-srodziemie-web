@@ -28,11 +28,15 @@ export default function Map() {
         minZoom={4}
         zoom={4}
         id="mapContainer"
-        className="h-screen w-full rounded-sm border-4 border-yellow-600 "
+        className="h-screen w-full rounded-sm "
         center={[90, 50]}
         maxBounds={maxBounds}
       >
-        <ImageOverlay url="images/lotrModMap.png" bounds={bounds} />
+        <ImageOverlay
+          url="images/lotrModMap.png"
+          bounds={bounds}
+          className="border-4 border-yellow-600 brightness-50 contrast-150 "
+        />
         {Object.entries(worldGuardRegions.regions).map(([key, val]) => {
           if (privateRegions.includes(key)) return;
 
@@ -48,7 +52,7 @@ export default function Map() {
               <Rectangle
                 key={key}
                 bounds={[minLatLong, maxLatLong]}
-                color="yellow"
+                color="#4CAF50"
               >
                 <Tooltip direction="right" permanent opacity={0.9}>
                   {`${key.charAt(0).toUpperCase()}${key.slice(1)}`}
