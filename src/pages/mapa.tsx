@@ -11,7 +11,7 @@ const Mapa = () => {
   return (
     <>
       <Head>
-        <title>Projekty</title>
+        <title>Mapa</title>
       </Head>
       <main className="min-h-screen w-[90%] py-16 lg:w-[80%]">
         <section className="relative flex justify-between gap-16 pt-12 ">
