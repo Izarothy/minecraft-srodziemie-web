@@ -9,8 +9,8 @@ const PageList = () => {
       <Link href={"/"} className="order-first ">
         <span className="font-bold text-white">Strona Główna</span>
       </Link>
-      <Link href={"/projekty"} className="order-first ">
-        <span className="font-bold text-white">Projekty</span>
+      <Link href={"/mapa"} className="order-first ">
+        <span className="font-bold text-white">Mapa</span>
       </Link>
       <span className="flex flex-col gap-2  text-sm text-white">
         <span className="font-bold text-slate-200">Artykuły</span>
