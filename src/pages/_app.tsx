@@ -1,13 +1,13 @@
 import { type AppType } from "next/app";
 import { api } from "~/utils/api";
 import "~/styles/globals.css";
-import { Poppins } from "next/font/google";
+import { Lexend } from "next/font/google";
 import Layout from "~/components/Layout/Layout";
 import { useRouter } from "next/router";
 
-const poppins = Poppins({
+const lexend = Lexend({
   weight: ["400", "500", "600", "700", "800"],
-  style: ["normal", "italic"],
+  style: ["normal"],
   display: "swap",
   subsets: ["latin"],
 });
@@ -20,7 +20,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
       <style jsx global>
         {`
           html {
-            font-family: ${poppins.style.fontFamily};
+            font-family: ${lexend.style.fontFamily};
           }
         `}
       </style>
