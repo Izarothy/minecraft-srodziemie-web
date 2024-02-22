@@ -69,8 +69,26 @@
   .label {
     @apply pl-1 text-sm font-semibold text-gray-400;
   }
+}
 
-  #mapContainer {
-    @apply bg-dark;
-  }
+/* Leaflet  */
+
+.leaflet-tooltip::before {
+  border-right-color: rgb(18, 18, 18) !important;
+}
+
+.leaflet-tooltip,
+.leaflet-container,
+.leaflet-bar a {
+  background: rgb(18, 18, 18) !important;
+  border: none !important;
+  color: #bec3f1 !important;
+}
+
+.leaflet-tooltip {
+  padding: 3px 6px !important;
+}
+
+.leaflet-bar a:nth-child(2) {
+  border-top: 1px solid #3e4446 !important;
 }

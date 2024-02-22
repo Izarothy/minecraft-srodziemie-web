@@ -28,14 +28,14 @@ export default function Map() {
         minZoom={4}
         zoom={4}
         id="mapContainer"
-        className="h-screen w-full rounded-sm "
+        className="h-screen w-full rounded-sm"
         center={[90, 50]}
         maxBounds={maxBounds}
       >
         <ImageOverlay
           url="images/lotrModMap.png"
           bounds={bounds}
-          className="border-4 border-yellow-600 brightness-50 contrast-150 "
+          className="border-4 border-yellow-600 brightness-50 contrast-125 "
         />
         {Object.entries(worldGuardRegions.regions).map(([key, val]) => {
           if (privateRegions.includes(key)) return;
