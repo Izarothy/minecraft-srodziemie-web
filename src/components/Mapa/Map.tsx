@@ -26,7 +26,7 @@ export default function Map() {
       <MapContainer
         crs={CRS.Simple}
         minZoom={4}
-        zoom={4}
+        zoom={5}
         id="mapContainer"
         className="h-screen w-full rounded-sm"
         center={[90, 50]}
@@ -35,7 +35,7 @@ export default function Map() {
         <ImageOverlay
           url="images/lotrModMap.png"
           bounds={bounds}
-          className="border-2 border-yellow-400 brightness-75 contrast-125"
+          className=" border-2 border-yellow-400 brightness-75 "
         />
         {Object.entries(worldGuardRegions.regions).map(([key, val]) => {
           if (privateRegions.includes(key)) return;
