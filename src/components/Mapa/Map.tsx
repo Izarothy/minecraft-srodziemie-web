@@ -35,7 +35,7 @@ export default function Map() {
         <ImageOverlay
           url="images/lotrModMap.png"
           bounds={bounds}
-          className="border-4 border-yellow-600 brightness-75 contrast-125"
+          className="border-2 border-yellow-400 brightness-75 contrast-125"
         />
         {Object.entries(worldGuardRegions.regions).map(([key, val]) => {
           if (privateRegions.includes(key)) return;

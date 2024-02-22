@@ -3,6 +3,7 @@ import { api } from "~/utils/api";
 import "~/styles/globals.css";
 import { Poppins } from "next/font/google";
 import Layout from "~/components/Layout/Layout";
+import { useRouter } from "next/router";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700", "800"],
@@ -12,6 +13,8 @@ const poppins = Poppins({
 });
 
 const MyApp: AppType = ({ Component, pageProps }) => {
+  const router = useRouter();
+
   return (
     <>
       <style jsx global>
@@ -21,9 +24,13 @@ const MyApp: AppType = ({ Component, pageProps }) => {
           }
         `}
       </style>
-      <Layout>
+      {!router.asPath.includes("map") ? (
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      ) : (
         <Component {...pageProps} />
-      </Layout>
+      )}
     </>
   );
 };
