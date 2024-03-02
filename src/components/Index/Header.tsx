@@ -65,7 +65,7 @@ const Header = () => {
               {hoverText}
             </div>
             <button
-              className=" inline-flex gap-2 border-0 bg-dark/20 py-2 text-xs font-normal text-gray-300"
+              className=" inline-flex gap-2 border-0 bg-dark/20 py-2 text-xs font-medium text-gray-300"
               onMouseEnter={() => {
                 const screenWidth = window.innerWidth;
                 if (screenWidth < 1024) return;
