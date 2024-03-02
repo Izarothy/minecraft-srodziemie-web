@@ -29,7 +29,7 @@ const Header = () => {
         priority
         alt="Tło"
         quality={100}
-        className="object-cover opacity-40"
+        className="object-cover opacity-30"
       />
       <span className="relative top-1/3 flex flex-col items-center gap-4">
         <h1 className="mb-8 text-3xl drop-shadow-lg sm:text-5xl lg:text-7xl">
