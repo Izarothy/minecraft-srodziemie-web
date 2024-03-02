@@ -35,7 +35,7 @@ const Header = () => {
         <h1 className="mb-8 text-3xl drop-shadow-lg sm:text-5xl lg:text-7xl">
           Minecraft Śródziemie
         </h1>
-        <p className="max-w-xl text-center  text-gray-200">
+        <p className="max-w-sm text-center text-gray-200  md:max-w-xl">
           Serwer Minecraft osadzony w Śródziemiu! Jeśli jesteś fanem Tolkiena,
           znajdziesz tu coś dla siebie.
         </p>
