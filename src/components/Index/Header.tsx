@@ -23,7 +23,7 @@ const Header = () => {
         </p>
         <span className="flex justify-center gap-8 sm:justify-normal">
           <a href="#instalacja">
-            <Button className=" inline-flex items-center gap-2 border-none bg-none ">
+            <Button className=" bg- inline-flex items-center gap-2 border-none ">
               Instalacja
               <ArrowDown />
             </Button>
