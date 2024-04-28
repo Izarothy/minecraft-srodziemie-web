@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import ArrowDown from "../Icons/ArrowDown";
 import copyToClipboard from "~/utils/copyToClipboard";
 import discordIcon from "public/images/discord-icon.svg";
-import { chooseImage, imageNames } from "~/utils/chooseImage";
 import handleIPTooltip from "~/utils/handleIPCopy";
 import { Button } from "../ui/button";
 import ClipboardCopy from "~/components/Icons/ClipboardCopy";
@@ -11,37 +10,20 @@ import ClipboardCopy from "~/components/Icons/ClipboardCopy";
 const Header = () => {
   const [isTooltipShown, setTooltipShown] = useState(false);
   const [hoverText, setTooltipText] = useState("Kliknij, by skopiować");
-  const [currentImage, setCurrentImage] = useState<string>(imageNames[0]);
-
-  useEffect(() => {
-    const imageInterval = chooseImage(setCurrentImage);
-
-    return () => {
-      clearInterval(imageInterval);
-    };
-  }, []);
 
   return (
-    <header className=" relative mx-auto flex h-[90vh] w-full flex-col ">
-      <Image
-        src={`/images/${currentImage}.png`}
-        fill
-        priority
-        alt="Tło"
-        quality={100}
-        className="object-cover opacity-30"
-      />
-      <span className="relative top-1/3 flex flex-col items-center gap-4">
-        <h1 className="mb-8 text-3xl drop-shadow-lg sm:text-5xl lg:text-7xl">
+    <header className="relative mx-auto flex h-screen w-screen flex-col gap-16 px-[5vw] py-4 sm:w-[92%] sm:gap-0 md:mt-8 md:h-[75vh] md:flex-row md:py-[13vh]">
+      <div className="mt-auto flex flex-1 flex-col gap-4 pt-16 sm:pt-0 md:pl-6">
+        <h1 className="mb-8 text-center text-2xl drop-shadow-lg sm:text-left sm:text-5xl">
           Minecraft Śródziemie
         </h1>
-        <p className="max-w-sm px-4 text-center  text-lg text-gray-200 sm:px-0 md:max-w-2xl">
-          Serwer Minecraft osadzony w Śródziemiu! Jeśli jesteś fanem Tolkiena,
-          znajdziesz tu coś dla siebie.
+        <p className="max-w-sm px-4 text-sm text-gray-300 sm:px-0  sm:text-base md:max-w-lg">
+          Serwer Minecraft osadzony w Śródziemiu! <br /> Jeśli jesteś fanem
+          Tolkiena, znajdziesz tu coś dla siebie.
         </p>
-        <span className="flex items-center gap-8">
+        <span className="flex justify-center gap-8 sm:justify-normal">
           <a href="#instalacja">
-            <Button className="inline-flex items-center gap-2 border border-gray-600 bg-purple-700 hover:bg-purple-600">
+            <Button className=" inline-flex items-center gap-2 border-none bg-none ">
               Instalacja
               <ArrowDown />
             </Button>
@@ -60,12 +42,12 @@ const Header = () => {
             <div
               className={`${
                 isTooltipShown ? ` ` : `invisible`
-              } mx-auto mb-2 flex-1 rounded-md bg-dark/80 px-6 py-1 text-center text-sm font-normal`}
+              } mx-auto mb-2 flex-1 rounded-md bg-dark/80 py-1 text-center text-sm font-normal`}
             >
               {hoverText}
             </div>
             <button
-              className=" inline-flex gap-2 border-0 bg-dark/20 py-2 text-xs font-medium text-gray-300"
+              className=" mx-auto inline-flex w-fit gap-2 border border-gray-800 bg-dark/20 py-2 text-xs font-medium text-gray-300 sm:mx-0"
               onMouseEnter={() => {
                 const screenWidth = window.innerWidth;
                 if (screenWidth < 1024) return;
@@ -83,7 +65,18 @@ const Header = () => {
             </button>
           </span>
         </span>
-      </span>
+      </div>
+      <div className="relative flex-1">
+        <Image
+          src={`/images/locations/tol-morwen.png`}
+          priority
+          alt="Tło"
+          quality={100}
+          width={700}
+          height={500}
+          className="mx-auto my-auto h-full w-[90%] rounded-md border border-gray-700 object-cover opacity-70"
+        />
+      </div>
     </header>
   );
 };

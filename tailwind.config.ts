@@ -20,7 +20,7 @@ const config = {
     extend: {
       colors: {
         discord: "#5368ee",
-        dark: "#121212",
+        dark: "#0b0c0d",
         "dark-lighter": "#171718",
         cta: "#000097",
       },
