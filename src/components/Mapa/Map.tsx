@@ -38,13 +38,16 @@ export default function Map() {
 					className=" border-2 border-yellow-400 brightness-75 "
 				/>
 				{Object.entries(worldGuardRegions.regions).map(([key, val]) => {
-					if (privateRegions.includes(key)) return null;
+					if (privateRegions.includes(key)) return;
 
 					if ("min" in val && "max" in val) {
 						const [minLatLong, maxLatLong] = convertCoordinatesToLatLng(
 							[val.min.x, val.min.z],
 							[val.max.x, val.max.z],
 						);
+
+						let regionName = key.charAt(0).toUpperCase() + key.slice(1);
+						if (regionName.includes("carastamo")) regionName = "Ras Morthil";
 
 						return (
 							<>
@@ -54,7 +57,7 @@ export default function Map() {
 									color="#4CAF50"
 								>
 									<Tooltip direction="right" permanent opacity={0.9}>
-										{`${key.charAt(0).toUpperCase()}${key.slice(1)}`}
+										{regionName}
 									</Tooltip>
 								</Rectangle>
 							</>
