@@ -1,1324 +1,1585 @@
 {
-  "regions": {
-    "elostirion": {
-      "min": {
-        "x": -12662,
-        "y": 0,
-        "z": 1505
-      },
-      "max": {
-        "x": -12606,
-        "y": 194,
-        "z": 1731
-      },
-      "members": {
-        "unique-ids": ["9d945e19-f9ba-3a33-89ea-53d3bbe5e700"]
-      },
-      "flags": {},
-      "owners": {},
-      "type": "cuboid",
-      "priority": 0
-    },
-    "isengard": {
-      "min": {
-        "x": 37368,
-        "y": 0,
-        "z": 41976
-      },
-      "max": {
-        "x": 37513,
-        "y": 255,
-        "z": 42120
-      },
-      "members": {},
-      "flags": {},
-      "owners": {
-        "unique-ids": ["9622a883-efd8-33ff-a5c9-db2714569a67"]
-      },
-      "type": "cuboid",
-      "priority": 0
-    },
-    "pertol-lambenomeva": {
-      "min": {
-        "x": 61006,
-        "y": 0,
-        "z": 78506
-      },
-      "max": {
-        "x": 61098,
-        "y": 255,
-        "z": 78639
-      },
-      "members": {
-        "unique-ids": [
-          "1fc9c7dd-2108-3ee9-8edf-b529acd01d23",
-          "71eaee9e-7fce-3899-bfc1-dff61fba918b",
-          "9c8bbfb8-7cc5-308c-8f76-090c776dbd38"
-        ]
-      },
-      "flags": {
-        "use": "allow",
-        "build-group": "NON_MEMBERS",
-        "mob-damage-group": "MEMBERS",
-        "interact": "allow",
-        "chest-access": "allow",
-        "ride": "allow",
-        "block-place": "allow",
-        "ride-group": "MEMBERS",
-        "chest-access-group": "MEMBERS",
-        "build": "deny",
-        "use-group": "MEMBERS",
-        "mob-damage": "allow",
-        "block-break": "allow",
-        "block-place-group": "MEMBERS",
-        "interact-group": "MEMBERS",
-        "block-break-group": "MEMBERS"
-      },
-      "owners": {},
-      "type": "cuboid",
-      "priority": 1
-    },
-    "carnilonde": {
-      "min": {
-        "x": -27604,
-        "y": 0,
-        "z": 5645
-      },
-      "max": {
-        "x": -27330,
-        "y": 255,
-        "z": 6001
-      },
-      "members": {
-        "unique-ids": ["9d945e19-f9ba-3a33-89ea-53d3bbe5e700"]
-      },
-      "flags": {
-        "build": "allow",
-        "build-group": "MEMBERS"
-      },
-      "owners": {},
-      "type": "cuboid",
-      "priority": 0
-    },
-    "minas_tirith": {
-      "min": {
-        "x": 77495,
-        "y": 0,
-        "z": 66042
-      },
-      "max": {
-        "x": 77938,
-        "y": 255,
-        "z": 66426
-      },
-      "members": {
-        "unique-ids": [
-          "ab813172-4db5-34a6-8fd7-9bdef28ba84d",
-          "aa1d73b6-8cf2-37c4-8523-a42d4260c109"
-        ]
-      },
-      "flags": {},
-      "owners": {},
-      "type": "cuboid",
-      "priority": 0
-    },
-    "lh-tawerna": {
-      "min": {
-        "x": 61472,
-        "y": 21,
-        "z": 78195
-      },
-      "max": {
-        "x": 61506,
-        "y": 126,
-        "z": 78215
-      },
-      "members": {
-        "unique-ids": ["b40339f3-64ab-3639-9f5d-76481623934e"]
-      },
-      "flags": {
-        "build": "allow",
-        "build-group": "MEMBERS"
-      },
-      "owners": {},
-      "type": "cuboid",
-      "priority": 1
-    },
-    "pits": {
-      "min": {
-        "x": 42106,
-        "y": 0,
-        "z": -43003
-      },
-      "max": {
-        "x": 42243,
-        "y": 255,
-        "z": -42844
-      },
-      "members": {},
-      "flags": {
-        "entry": "deny",
-        "build": "deny",
-        "build-group": "NON_MEMBERS"
-      },
-      "owners": {},
-      "type": "cuboid",
-      "priority": 0
-    },
-    "orocarni": {
-      "min": {
-        "x": 194082,
-        "y": 0,
-        "z": 8549
-      },
-      "max": {
-        "x": 195084,
-        "y": 255,
-        "z": 9280
-      },
-      "members": {
-        "unique-ids": [
-          "45084c9e-688a-3ea4-9ceb-e32167a7486e",
-          "9d945e19-f9ba-3a33-89ea-53d3bbe5e700",
-          "6466632e-bc4e-3db6-bb01-67d60c54bf4b",
-          "e271b564-7768-33c0-9bd9-ab81587c8786"
-        ]
-      },
-      "flags": {
-        "interact": "allow"
-      },
-      "owners": {},
-      "type": "cuboid",
-      "priority": 0
-    },
-    "ethir-1": {
-      "min": {
-        "x": 59362,
-        "y": 54,
-        "z": 82126
-      },
-      "max": {
-        "x": 59426,
-        "y": 255,
-        "z": 82190
-      },
-      "members": {
-        "unique-ids": [
-          "71eaee9e-7fce-3899-bfc1-dff61fba918b",
-          "9c8bbfb8-7cc5-308c-8f76-090c776dbd38"
-        ]
-      },
-      "flags": {
-        "sleep": "allow",
-        "chest-access-group": "MEMBERS",
-        "build": "allow",
-        "build-group": "MEMBERS",
-        "interact": "allow",
-        "sleep-group": "MEMBERS",
-        "interact-group": "MEMBERS",
-        "chest-access": "allow",
-        "mob-spawning": "deny"
-      },
-      "owners": {
-        "unique-ids": ["71eaee9e-7fce-3899-bfc1-dff61fba918b"]
-      },
-      "type": "cuboid",
-      "priority": 1
-    },
-    "lh-dzia-6": {
-      "min": {
-        "x": 61608,
-        "y": 48,
-        "z": 78276
-      },
-      "max": {
-        "x": 61626,
-        "y": 130,
-        "z": 78289
-      },
-      "members": {},
-      "flags": {
-        "build-group": "MEMBERS",
-        "interact": "allow",
-        "chest-access": "allow",
-        "mob-spawning": "deny",
-        "block-place": "allow",
-        "sleep": "allow",
-        "chest-access-group": "MEMBERS",
-        "build": "allow",
-        "block-break": "allow",
-        "block-place-group": "MEMBERS",
-        "interact-group": "MEMBERS",
-        "sleep-group": "MEMBERS",
-        "block-break-group": "MEMBERS"
-      },
-      "owners": {
-        "unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
-      },
-      "type": "cuboid",
-      "priority": 1
-    },
-    "lh-dzia-7": {
-      "min": {
-        "x": 61619,
-        "y": 65,
-        "z": 78270
-      },
-      "max": {
-        "x": 61627,
-        "y": 85,
-        "z": 78275
-      },
-      "members": {},
-      "flags": {
-        "build-group": "MEMBERS",
-        "interact": "allow",
-        "chest-access": "allow",
-        "mob-spawning": "deny",
-        "block-place": "allow",
-        "sleep": "allow",
-        "chest-access-group": "MEMBERS",
-        "build": "allow",
-        "block-break": "allow",
-        "block-place-group": "MEMBERS",
-        "interact-group": "MEMBERS",
-        "sleep-group": "MEMBERS",
-        "block-break-group": "MEMBERS"
-      },
-      "owners": {
-        "unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
-      },
-      "type": "cuboid",
-      "priority": 1
-    },
-    "lh-m-4": {
-      "min": {
-        "x": 61673,
-        "y": 72,
-        "z": 78283
-      },
-      "max": {
-        "x": 61676,
-        "y": 74,
-        "z": 78284
-      },
-      "members": {},
-      "flags": {
-        "sleep": "allow",
-        "chest-access-group": "MEMBERS",
-        "build": "allow",
-        "build-group": "MEMBERS",
-        "interact": "allow",
-        "sleep-group": "MEMBERS",
-        "interact-group": "MEMBERS",
-        "chest-access": "allow",
-        "mob-spawning": "deny"
-      },
-      "owners": {},
-      "type": "cuboid",
-      "priority": 1
-    },
-    "lh-dzia-4": {
-      "min": {
-        "x": 61664,
-        "y": 49,
-        "z": 78205
-      },
-      "max": {
-        "x": 61680,
-        "y": 129,
-        "z": 78221
-      },
-      "members": {},
-      "flags": {
-        "build-group": "MEMBERS",
-        "interact": "allow",
-        "chest-access": "allow",
-        "mob-spawning": "deny",
-        "block-place": "allow",
-        "sleep": "allow",
-        "chest-access-group": "MEMBERS",
-        "build": "allow",
-        "block-break": "allow",
-        "block-place-group": "MEMBERS",
-        "interact-group": "MEMBERS",
-        "sleep-group": "MEMBERS",
-        "block-break-group": "MEMBERS"
-      },
-      "owners": {
-        "unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
-      },
-      "type": "cuboid",
-      "priority": 1
-    },
-    "dale": {
-      "min": {
-        "x": 83378,
-        "y": 0,
-        "z": -14955
-      },
-      "max": {
-        "x": 84274,
-        "y": 255,
-        "z": -14365
-      },
-      "members": {
-        "unique-ids": [
-          "45084c9e-688a-3ea4-9ceb-e32167a7486e",
-          "7f509b08-5b26-39b1-9c46-0e771c98732e"
-        ]
-      },
-      "flags": {
-        "build": "deny",
-        "build-group": "NON_MEMBERS",
-        "mob-spawning": "deny"
-      },
-      "owners": {},
-      "type": "cuboid",
-      "priority": 0
-    },
-    "lh-m-3": {
-      "min": {
-        "x": 61645,
-        "y": 74,
-        "z": 78257
-      },
-      "max": {
-        "x": 61649,
-        "y": 76,
-        "z": 78262
-      },
-      "members": {},
-      "flags": {
-        "sleep": "allow",
-        "chest-access-group": "MEMBERS",
-        "build": "allow",
-        "build-group": "MEMBERS",
-        "interact": "allow",
-        "sleep-group": "MEMBERS",
-        "interact-group": "MEMBERS",
-        "chest-access": "allow",
-        "mob-spawning": "deny"
-      },
-      "owners": {},
-      "type": "cuboid",
-      "priority": 1
-    },
-    "lh-dzia-5": {
-      "min": {
-        "x": 61618,
-        "y": 49,
-        "z": 78249
-      },
-      "max": {
-        "x": 61635,
-        "y": 137,
-        "z": 78266
-      },
-      "members": {
-        "unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
-      },
-      "flags": {
-        "build-group": "MEMBERS",
-        "interact": "allow",
-        "chest-access": "allow",
-        "mob-spawning": "deny",
-        "block-place": "allow",
-        "sleep": "allow",
-        "chest-access-group": "MEMBERS",
-        "build": "allow",
-        "block-break": "allow",
-        "block-place-group": "MEMBERS",
-        "interact-group": "MEMBERS",
-        "sleep-group": "MEMBERS",
-        "block-break-group": "MEMBERS"
-      },
-      "owners": {
-        "unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
-      },
-      "type": "cuboid",
-      "priority": 1
-    },
-    "lh-m-2": {
-      "min": {
-        "x": 61655,
-        "y": 75,
-        "z": 78241
-      },
-      "max": {
-        "x": 61661,
-        "y": 78,
-        "z": 78244
-      },
-      "members": {
-        "unique-ids": ["1fc9c7dd-2108-3ee9-8edf-b529acd01d23"]
-      },
-      "flags": {
-        "chest-access-group": "MEMBERS",
-        "build": "deny",
-        "interact": "allow",
-        "interact-group": "MEMBERS",
-        "chest-access": "allow"
-      },
-      "owners": {},
-      "type": "cuboid",
-      "priority": 1
-    },
-    "lh-dzia-2": {
-      "min": {
-        "x": 61681,
-        "y": 50,
-        "z": 78183
-      },
-      "max": {
-        "x": 61697,
-        "y": 85,
-        "z": 78199
-      },
-      "members": {
-        "unique-ids": [
-          "71eaee9e-7fce-3899-bfc1-dff61fba918b",
-          "9c8bbfb8-7cc5-308c-8f76-090c776dbd38"
-        ]
-      },
-      "flags": {
-        "build-group": "MEMBERS",
-        "interact": "allow",
-        "chest-access": "allow",
-        "mob-spawning": "deny",
-        "block-place": "allow",
-        "sleep": "allow",
-        "chest-access-group": "MEMBERS",
-        "build": "allow",
-        "block-break": "allow",
-        "block-place-group": "MEMBERS",
-        "interact-group": "MEMBERS",
-        "sleep-group": "MEMBERS",
-        "block-break-group": "MEMBERS"
-      },
-      "owners": {
-        "unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
-      },
-      "type": "cuboid",
-      "priority": 1
-    },
-    "lh-dzia-3": {
-      "min": {
-        "x": 61698,
-        "y": 50,
-        "z": 78183
-      },
-      "max": {
-        "x": 61714,
-        "y": 85,
-        "z": 78199
-      },
-      "members": {
-        "unique-ids": [
-          "71eaee9e-7fce-3899-bfc1-dff61fba918b",
-          "9c8bbfb8-7cc5-308c-8f76-090c776dbd38"
-        ]
-      },
-      "flags": {
-        "build-group": "MEMBERS",
-        "interact": "allow",
-        "chest-access": "allow",
-        "mob-spawning": "deny",
-        "block-place": "allow",
-        "sleep": "allow",
-        "chest-access-group": "MEMBERS",
-        "build": "allow",
-        "block-break": "allow",
-        "block-place-group": "MEMBERS",
-        "interact-group": "MEMBERS",
-        "sleep-group": "MEMBERS",
-        "block-break-group": "MEMBERS"
-      },
-      "owners": {
-        "unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
-      },
-      "type": "cuboid",
-      "priority": 1
-    },
-    "lh-m-1": {
-      "min": {
-        "x": 61644,
-        "y": 74,
-        "z": 78242
-      },
-      "max": {
-        "x": 61649,
-        "y": 76,
-        "z": 78245
-      },
-      "members": {},
-      "flags": {
-        "chest-access-group": "MEMBERS",
-        "build": "deny",
-        "interact": "allow",
-        "interact-group": "MEMBERS",
-        "chest-access": "allow"
-      },
-      "owners": {},
-      "type": "cuboid",
-      "priority": 1
-    },
-    "moria": {
-      "min": {
-        "x": 41564,
-        "y": 0,
-        "z": 17927
-      },
-      "max": {
-        "x": 42910,
-        "y": 255,
-        "z": 18577
-      },
-      "members": {
-        "unique-ids": [
-          "7f509b08-5b26-39b1-9c46-0e771c98732e",
-          "2123abfe-705c-390c-94a6-f97de18b8d5c"
-        ]
-      },
-      "flags": {
-        "build": "deny",
-        "use": "allow",
-        "build-group": "NON_MEMBERS",
-        "use-group": "NON_MEMBERS",
-        "mob-damage": "deny",
-        "passthrough": "allow",
-        "interact": "allow",
-        "interact-group": "NON_MEMBERS"
-      },
-      "owners": {},
-      "type": "cuboid",
-      "priority": 0
-    },
-    "lh-dzia-1": {
-      "min": {
-        "x": 61664,
-        "y": 60,
-        "z": 78183
-      },
-      "max": {
-        "x": 61680,
-        "y": 86,
-        "z": 78199
-      },
-      "members": {},
-      "flags": {
-        "build-group": "MEMBERS",
-        "interact": "allow",
-        "chest-access": "allow",
-        "mob-spawning": "deny",
-        "block-place": "allow",
-        "sleep": "allow",
-        "chest-access-group": "MEMBERS",
-        "build": "allow",
-        "block-break": "allow",
-        "block-place-group": "MEMBERS",
-        "interact-group": "MEMBERS",
-        "sleep-group": "MEMBERS",
-        "block-break-group": "MEMBERS"
-      },
-      "owners": {
-        "unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
-      },
-      "type": "cuboid",
-      "priority": 1
-    },
-    "punktzero": {
-      "min": {
-        "x": -2,
-        "y": 71,
-        "z": -9
-      },
-      "max": {
-        "x": 1,
-        "y": 80,
-        "z": 1
-      },
-      "members": {},
-      "flags": {
-        "build": "deny",
-        "greeting": "Witaj na Spawnie! W pobliskich domkach znajduje się info o serwerze!",
-        "pvp": "deny"
-      },
-      "owners": {},
-      "type": "cuboid",
-      "priority": 0
-    },
-    "linhir": {
-      "min": {
-        "x": 60200,
-        "y": 0,
-        "z": 77860
-      },
-      "max": {
-        "x": 62100,
-        "y": 255,
-        "z": 79640
-      },
-      "members": {
-        "unique-ids": [
-          "cdb0aa61-6d13-471d-a788-282f448cadbb",
-          "6466632e-bc4e-3db6-bb01-67d60c54bf4b",
-          "9d945e19-f9ba-3a33-89ea-53d3bbe5e700",
-          "71eaee9e-7fce-3899-bfc1-dff61fba918b",
-          "00c4417d-fc10-349b-99e7-b32b721d083b",
-          "9c8bbfb8-7cc5-308c-8f76-090c776dbd38",
-          "7994a15d-93e4-36e6-b29e-e926dcc2068b",
-          "1fc9c7dd-2108-3ee9-8edf-b529acd01d23",
-          "38f77d05-f15f-3f9d-9c82-6fa5fb3f81f6",
-          "2bf96c03-da37-3123-8ade-d03a5a987f11"
-        ]
-      },
-      "flags": {
-        "deny-message": "Tego nie można tu robić. Jeśli to pomyłka, napisz na Discordzie.",
-        "interact": "allow",
-        "vehicle-destroy": "allow",
-        "chest-access": "allow",
-        "mob-spawning": "allow",
-        "ride": "allow",
-        "block-place": "deny",
-        "sleep": "allow",
-        "vehicle-place": "allow",
-        "chest-access-group": "MEMBERS",
-        "mob-damage": "allow",
-        "block-break": "deny",
-        "sleep-group": "MEMBERS"
-      },
-      "owners": {
-        "unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
-      },
-      "type": "cuboid",
-      "priority": 0
-    },
-    "misty": {
-      "min": {
-        "x": 45918,
-        "y": 0,
-        "z": 15279
-      },
-      "max": {
-        "x": 46255,
-        "y": 242,
-        "z": 15568
-      },
-      "members": {},
-      "flags": {
-        "build": "allow",
-        "tnt": "allow"
-      },
-      "owners": {},
-      "type": "cuboid",
-      "priority": 0
-    },
-    "lh-zajazd": {
-      "min": {
-        "x": 61588,
-        "y": 43,
-        "z": 78347
-      },
-      "max": {
-        "x": 61644,
-        "y": 168,
-        "z": 78420
-      },
-      "members": {},
-      "flags": {
-        "build": "allow",
-        "build-group": "MEMBERS",
-        "mob-spawning": "deny"
-      },
-      "owners": {},
-      "type": "cuboid",
-      "priority": 1
-    },
-    "carastamo": {
-      "min": {
-        "x": 39956,
-        "y": 0,
-        "z": 47804
-      },
-      "max": {
-        "x": 40277,
-        "y": 255,
-        "z": 48150
-      },
-      "members": {
-        "unique-ids": [
-          "6466632e-bc4e-3db6-bb01-67d60c54bf4b",
-          "71eaee9e-7fce-3899-bfc1-dff61fba918b",
-          "1fc9c7dd-2108-3ee9-8edf-b529acd01d23",
-          "fab3d77b-17d5-3835-ab5a-8b0f352ea29b",
-          "39815d1f-4470-471d-9e1e-6fba551f974c",
-          "7007df16-a9bb-3f0b-9667-cfe4420204c4",
-          "9c8bbfb8-7cc5-308c-8f76-090c776dbd38"
-        ]
-      },
-      "flags": {
-        "build": "allow",
-        "build-group": "MEMBERS"
-      },
-      "owners": {
-        "unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
-      },
-      "type": "cuboid",
-      "priority": 0
-    },
-    "morannon": {
-      "min": {
-        "x": 84286,
-        "y": 0,
-        "z": 51405
-      },
-      "max": {
-        "x": 84601,
-        "y": 255,
-        "z": 51651
-      },
-      "members": {},
-      "flags": {},
-      "owners": {},
-      "type": "cuboid",
-      "priority": 0
-    },
-    "gondor-hyallonde": {
-      "min": {
-        "x": 50537,
-        "y": 53,
-        "z": 86838
-      },
-      "max": {
-        "x": 50559,
-        "y": 255,
-        "z": 86857
-      },
-      "members": {},
-      "flags": {
-        "block-break": "deny",
-        "block-place": "deny"
-      },
-      "owners": {
-        "unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
-      },
-      "type": "cuboid",
-      "priority": 0
-    },
-    "imloth_melui": {
-      "min": {
-        "x": 74308,
-        "y": 0,
-        "z": 65924
-      },
-      "max": {
-        "x": 75402,
-        "y": 255,
-        "z": 67352
-      },
-      "members": {},
-      "flags": {
-        "build": "allow",
-        "build-group": "MEMBERS"
-      },
-      "owners": {
-        "unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
-      },
-      "type": "cuboid",
-      "priority": 0
-    },
-    "wprowadzenie": {
-      "min": {
-        "x": -2100157,
-        "y": 132,
-        "z": -40155
-      },
-      "max": {
-        "x": -2099889,
-        "y": 154,
-        "z": -39895
-      },
-      "members": {
-        "unique-ids": [
-          "45084c9e-688a-3ea4-9ceb-e32167a7486e",
-          "cdb0aa61-6d13-471d-a788-282f448cadbb"
-        ]
-      },
-      "flags": {
-        "build": "deny",
-        "build-group": "NON_MEMBERS"
-      },
-      "owners": {},
-      "type": "cuboid",
-      "priority": 0
-    },
-    "port_tolmorwen": {
-      "min": {
-        "x": -91726,
-        "y": 0,
-        "z": -4178
-      },
-      "max": {
-        "x": -91515,
-        "y": 255,
-        "z": -3799
-      },
-      "members": {
-        "unique-ids": [
-          "9d945e19-f9ba-3a33-89ea-53d3bbe5e700",
-          "7f509b08-5b26-39b1-9c46-0e771c98732e"
-        ]
-      },
-      "flags": {},
-      "owners": {},
-      "type": "cuboid",
-      "priority": 0
-    },
-    "aldburg": {
-      "min": {
-        "x": 52957,
-        "y": 0,
-        "z": 57169
-      },
-      "max": {
-        "x": 53140,
-        "y": 255,
-        "z": 57377
-      },
-      "members": {
-        "unique-ids": [
-          "c879069c-efd8-487f-98fa-a242a71b292e",
-          "e861c12d-0bd8-3260-a303-c3d24d8f4a76",
-          "f326a254-f3d0-3937-863c-1739d310e97d",
-          "ab813172-4db5-34a6-8fd7-9bdef28ba84d"
-        ]
-      },
-      "flags": {},
-      "owners": {
-        "unique-ids": ["a6ded39b-da9f-3e74-ac61-19c054d8a915"]
-      },
-      "type": "cuboid",
-      "priority": 0
-    },
-    "lh-las": {
-      "min": {
-        "x": 60572,
-        "y": 0,
-        "z": 78668
-      },
-      "max": {
-        "x": 61064,
-        "y": 255,
-        "z": 79284
-      },
-      "members": {
-        "unique-ids": [
-          "2bf96c03-da37-3123-8ade-d03a5a987f11",
-          "71eaee9e-7fce-3899-bfc1-dff61fba918b"
-        ]
-      },
-      "flags": {
-        "sleep": "allow",
-        "chest-access-group": "MEMBERS",
-        "interact": "allow",
-        "sleep-group": "MEMBERS",
-        "interact-group": "MEMBERS",
-        "chest-access": "allow"
-      },
-      "owners": {},
-      "type": "cuboid",
-      "priority": 1
-    },
-    "Ras_Morthil": {
-      "min": {
-        "x": 4289,
-        "y": 0,
-        "z": 76875
-      },
-      "max": {
-        "x": 4813,
-        "y": 255,
-        "z": 77212
-      },
-      "members": {
-        "unique-ids": [
-          "6466632e-bc4e-3db6-bb01-67d60c54bf4b",
-          "1fc9c7dd-2108-3ee9-8edf-b529acd01d23",
-          "71eaee9e-7fce-3899-bfc1-dff61fba918b",
-          "fab3d77b-17d5-3835-ab5a-8b0f352ea29b",
-          "7007df16-a9bb-3f0b-9667-cfe4420204c4",
-          "9c8bbfb8-7cc5-308c-8f76-090c776dbd38"
-        ]
-      },
-      "flags": {},
-      "owners": {},
-      "type": "cuboid",
-      "priority": 0
-    },
-    "lh-ziem-nld-2": {
-      "min": {
-        "x": 61430,
-        "y": 50,
-        "z": 78124
-      },
-      "max": {
-        "x": 61471,
-        "y": 103,
-        "z": 78204
-      },
-      "members": {
-        "unique-ids": ["9d945e19-f9ba-3a33-89ea-53d3bbe5e700"]
-      },
-      "flags": {
-        "chest-access-group": "MEMBERS",
-        "build": "allow",
-        "build-group": "MEMBERS",
-        "interact": "allow",
-        "interact-group": "MEMBERS",
-        "chest-access": "allow",
-        "mob-spawning": "deny"
-      },
-      "owners": {},
-      "type": "cuboid",
-      "priority": 1
-    },
-    "lh-ziem-nld-1": {
-      "min": {
-        "x": 61519,
-        "y": 50,
-        "z": 78108
-      },
-      "max": {
-        "x": 61594,
-        "y": 103,
-        "z": 78224
-      },
-      "members": {
-        "unique-ids": ["9d945e19-f9ba-3a33-89ea-53d3bbe5e700"]
-      },
-      "flags": {
-        "sleep": "allow",
-        "chest-access-group": "MEMBERS",
-        "build": "allow",
-        "build-group": "MEMBERS",
-        "interact": "allow",
-        "sleep-group": "MEMBERS",
-        "interact-group": "MEMBERS",
-        "chest-access": "allow",
-        "mob-spawning": "deny"
-      },
-      "owners": {
-        "unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
-      },
-      "type": "cuboid",
-      "priority": 1
-    },
-    "beorn": {
-      "min": {
-        "x": 62891,
-        "y": 0,
-        "z": -6539
-      },
-      "max": {
-        "x": 63201,
-        "y": 255,
-        "z": -6217
-      },
-      "members": {
-        "unique-ids": ["7f509b08-5b26-39b1-9c46-0e771c98732e"]
-      },
-      "flags": {
-        "build": "deny",
-        "build-group": "NON_MEMBERS"
-      },
-      "owners": {},
-      "type": "cuboid",
-      "priority": 0
-    },
-    "bree": {
-      "min": {
-        "x": 13568,
-        "y": 0,
-        "z": 370
-      },
-      "max": {
-        "x": 13942,
-        "y": 255,
-        "z": 779
-      },
-      "members": {
-        "unique-ids": [
-          "6466632e-bc4e-3db6-bb01-67d60c54bf4b",
-          "4bffb177-0564-3b0c-915f-59e9e6a0342b",
-          "9d945e19-f9ba-3a33-89ea-53d3bbe5e700"
-        ]
-      },
-      "flags": {
-        "interact": "allow"
-      },
-      "owners": {},
-      "type": "cuboid",
-      "priority": 0
-    },
-    "amon_sul": {
-      "min": {
-        "x": 24384,
-        "y": 0,
-        "z": -1040
-      },
-      "max": {
-        "x": 24566,
-        "y": 255,
-        "z": -847
-      },
-      "members": {},
-      "flags": {
-        "build": "deny"
-      },
-      "owners": {},
-      "type": "cuboid",
-      "priority": 0
-    },
-    "last_bridge": {
-      "min": {
-        "x": 35596,
-        "y": 0,
-        "z": -1991
-      },
-      "max": {
-        "x": 35698,
-        "y": 146,
-        "z": -1966
-      },
-      "members": {
-        "unique-ids": ["9d945e19-f9ba-3a33-89ea-53d3bbe5e700"]
-      },
-      "flags": {},
-      "owners": {},
-      "type": "cuboid",
-      "priority": 0
-    },
-    "nowyspawn": {
-      "min": {
-        "x": -30,
-        "y": 0,
-        "z": -28
-      },
-      "max": {
-        "x": 59,
-        "y": 255,
-        "z": 54
-      },
-      "members": {},
-      "flags": {
-        "block-break": "deny",
-        "chest-access": "deny",
-        "pvp": "deny",
-        "block-place": "deny"
-      },
-      "owners": {},
-      "type": "cuboid",
-      "priority": 0
-    },
-    "mtgram": {
-      "min": {
-        "x": 37931,
-        "y": 0,
-        "z": -18000
-      },
-      "max": {
-        "x": 38200,
-        "y": 255,
-        "z": -17701
-      },
-      "members": {
-        "unique-ids": ["cdb0aa61-6d13-471d-a788-282f448cadbb"]
-      },
-      "flags": {
-        "greeting": "Wchodzisz na obszar miejski Góry Gram.",
-        "build-group": "NON_MEMBERS",
-        "mob-damage-group": "NON_MEMBERS",
-        "interact": "allow",
-        "lighter": "deny",
-        "chest-access": "deny",
-        "pvp": "allow",
-        "tnt-group": "NON_MEMBERS",
-        "ride": "allow",
-        "lighter-group": "NON_MEMBERS",
-        "build": "deny",
-        "mob-damage": "allow",
-        "damage-animals": "allow",
-        "interact-group": "NON_MEMBERS",
-        "tnt": "deny",
-        "farewell": "Opuszczasz obszar Góry Gram."
-      },
-      "owners": {
-        "unique-ids": ["cdb0aa61-6d13-471d-a788-282f448cadbb"]
-      },
-      "type": "cuboid",
-      "priority": 0
-    },
-    "ethir-anduin": {
-      "min": {
-        "x": 58878,
-        "y": 0,
-        "z": 81583
-      },
-      "max": {
-        "x": 59568,
-        "y": 255,
-        "z": 82182
-      },
-      "members": {},
-      "flags": {
-        "build": "allow",
-        "build-group": "MEMBERS"
-      },
-      "owners": {},
-      "type": "cuboid",
-      "priority": 0
-    },
-    "lh-tawerna-s": {
-      "min": {
-        "x": 61494,
-        "y": 21,
-        "z": 78216
-      },
-      "max": {
-        "x": 61506,
-        "y": 121,
-        "z": 78226
-      },
-      "members": {
-        "unique-ids": ["b40339f3-64ab-3639-9f5d-76481623934e"]
-      },
-      "flags": {
-        "build": "allow",
-        "build-group": "MEMBERS"
-      },
-      "owners": {},
-      "type": "cuboid",
-      "priority": 1
-    },
-    "spawn": {
-      "min": {
-        "x": -477,
-        "y": 0,
-        "z": 305
-      },
-      "max": {
-        "x": -104,
-        "y": 255,
-        "z": 640
-      },
-      "members": {
-        "unique-ids": [
-          "6466632e-bc4e-3db6-bb01-67d60c54bf4b",
-          "7f509b08-5b26-39b1-9c46-0e771c98732e",
-          "ab813172-4db5-34a6-8fd7-9bdef28ba84d"
-        ]
-      },
-      "flags": {
-        "invincible": "allow",
-        "greeting": "Witaj na Spawnie!",
-        "block-break": "deny",
-        "interact": "allow",
-        "interact-group": "NON_MEMBERS",
-        "mob-spawning": "allow",
-        "block-place": "deny",
-        "farewell": "Opuszczasz Spawn. Miłego grania!"
-      },
-      "owners": {},
-      "type": "cuboid",
-      "priority": 0
-    },
-    "woldhall": {
-      "min": {
-        "x": 60590,
-        "y": 0,
-        "z": 37041
-      },
-      "max": {
-        "x": 60688,
-        "y": 255,
-        "z": 37166
-      },
-      "members": {
-        "unique-ids": [
-          "ab813172-4db5-34a6-8fd7-9bdef28ba84d",
-          "aa1d73b6-8cf2-37c4-8523-a42d4260c109"
-        ]
-      },
-      "flags": {},
-      "owners": {},
-      "type": "cuboid",
-      "priority": 0
-    },
-    "pelargir": {
-      "min": {
-        "x": 73739,
-        "y": 49,
-        "z": 79738
-      },
-      "max": {
-        "x": 74272,
-        "y": 134,
-        "z": 80129
-      },
-      "members": {
-        "unique-ids": ["2819f891-135b-34d0-aa1d-863b4dfe2868"]
-      },
-      "flags": {},
-      "owners": {},
-      "type": "cuboid",
-      "priority": 0
-    },
-    "dale-crossroads": {
-      "min": {
-        "x": 96472,
-        "y": 0,
-        "z": -6569
-      },
-      "max": {
-        "x": 97176,
-        "y": 255,
-        "z": -5992
-      },
-      "members": {},
-      "flags": {},
-      "owners": {},
-      "type": "cuboid",
-      "priority": 0
-    },
-    "cair-andros": {
-      "min": {
-        "x": 78536,
-        "y": 0,
-        "z": 60480
-      },
-      "max": {
-        "x": 79686,
-        "y": 255,
-        "z": 62137
-      },
-      "members": {},
-      "flags": {
-        "vehicle-place": "allow",
-        "build": "allow",
-        "build-group": "MEMBERS",
-        "interact": "allow",
-        "vehicle-destroy": "allow",
-        "damage-animals": "allow",
-        "pistons": "allow",
-        "pvp": "allow",
-        "ride": "allow"
-      },
-      "owners": {
-        "unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
-      },
-      "type": "cuboid",
-      "priority": 0
-    }
-  }
+	"regions": {
+		"isengard": {
+			"min": {
+				"x": 37368,
+				"y": 0,
+				"z": 41976
+			},
+			"max": {
+				"x": 37513,
+				"y": 255,
+				"z": 42120
+			},
+			"members": {},
+			"flags": {},
+			"owners": {
+				"unique-ids": ["9622a883-efd8-33ff-a5c9-db2714569a67"]
+			},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"elostirion": {
+			"min": {
+				"x": -12662,
+				"y": 0,
+				"z": 1505
+			},
+			"max": {
+				"x": -12606,
+				"y": 194,
+				"z": 1731
+			},
+			"members": {
+				"unique-ids": ["9d945e19-f9ba-3a33-89ea-53d3bbe5e700"]
+			},
+			"flags": {},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"pertol-lambenomeva": {
+			"min": {
+				"x": 60994,
+				"y": 0,
+				"z": 78506
+			},
+			"max": {
+				"x": 61098,
+				"y": 255,
+				"z": 78639
+			},
+			"members": {
+				"unique-ids": [
+					"1fc9c7dd-2108-3ee9-8edf-b529acd01d23",
+					"71eaee9e-7fce-3899-bfc1-dff61fba918b",
+					"9c8bbfb8-7cc5-308c-8f76-090c776dbd38"
+				]
+			},
+			"flags": {
+				"use": "allow",
+				"build-group": "NON_MEMBERS",
+				"mob-damage-group": "MEMBERS",
+				"interact": "allow",
+				"chest-access": "allow",
+				"block-place": "allow",
+				"ride": "allow",
+				"ride-group": "MEMBERS",
+				"build": "deny",
+				"chest-access-group": "MEMBERS",
+				"use-group": "MEMBERS",
+				"mob-damage": "allow",
+				"block-break": "allow",
+				"interact-group": "MEMBERS",
+				"block-place-group": "MEMBERS",
+				"block-break-group": "MEMBERS"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 1
+		},
+		"carnilonde": {
+			"min": {
+				"x": -27604,
+				"y": 0,
+				"z": 5645
+			},
+			"max": {
+				"x": -27330,
+				"y": 255,
+				"z": 6001
+			},
+			"members": {
+				"unique-ids": ["9d945e19-f9ba-3a33-89ea-53d3bbe5e700"]
+			},
+			"flags": {
+				"build": "allow",
+				"build-group": "MEMBERS"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"minas_tirith": {
+			"min": {
+				"x": 77495,
+				"y": 0,
+				"z": 66042
+			},
+			"max": {
+				"x": 77938,
+				"y": 255,
+				"z": 66426
+			},
+			"members": {
+				"unique-ids": [
+					"ab813172-4db5-34a6-8fd7-9bdef28ba84d",
+					"aa1d73b6-8cf2-37c4-8523-a42d4260c109"
+				]
+			},
+			"flags": {
+				"damage-animals": "allow",
+				"pvp": "allow"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"lh-tawerna": {
+			"min": {
+				"x": 61472,
+				"y": 21,
+				"z": 78195
+			},
+			"max": {
+				"x": 61506,
+				"y": 126,
+				"z": 78215
+			},
+			"members": {
+				"unique-ids": ["b40339f3-64ab-3639-9f5d-76481623934e"]
+			},
+			"flags": {
+				"build": "allow",
+				"build-group": "MEMBERS"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 1
+		},
+		"pits": {
+			"min": {
+				"x": 42106,
+				"y": 0,
+				"z": -43003
+			},
+			"max": {
+				"x": 42243,
+				"y": 255,
+				"z": -42844
+			},
+			"members": {},
+			"flags": {
+				"entry": "deny",
+				"build": "deny",
+				"build-group": "NON_MEMBERS"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"orocarni": {
+			"min": {
+				"x": 194082,
+				"y": 0,
+				"z": 8549
+			},
+			"max": {
+				"x": 195084,
+				"y": 255,
+				"z": 9280
+			},
+			"members": {
+				"unique-ids": [
+					"45084c9e-688a-3ea4-9ceb-e32167a7486e",
+					"9d945e19-f9ba-3a33-89ea-53d3bbe5e700",
+					"6466632e-bc4e-3db6-bb01-67d60c54bf4b",
+					"e271b564-7768-33c0-9bd9-ab81587c8786"
+				]
+			},
+			"flags": {
+				"interact": "allow"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"ethir-1": {
+			"min": {
+				"x": 59362,
+				"y": 54,
+				"z": 82126
+			},
+			"max": {
+				"x": 59426,
+				"y": 255,
+				"z": 82190
+			},
+			"members": {
+				"unique-ids": [
+					"71eaee9e-7fce-3899-bfc1-dff61fba918b",
+					"9c8bbfb8-7cc5-308c-8f76-090c776dbd38"
+				]
+			},
+			"flags": {
+				"sleep": "allow",
+				"build": "allow",
+				"chest-access-group": "MEMBERS",
+				"build-group": "MEMBERS",
+				"interact": "allow",
+				"sleep-group": "MEMBERS",
+				"interact-group": "MEMBERS",
+				"chest-access": "allow",
+				"mob-spawning": "deny"
+			},
+			"owners": {
+				"unique-ids": ["71eaee9e-7fce-3899-bfc1-dff61fba918b"]
+			},
+			"type": "cuboid",
+			"priority": 1
+		},
+		"mt-harost": {
+			"min": {
+				"x": 77799,
+				"y": 0,
+				"z": 66971
+			},
+			"max": {
+				"x": 77857,
+				"y": 255,
+				"z": 67132
+			},
+			"members": {
+				"unique-ids": [
+					"b40339f3-64ab-3639-9f5d-76481623934e",
+					"6466632e-bc4e-3db6-bb01-67d60c54bf4b",
+					"71eaee9e-7fce-3899-bfc1-dff61fba918b",
+					"59d32bb9-9d23-3299-b5c0-f1744be76caa"
+				]
+			},
+			"flags": {
+				"blocked-cmds": ["/tpa", "/tppos", "/teleport", "/tpaccept", "/tp"],
+				"use": "allow",
+				"use-group": "MEMBERS",
+				"block-break": "allow",
+				"interact": "allow",
+				"block-place-group": "MEMBERS",
+				"interact-group": "MEMBERS",
+				"block-place": "allow",
+				"block-break-group": "MEMBERS"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 1
+		},
+		"lh-dzia-6": {
+			"min": {
+				"x": 61608,
+				"y": 48,
+				"z": 78276
+			},
+			"max": {
+				"x": 61626,
+				"y": 130,
+				"z": 78289
+			},
+			"members": {},
+			"flags": {
+				"build-group": "MEMBERS",
+				"interact": "allow",
+				"chest-access": "allow",
+				"block-place": "allow",
+				"mob-spawning": "deny",
+				"sleep": "allow",
+				"build": "allow",
+				"chest-access-group": "MEMBERS",
+				"block-break": "allow",
+				"interact-group": "MEMBERS",
+				"sleep-group": "MEMBERS",
+				"block-place-group": "MEMBERS",
+				"block-break-group": "MEMBERS"
+			},
+			"owners": {
+				"unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
+			},
+			"type": "cuboid",
+			"priority": 1
+		},
+		"lh-dzia-7": {
+			"min": {
+				"x": 61619,
+				"y": 65,
+				"z": 78270
+			},
+			"max": {
+				"x": 61627,
+				"y": 85,
+				"z": 78275
+			},
+			"members": {},
+			"flags": {
+				"build-group": "MEMBERS",
+				"interact": "allow",
+				"chest-access": "allow",
+				"block-place": "allow",
+				"mob-spawning": "deny",
+				"sleep": "allow",
+				"build": "allow",
+				"chest-access-group": "MEMBERS",
+				"block-break": "allow",
+				"interact-group": "MEMBERS",
+				"sleep-group": "MEMBERS",
+				"block-place-group": "MEMBERS",
+				"block-break-group": "MEMBERS"
+			},
+			"owners": {
+				"unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
+			},
+			"type": "cuboid",
+			"priority": 1
+		},
+		"dale": {
+			"min": {
+				"x": 83378,
+				"y": 0,
+				"z": -14955
+			},
+			"max": {
+				"x": 84274,
+				"y": 255,
+				"z": -14365
+			},
+			"members": {
+				"unique-ids": [
+					"45084c9e-688a-3ea4-9ceb-e32167a7486e",
+					"7f509b08-5b26-39b1-9c46-0e771c98732e"
+				]
+			},
+			"flags": {
+				"build": "deny",
+				"build-group": "NON_MEMBERS",
+				"mob-spawning": "deny"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"lh-dzia-4": {
+			"min": {
+				"x": 61664,
+				"y": 49,
+				"z": 78205
+			},
+			"max": {
+				"x": 61680,
+				"y": 129,
+				"z": 78221
+			},
+			"members": {},
+			"flags": {
+				"build-group": "MEMBERS",
+				"interact": "allow",
+				"chest-access": "allow",
+				"block-place": "allow",
+				"mob-spawning": "deny",
+				"sleep": "allow",
+				"build": "allow",
+				"chest-access-group": "MEMBERS",
+				"block-break": "allow",
+				"interact-group": "MEMBERS",
+				"sleep-group": "MEMBERS",
+				"block-place-group": "MEMBERS",
+				"block-break-group": "MEMBERS"
+			},
+			"owners": {
+				"unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
+			},
+			"type": "cuboid",
+			"priority": 1
+		},
+		"lh-m-4": {
+			"min": {
+				"x": 61673,
+				"y": 72,
+				"z": 78283
+			},
+			"max": {
+				"x": 61676,
+				"y": 74,
+				"z": 78284
+			},
+			"members": {},
+			"flags": {
+				"sleep": "allow",
+				"build": "allow",
+				"chest-access-group": "MEMBERS",
+				"build-group": "MEMBERS",
+				"interact": "allow",
+				"sleep-group": "MEMBERS",
+				"interact-group": "MEMBERS",
+				"chest-access": "allow",
+				"mob-spawning": "deny"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 1
+		},
+		"lh-dzia-5": {
+			"min": {
+				"x": 61618,
+				"y": 49,
+				"z": 78249
+			},
+			"max": {
+				"x": 61635,
+				"y": 137,
+				"z": 78266
+			},
+			"members": {
+				"unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
+			},
+			"flags": {
+				"build-group": "MEMBERS",
+				"interact": "allow",
+				"chest-access": "allow",
+				"block-place": "allow",
+				"mob-spawning": "deny",
+				"sleep": "allow",
+				"build": "allow",
+				"chest-access-group": "MEMBERS",
+				"block-break": "allow",
+				"interact-group": "MEMBERS",
+				"sleep-group": "MEMBERS",
+				"block-place-group": "MEMBERS",
+				"block-break-group": "MEMBERS"
+			},
+			"owners": {
+				"unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
+			},
+			"type": "cuboid",
+			"priority": 1
+		},
+		"lh-m-3": {
+			"min": {
+				"x": 61645,
+				"y": 74,
+				"z": 78257
+			},
+			"max": {
+				"x": 61649,
+				"y": 76,
+				"z": 78262
+			},
+			"members": {},
+			"flags": {
+				"sleep": "allow",
+				"build": "allow",
+				"chest-access-group": "MEMBERS",
+				"build-group": "MEMBERS",
+				"interact": "allow",
+				"sleep-group": "MEMBERS",
+				"interact-group": "MEMBERS",
+				"chest-access": "allow",
+				"mob-spawning": "deny"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 1
+		},
+		"lh-dzia-2": {
+			"min": {
+				"x": 61681,
+				"y": 50,
+				"z": 78183
+			},
+			"max": {
+				"x": 61697,
+				"y": 85,
+				"z": 78199
+			},
+			"members": {
+				"unique-ids": [
+					"71eaee9e-7fce-3899-bfc1-dff61fba918b",
+					"9c8bbfb8-7cc5-308c-8f76-090c776dbd38"
+				]
+			},
+			"flags": {
+				"build-group": "MEMBERS",
+				"interact": "allow",
+				"chest-access": "allow",
+				"block-place": "allow",
+				"mob-spawning": "deny",
+				"sleep": "allow",
+				"build": "allow",
+				"chest-access-group": "MEMBERS",
+				"block-break": "allow",
+				"interact-group": "MEMBERS",
+				"sleep-group": "MEMBERS",
+				"block-place-group": "MEMBERS",
+				"block-break-group": "MEMBERS"
+			},
+			"owners": {
+				"unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
+			},
+			"type": "cuboid",
+			"priority": 1
+		},
+		"lh-m-2": {
+			"min": {
+				"x": 61655,
+				"y": 75,
+				"z": 78241
+			},
+			"max": {
+				"x": 61661,
+				"y": 78,
+				"z": 78244
+			},
+			"members": {
+				"unique-ids": ["1fc9c7dd-2108-3ee9-8edf-b529acd01d23"]
+			},
+			"flags": {
+				"build": "deny",
+				"chest-access-group": "MEMBERS",
+				"interact": "allow",
+				"interact-group": "MEMBERS",
+				"chest-access": "allow"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 1
+		},
+		"lh-dzia-3": {
+			"min": {
+				"x": 61698,
+				"y": 50,
+				"z": 78183
+			},
+			"max": {
+				"x": 61714,
+				"y": 85,
+				"z": 78199
+			},
+			"members": {
+				"unique-ids": [
+					"71eaee9e-7fce-3899-bfc1-dff61fba918b",
+					"9c8bbfb8-7cc5-308c-8f76-090c776dbd38"
+				]
+			},
+			"flags": {
+				"build-group": "MEMBERS",
+				"interact": "allow",
+				"chest-access": "allow",
+				"block-place": "allow",
+				"mob-spawning": "deny",
+				"sleep": "allow",
+				"build": "allow",
+				"chest-access-group": "MEMBERS",
+				"block-break": "allow",
+				"interact-group": "MEMBERS",
+				"sleep-group": "MEMBERS",
+				"block-place-group": "MEMBERS",
+				"block-break-group": "MEMBERS"
+			},
+			"owners": {
+				"unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
+			},
+			"type": "cuboid",
+			"priority": 1
+		},
+		"lh-m-1": {
+			"min": {
+				"x": 61644,
+				"y": 74,
+				"z": 78242
+			},
+			"max": {
+				"x": 61649,
+				"y": 76,
+				"z": 78245
+			},
+			"members": {},
+			"flags": {
+				"build": "deny",
+				"chest-access-group": "MEMBERS",
+				"interact": "allow",
+				"interact-group": "MEMBERS",
+				"chest-access": "allow"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 1
+		},
+		"moria": {
+			"min": {
+				"x": 41564,
+				"y": 0,
+				"z": 17927
+			},
+			"max": {
+				"x": 42910,
+				"y": 255,
+				"z": 18577
+			},
+			"members": {
+				"unique-ids": [
+					"7f509b08-5b26-39b1-9c46-0e771c98732e",
+					"2123abfe-705c-390c-94a6-f97de18b8d5c",
+					"8c165c43-5d37-41d6-8b8b-9c393dc9fbee",
+					"72415332-b635-3f84-9135-8144694061b9",
+					"6bdf6857-843c-3946-bc6d-33258deddebc",
+					"d94f134b-81eb-3d84-98f4-c0440443d64e"
+				]
+			},
+			"flags": {
+				"build": "deny",
+				"use": "allow",
+				"build-group": "NON_MEMBERS",
+				"use-group": "NON_MEMBERS",
+				"mob-damage": "allow",
+				"passthrough": "allow",
+				"block-break": "deny",
+				"interact": "allow",
+				"interact-group": "NON_MEMBERS",
+				"block-place": "allow",
+				"block-break-group": "NON_MEMBERS"
+			},
+			"owners": {
+				"unique-ids": [
+					"b40339f3-64ab-3639-9f5d-76481623934e",
+					"6298d12e-2a7e-4840-a18b-9d9b42a577be"
+				]
+			},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"gundabad": {
+			"min": {
+				"x": 49112,
+				"y": 0,
+				"z": -17947
+			},
+			"max": {
+				"x": 49561,
+				"y": 255,
+				"z": -17404
+			},
+			"members": {},
+			"flags": {
+				"sleep": "allow",
+				"build": "allow",
+				"chest-access-group": "MEMBERS",
+				"build-group": "MEMBERS",
+				"interact": "allow",
+				"sleep-group": "MEMBERS",
+				"interact-group": "MEMBERS",
+				"chest-access": "allow"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"lh-dzia-1": {
+			"min": {
+				"x": 61664,
+				"y": 60,
+				"z": 78183
+			},
+			"max": {
+				"x": 61680,
+				"y": 86,
+				"z": 78199
+			},
+			"members": {
+				"unique-ids": ["59d32bb9-9d23-3299-b5c0-f1744be76caa"]
+			},
+			"flags": {
+				"build-group": "MEMBERS",
+				"interact": "allow",
+				"chest-access": "allow",
+				"block-place": "allow",
+				"mob-spawning": "deny",
+				"sleep": "allow",
+				"build": "allow",
+				"chest-access-group": "MEMBERS",
+				"block-break": "allow",
+				"interact-group": "MEMBERS",
+				"sleep-group": "MEMBERS",
+				"block-place-group": "MEMBERS",
+				"block-break-group": "MEMBERS"
+			},
+			"owners": {
+				"unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
+			},
+			"type": "cuboid",
+			"priority": 1
+		},
+		"punktzero": {
+			"min": {
+				"x": -2,
+				"y": 71,
+				"z": -9
+			},
+			"max": {
+				"x": 1,
+				"y": 80,
+				"z": 1
+			},
+			"members": {},
+			"flags": {
+				"build": "deny",
+				"greeting": "Witaj na Spawnie! W pobliskich domkach znajduje się info o serwerze!",
+				"pvp": "deny"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"linhir": {
+			"min": {
+				"x": 60200,
+				"y": 0,
+				"z": 77860
+			},
+			"max": {
+				"x": 62100,
+				"y": 255,
+				"z": 79640
+			},
+			"members": {
+				"unique-ids": [
+					"cdb0aa61-6d13-471d-a788-282f448cadbb",
+					"6466632e-bc4e-3db6-bb01-67d60c54bf4b",
+					"9d945e19-f9ba-3a33-89ea-53d3bbe5e700",
+					"71eaee9e-7fce-3899-bfc1-dff61fba918b",
+					"00c4417d-fc10-349b-99e7-b32b721d083b",
+					"9c8bbfb8-7cc5-308c-8f76-090c776dbd38",
+					"7994a15d-93e4-36e6-b29e-e926dcc2068b",
+					"1fc9c7dd-2108-3ee9-8edf-b529acd01d23",
+					"38f77d05-f15f-3f9d-9c82-6fa5fb3f81f6",
+					"2bf96c03-da37-3123-8ade-d03a5a987f11",
+					"304544a6-bf5f-350f-b3b8-d43339d7af36"
+				]
+			},
+			"flags": {
+				"use": "allow",
+				"vehicle-destroy": "allow",
+				"interact": "allow",
+				"chest-access": "allow",
+				"pvp": "allow",
+				"block-place": "deny",
+				"ride": "allow",
+				"mob-spawning": "allow",
+				"sleep": "allow",
+				"vehicle-place": "allow",
+				"chest-access-group": "MEMBERS",
+				"blocked-cmds": [
+					"/tpa",
+					"/tppos",
+					"/teleport",
+					"/tpaccept",
+					"/warp",
+					"/tp"
+				],
+				"use-group": "MEMBERS",
+				"mob-damage": "allow",
+				"block-break": "deny",
+				"sleep-group": "MEMBERS",
+				"block-place-group": "NON_MEMBERS",
+				"block-break-group": "NON_MEMBERS"
+			},
+			"owners": {
+				"unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
+			},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"budownia": {
+			"min": {
+				"x": -30527,
+				"y": 0,
+				"z": 85807
+			},
+			"max": {
+				"x": -30260,
+				"y": 255,
+				"z": 86047
+			},
+			"members": {},
+			"flags": {
+				"build": "allow",
+				"build-group": "MEMBERS",
+				"mob-spawning": "deny"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"meneltarma": {
+			"min": {
+				"x": -97182,
+				"y": 0,
+				"z": 127102
+			},
+			"max": {
+				"x": -94062,
+				"y": 255,
+				"z": 129588
+			},
+			"members": {},
+			"flags": {
+				"blocked-cmds": [
+					"/tpa",
+					"/sethome",
+					"/teleport",
+					"/tpaccept",
+					"/home",
+					"/tp"
+				]
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"misty": {
+			"min": {
+				"x": 45918,
+				"y": 0,
+				"z": 15279
+			},
+			"max": {
+				"x": 46255,
+				"y": 242,
+				"z": 15568
+			},
+			"members": {},
+			"flags": {
+				"build": "allow",
+				"tnt": "allow"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"lh-zajazd": {
+			"min": {
+				"x": 61588,
+				"y": 43,
+				"z": 78347
+			},
+			"max": {
+				"x": 61644,
+				"y": 168,
+				"z": 78420
+			},
+			"members": {},
+			"flags": {
+				"build": "allow",
+				"build-group": "MEMBERS",
+				"mob-spawning": "deny"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 1
+		},
+		"carastamo": {
+			"min": {
+				"x": 39956,
+				"y": 0,
+				"z": 47804
+			},
+			"max": {
+				"x": 40277,
+				"y": 255,
+				"z": 48150
+			},
+			"members": {
+				"unique-ids": [
+					"6466632e-bc4e-3db6-bb01-67d60c54bf4b",
+					"71eaee9e-7fce-3899-bfc1-dff61fba918b",
+					"1fc9c7dd-2108-3ee9-8edf-b529acd01d23",
+					"fab3d77b-17d5-3835-ab5a-8b0f352ea29b",
+					"39815d1f-4470-471d-9e1e-6fba551f974c",
+					"7007df16-a9bb-3f0b-9667-cfe4420204c4",
+					"9c8bbfb8-7cc5-308c-8f76-090c776dbd38"
+				]
+			},
+			"flags": {
+				"build": "allow",
+				"build-group": "MEMBERS"
+			},
+			"owners": {
+				"unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
+			},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"morannon": {
+			"min": {
+				"x": 84286,
+				"y": 0,
+				"z": 51405
+			},
+			"max": {
+				"x": 84601,
+				"y": 255,
+				"z": 51651
+			},
+			"members": {},
+			"flags": {},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"brama-rzeczna": {
+			"min": {
+				"x": 85465,
+				"y": 0,
+				"z": -4340
+			},
+			"max": {
+				"x": 85631,
+				"y": 255,
+				"z": -4308
+			},
+			"members": {},
+			"flags": {
+				"build": "allow",
+				"chest-access-group": "MEMBERS",
+				"build-group": "MEMBERS",
+				"interact": "allow",
+				"chest-access": "allow"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"gondor-hyallonde": {
+			"min": {
+				"x": 50537,
+				"y": 53,
+				"z": 86838
+			},
+			"max": {
+				"x": 50559,
+				"y": 255,
+				"z": 86857
+			},
+			"members": {},
+			"flags": {
+				"block-break": "deny",
+				"block-place": "deny"
+			},
+			"owners": {
+				"unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
+			},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"imloth_melui": {
+			"min": {
+				"x": 74308,
+				"y": 0,
+				"z": 65924
+			},
+			"max": {
+				"x": 75402,
+				"y": 255,
+				"z": 67352
+			},
+			"members": {},
+			"flags": {
+				"build": "allow",
+				"build-group": "MEMBERS"
+			},
+			"owners": {
+				"unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
+			},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"wprowadzenie": {
+			"min": {
+				"x": -2100157,
+				"y": 132,
+				"z": -40155
+			},
+			"max": {
+				"x": -2099889,
+				"y": 154,
+				"z": -39895
+			},
+			"members": {
+				"unique-ids": [
+					"45084c9e-688a-3ea4-9ceb-e32167a7486e",
+					"cdb0aa61-6d13-471d-a788-282f448cadbb"
+				]
+			},
+			"flags": {
+				"build": "deny",
+				"build-group": "NON_MEMBERS"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"port_tolmorwen": {
+			"min": {
+				"x": -91726,
+				"y": 0,
+				"z": -4178
+			},
+			"max": {
+				"x": -91515,
+				"y": 255,
+				"z": -3799
+			},
+			"members": {
+				"unique-ids": [
+					"9d945e19-f9ba-3a33-89ea-53d3bbe5e700",
+					"7f509b08-5b26-39b1-9c46-0e771c98732e"
+				]
+			},
+			"flags": {},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"aldburg": {
+			"min": {
+				"x": 52957,
+				"y": 0,
+				"z": 57169
+			},
+			"max": {
+				"x": 53140,
+				"y": 255,
+				"z": 57377
+			},
+			"members": {
+				"unique-ids": [
+					"c879069c-efd8-487f-98fa-a242a71b292e",
+					"e861c12d-0bd8-3260-a303-c3d24d8f4a76",
+					"f326a254-f3d0-3937-863c-1739d310e97d",
+					"ab813172-4db5-34a6-8fd7-9bdef28ba84d"
+				]
+			},
+			"flags": {},
+			"owners": {
+				"unique-ids": ["a6ded39b-da9f-3e74-ac61-19c054d8a915"]
+			},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"lh-las": {
+			"min": {
+				"x": 60572,
+				"y": 0,
+				"z": 78668
+			},
+			"max": {
+				"x": 61064,
+				"y": 255,
+				"z": 79284
+			},
+			"members": {
+				"unique-ids": [
+					"2bf96c03-da37-3123-8ade-d03a5a987f11",
+					"71eaee9e-7fce-3899-bfc1-dff61fba918b"
+				]
+			},
+			"flags": {
+				"sleep": "allow",
+				"chest-access-group": "MEMBERS",
+				"interact": "allow",
+				"sleep-group": "MEMBERS",
+				"interact-group": "MEMBERS",
+				"chest-access": "allow"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 1
+		},
+		"carastamo1": {
+			"min": {
+				"x": 4289,
+				"y": 0,
+				"z": 76875
+			},
+			"max": {
+				"x": 4813,
+				"y": 255,
+				"z": 77212
+			},
+			"members": {
+				"unique-ids": [
+					"6466632e-bc4e-3db6-bb01-67d60c54bf4b",
+					"1fc9c7dd-2108-3ee9-8edf-b529acd01d23",
+					"71eaee9e-7fce-3899-bfc1-dff61fba918b",
+					"fab3d77b-17d5-3835-ab5a-8b0f352ea29b",
+					"7007df16-a9bb-3f0b-9667-cfe4420204c4",
+					"9c8bbfb8-7cc5-308c-8f76-090c776dbd38"
+				]
+			},
+			"flags": {},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"lh-ziem-nld-2": {
+			"min": {
+				"x": 61430,
+				"y": 50,
+				"z": 78124
+			},
+			"max": {
+				"x": 61471,
+				"y": 103,
+				"z": 78204
+			},
+			"members": {
+				"unique-ids": ["9d945e19-f9ba-3a33-89ea-53d3bbe5e700"]
+			},
+			"flags": {
+				"build": "allow",
+				"chest-access-group": "MEMBERS",
+				"build-group": "MEMBERS",
+				"interact": "allow",
+				"interact-group": "MEMBERS",
+				"chest-access": "allow",
+				"mob-spawning": "deny"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 1
+		},
+		"lh-ziem-nld-1": {
+			"min": {
+				"x": 61519,
+				"y": 50,
+				"z": 78108
+			},
+			"max": {
+				"x": 61594,
+				"y": 103,
+				"z": 78224
+			},
+			"members": {
+				"unique-ids": ["9d945e19-f9ba-3a33-89ea-53d3bbe5e700"]
+			},
+			"flags": {
+				"sleep": "allow",
+				"build": "allow",
+				"chest-access-group": "MEMBERS",
+				"build-group": "MEMBERS",
+				"interact": "allow",
+				"sleep-group": "MEMBERS",
+				"interact-group": "MEMBERS",
+				"chest-access": "allow",
+				"mob-spawning": "deny"
+			},
+			"owners": {
+				"unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
+			},
+			"type": "cuboid",
+			"priority": 1
+		},
+		"beorn": {
+			"min": {
+				"x": 62891,
+				"y": 0,
+				"z": -6539
+			},
+			"max": {
+				"x": 63201,
+				"y": 255,
+				"z": -6217
+			},
+			"members": {
+				"unique-ids": ["7f509b08-5b26-39b1-9c46-0e771c98732e"]
+			},
+			"flags": {
+				"build": "deny",
+				"build-group": "NON_MEMBERS"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"rohan_zajazd": {
+			"min": {
+				"x": 50331,
+				"y": 0,
+				"z": 55377
+			},
+			"max": {
+				"x": 50423,
+				"y": 255,
+				"z": 55490
+			},
+			"members": {},
+			"flags": {
+				"build": "allow",
+				"build-group": "MEMBERS"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"bree": {
+			"min": {
+				"x": 13568,
+				"y": 0,
+				"z": 370
+			},
+			"max": {
+				"x": 13942,
+				"y": 255,
+				"z": 779
+			},
+			"members": {
+				"unique-ids": [
+					"6466632e-bc4e-3db6-bb01-67d60c54bf4b",
+					"4bffb177-0564-3b0c-915f-59e9e6a0342b",
+					"9d945e19-f9ba-3a33-89ea-53d3bbe5e700"
+				]
+			},
+			"flags": {
+				"interact": "allow"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"lh-ziem-csr-1": {
+			"min": {
+				"x": 61117,
+				"y": 65,
+				"z": 78268
+			},
+			"max": {
+				"x": 61213,
+				"y": 255,
+				"z": 78356
+			},
+			"members": {
+				"unique-ids": [
+					"7994a15d-93e4-36e6-b29e-e926dcc2068b",
+					"2123abfe-705c-390c-94a6-f97de18b8d5c"
+				]
+			},
+			"flags": {
+				"build-group": "MEMBERS",
+				"interact": "allow",
+				"chest-access": "allow",
+				"block-place": "allow",
+				"mob-spawning": "deny",
+				"sleep": "allow",
+				"build": "allow",
+				"chest-access-group": "MEMBERS",
+				"block-break": "allow",
+				"interact-group": "MEMBERS",
+				"sleep-group": "MEMBERS",
+				"block-place-group": "MEMBERS",
+				"block-break-group": "MEMBERS"
+			},
+			"owners": {
+				"unique-ids": ["7994a15d-93e4-36e6-b29e-e926dcc2068b"]
+			},
+			"type": "cuboid",
+			"priority": 1
+		},
+		"amon_sul": {
+			"min": {
+				"x": 24384,
+				"y": 0,
+				"z": -1040
+			},
+			"max": {
+				"x": 24566,
+				"y": 255,
+				"z": -847
+			},
+			"members": {},
+			"flags": {
+				"build": "deny"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"last_bridge": {
+			"min": {
+				"x": 35596,
+				"y": 0,
+				"z": -1991
+			},
+			"max": {
+				"x": 35698,
+				"y": 146,
+				"z": -1966
+			},
+			"members": {
+				"unique-ids": ["9d945e19-f9ba-3a33-89ea-53d3bbe5e700"]
+			},
+			"flags": {},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"nowyspawn": {
+			"min": {
+				"x": -30,
+				"y": 0,
+				"z": -28
+			},
+			"max": {
+				"x": 59,
+				"y": 255,
+				"z": 54
+			},
+			"members": {},
+			"flags": {
+				"block-break": "deny",
+				"chest-access": "deny",
+				"pvp": "deny",
+				"block-place": "deny"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"mtgram": {
+			"min": {
+				"x": 37931,
+				"y": 0,
+				"z": -18000
+			},
+			"max": {
+				"x": 38200,
+				"y": 255,
+				"z": -17701
+			},
+			"members": {
+				"unique-ids": ["cdb0aa61-6d13-471d-a788-282f448cadbb"]
+			},
+			"flags": {
+				"build-group": "NON_MEMBERS",
+				"greeting": "Wchodzisz na obszar miejski Góry Gram.",
+				"mob-damage-group": "NON_MEMBERS",
+				"lighter": "deny",
+				"interact": "allow",
+				"chest-access": "deny",
+				"pvp": "allow",
+				"tnt-group": "NON_MEMBERS",
+				"ride": "allow",
+				"lighter-group": "NON_MEMBERS",
+				"build": "deny",
+				"mob-damage": "allow",
+				"damage-animals": "allow",
+				"interact-group": "NON_MEMBERS",
+				"tnt": "deny",
+				"farewell": "Opuszczasz obszar Góry Gram."
+			},
+			"owners": {
+				"unique-ids": ["cdb0aa61-6d13-471d-a788-282f448cadbb"]
+			},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"ethir-anduin": {
+			"min": {
+				"x": 58878,
+				"y": 0,
+				"z": 81583
+			},
+			"max": {
+				"x": 59568,
+				"y": 255,
+				"z": 82182
+			},
+			"members": {},
+			"flags": {
+				"build": "allow",
+				"build-group": "MEMBERS",
+				"chest-access": "deny"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"lh-tawerna-s": {
+			"min": {
+				"x": 61494,
+				"y": 21,
+				"z": 78216
+			},
+			"max": {
+				"x": 61506,
+				"y": 121,
+				"z": 78226
+			},
+			"members": {
+				"unique-ids": ["b40339f3-64ab-3639-9f5d-76481623934e"]
+			},
+			"flags": {
+				"build": "allow",
+				"build-group": "MEMBERS"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 1
+		},
+		"dol_guldur": {
+			"min": {
+				"x": 67668,
+				"y": 0,
+				"z": 20986
+			},
+			"max": {
+				"x": 67962,
+				"y": 255,
+				"z": 21097
+			},
+			"members": {},
+			"flags": {
+				"build": "allow",
+				"build-group": "MEMBERS"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"spawn": {
+			"min": {
+				"x": -477,
+				"y": 0,
+				"z": 305
+			},
+			"max": {
+				"x": -104,
+				"y": 255,
+				"z": 640
+			},
+			"members": {
+				"unique-ids": [
+					"6466632e-bc4e-3db6-bb01-67d60c54bf4b",
+					"7f509b08-5b26-39b1-9c46-0e771c98732e",
+					"ab813172-4db5-34a6-8fd7-9bdef28ba84d"
+				]
+			},
+			"flags": {
+				"block-break": "deny",
+				"interact": "allow",
+				"interact-group": "NON_MEMBERS",
+				"mob-spawning": "allow",
+				"block-place": "deny"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"woldhall": {
+			"min": {
+				"x": 60590,
+				"y": 0,
+				"z": 37041
+			},
+			"max": {
+				"x": 60688,
+				"y": 255,
+				"z": 37166
+			},
+			"members": {
+				"unique-ids": [
+					"ab813172-4db5-34a6-8fd7-9bdef28ba84d",
+					"aa1d73b6-8cf2-37c4-8523-a42d4260c109"
+				]
+			},
+			"flags": {},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"pelargir": {
+			"min": {
+				"x": 73639,
+				"y": 0,
+				"z": 79688
+			},
+			"max": {
+				"x": 74509,
+				"y": 255,
+				"z": 80211
+			},
+			"members": {
+				"unique-ids": ["2819f891-135b-34d0-aa1d-863b4dfe2868"]
+			},
+			"flags": {
+				"build": "allow",
+				"chest-access-group": "MEMBERS",
+				"blocked-cmds": ["/tpa", "/tppos", "/teleport", "/tpaccept", "/tp"],
+				"build-group": "MEMBERS",
+				"interact": "allow",
+				"interact-group": "MEMBERS",
+				"chest-access": "allow"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"dale-crossroads": {
+			"min": {
+				"x": 96472,
+				"y": 0,
+				"z": -6569
+			},
+			"max": {
+				"x": 97176,
+				"y": 255,
+				"z": -5992
+			},
+			"members": {},
+			"flags": {
+				"build": "allow",
+				"build-group": "MEMBERS"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"cair-andros": {
+			"min": {
+				"x": 78536,
+				"y": 0,
+				"z": 60480
+			},
+			"max": {
+				"x": 79686,
+				"y": 255,
+				"z": 62137
+			},
+			"members": {},
+			"flags": {
+				"vehicle-place": "allow",
+				"build": "allow",
+				"blocked-cmds": ["/tpa", "/tppos", "/teleport", "/tpaccept", "/tp"],
+				"build-group": "MEMBERS",
+				"vehicle-destroy": "allow",
+				"damage-animals": "allow",
+				"interact": "allow",
+				"pistons": "allow",
+				"pvp": "allow",
+				"ride": "allow"
+			},
+			"owners": {
+				"unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
+			},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"__global__": {
+			"members": {},
+			"flags": {
+				"other-explosion": "deny",
+				"blocked-cmds": ["/'"],
+				"use": "allow",
+				"interact": "allow",
+				"tnt": "deny"
+			},
+			"owners": {},
+			"type": "global",
+			"priority": 0
+		}
+	}
 }
