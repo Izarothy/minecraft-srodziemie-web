@@ -38,7 +38,10 @@ export default function Map() {
 					className=" border-2 border-yellow-400 brightness-75 "
 				/>
 				{Object.entries(worldGuardRegions.regions).map(([key, val]) => {
-					if (privateRegions.includes(key)) return;
+					console.log(
+						`Checking region: ${key}, isPrivate: ${String(privateRegions.includes(key))}`,
+					);
+					if (privateRegions.includes(key)) return null;
 
 					if ("min" in val && "max" in val) {
 						const [minLatLong, maxLatLong] = convertCoordinatesToLatLng(
