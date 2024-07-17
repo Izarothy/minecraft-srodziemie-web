@@ -50,7 +50,7 @@ export default function Map() {
 						);
 
 						let regionName = key.charAt(0).toUpperCase() + key.slice(1);
-						if (regionName.includes("carastamo")) regionName = "Ras Morthil";
+						if (regionName === "Carastamo1") regionName = "Ras Morthil";
 
 						return (
 							<>
