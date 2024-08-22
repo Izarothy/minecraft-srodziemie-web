@@ -1,7 +1,7 @@
+// @ts-nocheck
 import dotenv from 'dotenv';
 import ftp from "basic-ftp";
 import fs from "node:fs";
-// @ts-ignore
 import yaml from "js-yaml";
 
 dotenv.config();
