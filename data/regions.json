@@ -2,14 +2,14 @@
 	"regions": {
 		"isengard": {
 			"min": {
-				"x": 37368,
+				"x": 36868,
 				"y": 0,
-				"z": 41976
+				"z": 41476
 			},
 			"max": {
-				"x": 37513,
+				"x": 38013,
 				"y": 255,
-				"z": 42120
+				"z": 42620
 			},
 			"members": {},
 			"flags": {},
@@ -53,7 +53,8 @@
 				"unique-ids": [
 					"1fc9c7dd-2108-3ee9-8edf-b529acd01d23",
 					"71eaee9e-7fce-3899-bfc1-dff61fba918b",
-					"9c8bbfb8-7cc5-308c-8f76-090c776dbd38"
+					"9c8bbfb8-7cc5-308c-8f76-090c776dbd38",
+					"c47b057f-5104-3f45-b241-d10cc3254d53"
 				]
 			},
 			"flags": {
@@ -62,16 +63,16 @@
 				"mob-damage-group": "MEMBERS",
 				"interact": "allow",
 				"chest-access": "allow",
-				"block-place": "allow",
 				"ride": "allow",
+				"block-place": "allow",
 				"ride-group": "MEMBERS",
-				"build": "deny",
 				"chest-access-group": "MEMBERS",
+				"build": "deny",
 				"use-group": "MEMBERS",
 				"mob-damage": "allow",
 				"block-break": "allow",
-				"interact-group": "MEMBERS",
 				"block-place-group": "MEMBERS",
+				"interact-group": "MEMBERS",
 				"block-break-group": "MEMBERS"
 			},
 			"owners": {},
@@ -213,8 +214,8 @@
 			},
 			"flags": {
 				"sleep": "allow",
-				"build": "allow",
 				"chest-access-group": "MEMBERS",
+				"build": "allow",
 				"build-group": "MEMBERS",
 				"interact": "allow",
 				"sleep-group": "MEMBERS",
@@ -248,8 +249,8 @@
 				]
 			},
 			"flags": {
-				"blocked-cmds": ["/tpa", "/tppos", "/teleport", "/tpaccept", "/tp"],
 				"use": "allow",
+				"blocked-cmds": ["/tpa", "/tppos", "/teleport", "/tpaccept", "/tp"],
 				"use-group": "MEMBERS",
 				"block-break": "allow",
 				"interact": "allow",
@@ -278,15 +279,15 @@
 				"build-group": "MEMBERS",
 				"interact": "allow",
 				"chest-access": "allow",
-				"block-place": "allow",
 				"mob-spawning": "deny",
+				"block-place": "allow",
 				"sleep": "allow",
-				"build": "allow",
 				"chest-access-group": "MEMBERS",
+				"build": "allow",
 				"block-break": "allow",
-				"interact-group": "MEMBERS",
-				"sleep-group": "MEMBERS",
 				"block-place-group": "MEMBERS",
+				"sleep-group": "MEMBERS",
+				"interact-group": "MEMBERS",
 				"block-break-group": "MEMBERS"
 			},
 			"owners": {
@@ -311,15 +312,15 @@
 				"build-group": "MEMBERS",
 				"interact": "allow",
 				"chest-access": "allow",
-				"block-place": "allow",
 				"mob-spawning": "deny",
+				"block-place": "allow",
 				"sleep": "allow",
-				"build": "allow",
 				"chest-access-group": "MEMBERS",
+				"build": "allow",
 				"block-break": "allow",
-				"interact-group": "MEMBERS",
-				"sleep-group": "MEMBERS",
 				"block-place-group": "MEMBERS",
+				"sleep-group": "MEMBERS",
+				"interact-group": "MEMBERS",
 				"block-break-group": "MEMBERS"
 			},
 			"owners": {
@@ -370,15 +371,15 @@
 				"build-group": "MEMBERS",
 				"interact": "allow",
 				"chest-access": "allow",
-				"block-place": "allow",
 				"mob-spawning": "deny",
+				"block-place": "allow",
 				"sleep": "allow",
-				"build": "allow",
 				"chest-access-group": "MEMBERS",
+				"build": "allow",
 				"block-break": "allow",
-				"interact-group": "MEMBERS",
-				"sleep-group": "MEMBERS",
 				"block-place-group": "MEMBERS",
+				"sleep-group": "MEMBERS",
+				"interact-group": "MEMBERS",
 				"block-break-group": "MEMBERS"
 			},
 			"owners": {
@@ -401,8 +402,8 @@
 			"members": {},
 			"flags": {
 				"sleep": "allow",
-				"build": "allow",
 				"chest-access-group": "MEMBERS",
+				"build": "allow",
 				"build-group": "MEMBERS",
 				"interact": "allow",
 				"sleep-group": "MEMBERS",
@@ -432,15 +433,15 @@
 				"build-group": "MEMBERS",
 				"interact": "allow",
 				"chest-access": "allow",
-				"block-place": "allow",
 				"mob-spawning": "deny",
+				"block-place": "allow",
 				"sleep": "allow",
-				"build": "allow",
 				"chest-access-group": "MEMBERS",
+				"build": "allow",
 				"block-break": "allow",
-				"interact-group": "MEMBERS",
-				"sleep-group": "MEMBERS",
 				"block-place-group": "MEMBERS",
+				"sleep-group": "MEMBERS",
+				"interact-group": "MEMBERS",
 				"block-break-group": "MEMBERS"
 			},
 			"owners": {
@@ -463,8 +464,8 @@
 			"members": {},
 			"flags": {
 				"sleep": "allow",
-				"build": "allow",
 				"chest-access-group": "MEMBERS",
+				"build": "allow",
 				"build-group": "MEMBERS",
 				"interact": "allow",
 				"sleep-group": "MEMBERS",
@@ -497,15 +498,15 @@
 				"build-group": "MEMBERS",
 				"interact": "allow",
 				"chest-access": "allow",
-				"block-place": "allow",
 				"mob-spawning": "deny",
+				"block-place": "allow",
 				"sleep": "allow",
-				"build": "allow",
 				"chest-access-group": "MEMBERS",
+				"build": "allow",
 				"block-break": "allow",
-				"interact-group": "MEMBERS",
-				"sleep-group": "MEMBERS",
 				"block-place-group": "MEMBERS",
+				"sleep-group": "MEMBERS",
+				"interact-group": "MEMBERS",
 				"block-break-group": "MEMBERS"
 			},
 			"owners": {
@@ -529,8 +530,31 @@
 				"unique-ids": ["1fc9c7dd-2108-3ee9-8edf-b529acd01d23"]
 			},
 			"flags": {
-				"build": "deny",
 				"chest-access-group": "MEMBERS",
+				"build": "deny",
+				"interact": "allow",
+				"interact-group": "MEMBERS",
+				"chest-access": "allow"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 1
+		},
+		"lh-m-1": {
+			"min": {
+				"x": 61644,
+				"y": 74,
+				"z": 78242
+			},
+			"max": {
+				"x": 61649,
+				"y": 76,
+				"z": 78245
+			},
+			"members": {},
+			"flags": {
+				"chest-access-group": "MEMBERS",
+				"build": "deny",
 				"interact": "allow",
 				"interact-group": "MEMBERS",
 				"chest-access": "allow"
@@ -560,43 +584,20 @@
 				"build-group": "MEMBERS",
 				"interact": "allow",
 				"chest-access": "allow",
-				"block-place": "allow",
 				"mob-spawning": "deny",
+				"block-place": "allow",
 				"sleep": "allow",
-				"build": "allow",
 				"chest-access-group": "MEMBERS",
+				"build": "allow",
 				"block-break": "allow",
-				"interact-group": "MEMBERS",
-				"sleep-group": "MEMBERS",
 				"block-place-group": "MEMBERS",
+				"sleep-group": "MEMBERS",
+				"interact-group": "MEMBERS",
 				"block-break-group": "MEMBERS"
 			},
 			"owners": {
 				"unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
 			},
-			"type": "cuboid",
-			"priority": 1
-		},
-		"lh-m-1": {
-			"min": {
-				"x": 61644,
-				"y": 74,
-				"z": 78242
-			},
-			"max": {
-				"x": 61649,
-				"y": 76,
-				"z": 78245
-			},
-			"members": {},
-			"flags": {
-				"build": "deny",
-				"chest-access-group": "MEMBERS",
-				"interact": "allow",
-				"interact-group": "MEMBERS",
-				"chest-access": "allow"
-			},
-			"owners": {},
 			"type": "cuboid",
 			"priority": 1
 		},
@@ -624,9 +625,9 @@
 			"flags": {
 				"build": "deny",
 				"use": "allow",
-				"build-group": "NON_MEMBERS",
 				"use-group": "NON_MEMBERS",
 				"mob-damage": "allow",
+				"build-group": "NON_MEMBERS",
 				"passthrough": "allow",
 				"block-break": "deny",
 				"interact": "allow",
@@ -643,31 +644,24 @@
 			"type": "cuboid",
 			"priority": 0
 		},
-		"gundabad": {
+		"whitefort": {
 			"min": {
-				"x": 49112,
-				"y": 0,
-				"z": -17947
+				"x": 123342,
+				"y": 72,
+				"z": 34488
 			},
 			"max": {
-				"x": 49561,
-				"y": 255,
-				"z": -17404
+				"x": 123403,
+				"y": 131,
+				"z": 34578
 			},
 			"members": {},
 			"flags": {
-				"sleep": "allow",
-				"build": "allow",
-				"chest-access-group": "MEMBERS",
-				"build-group": "MEMBERS",
-				"interact": "allow",
-				"sleep-group": "MEMBERS",
-				"interact-group": "MEMBERS",
-				"chest-access": "allow"
+				"build": "deny"
 			},
 			"owners": {},
 			"type": "cuboid",
-			"priority": 0
+			"priority": 1
 		},
 		"lh-dzia-1": {
 			"min": {
@@ -687,15 +681,15 @@
 				"build-group": "MEMBERS",
 				"interact": "allow",
 				"chest-access": "allow",
-				"block-place": "allow",
 				"mob-spawning": "deny",
+				"block-place": "allow",
 				"sleep": "allow",
-				"build": "allow",
 				"chest-access-group": "MEMBERS",
+				"build": "allow",
 				"block-break": "allow",
-				"interact-group": "MEMBERS",
-				"sleep-group": "MEMBERS",
 				"block-place-group": "MEMBERS",
+				"sleep-group": "MEMBERS",
+				"interact-group": "MEMBERS",
 				"block-break-group": "MEMBERS"
 			},
 			"owners": {
@@ -703,6 +697,32 @@
 			},
 			"type": "cuboid",
 			"priority": 1
+		},
+		"gundabad": {
+			"min": {
+				"x": 49112,
+				"y": 0,
+				"z": -17947
+			},
+			"max": {
+				"x": 49561,
+				"y": 255,
+				"z": -17404
+			},
+			"members": {},
+			"flags": {
+				"sleep": "allow",
+				"chest-access-group": "MEMBERS",
+				"build": "allow",
+				"build-group": "MEMBERS",
+				"interact": "allow",
+				"sleep-group": "MEMBERS",
+				"interact-group": "MEMBERS",
+				"chest-access": "allow"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
 		},
 		"punktzero": {
 			"min": {
@@ -755,11 +775,11 @@
 				"use": "allow",
 				"vehicle-destroy": "allow",
 				"interact": "allow",
-				"chest-access": "allow",
 				"pvp": "allow",
-				"block-place": "deny",
-				"ride": "allow",
+				"chest-access": "allow",
 				"mob-spawning": "allow",
+				"ride": "allow",
+				"block-place": "deny",
 				"sleep": "allow",
 				"vehicle-place": "allow",
 				"chest-access-group": "MEMBERS",
@@ -774,8 +794,8 @@
 				"use-group": "MEMBERS",
 				"mob-damage": "allow",
 				"block-break": "deny",
-				"sleep-group": "MEMBERS",
 				"block-place-group": "NON_MEMBERS",
+				"sleep-group": "MEMBERS",
 				"block-break-group": "NON_MEMBERS"
 			},
 			"owners": {
@@ -807,14 +827,14 @@
 		},
 		"meneltarma": {
 			"min": {
-				"x": -97182,
+				"x": -97282,
 				"y": 0,
-				"z": 127102
+				"z": 127002
 			},
 			"max": {
-				"x": -94062,
+				"x": -93862,
 				"y": 255,
-				"z": 129588
+				"z": 129688
 			},
 			"members": {},
 			"flags": {
@@ -921,6 +941,28 @@
 			"type": "cuboid",
 			"priority": 0
 		},
+		"osgiliath": {
+			"min": {
+				"x": 79097,
+				"y": 0,
+				"z": 65653
+			},
+			"max": {
+				"x": 80340,
+				"y": 255,
+				"z": 66520
+			},
+			"members": {
+				"unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
+			},
+			"flags": {
+				"build": "allow",
+				"build-group": "MEMBERS"
+			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 1
+		},
 		"brama-rzeczna": {
 			"min": {
 				"x": 85465,
@@ -934,8 +976,8 @@
 			},
 			"members": {},
 			"flags": {
-				"build": "allow",
 				"chest-access-group": "MEMBERS",
+				"build": "allow",
 				"build-group": "MEMBERS",
 				"interact": "allow",
 				"chest-access": "allow"
@@ -966,6 +1008,23 @@
 			"type": "cuboid",
 			"priority": 0
 		},
+		"arityoco": {
+			"min": {
+				"x": -13358,
+				"y": 0,
+				"z": 13311
+			},
+			"max": {
+				"x": -13206,
+				"y": 255,
+				"z": 13415
+			},
+			"members": {},
+			"flags": {},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
 		"imloth_melui": {
 			"min": {
 				"x": 74308,
@@ -985,6 +1044,23 @@
 			"owners": {
 				"unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
 			},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"thafar-gundu": {
+			"min": {
+				"x": 201301,
+				"y": 0,
+				"z": -33364
+			},
+			"max": {
+				"x": 202147,
+				"y": 255,
+				"z": -32683
+			},
+			"members": {},
+			"flags": {},
+			"owners": {},
 			"type": "cuboid",
 			"priority": 0
 		},
@@ -1090,6 +1166,23 @@
 			"type": "cuboid",
 			"priority": 1
 		},
+		"erion-port": {
+			"min": {
+				"x": -2086,
+				"y": 0,
+				"z": 79534
+			},
+			"max": {
+				"x": -1987,
+				"y": 255,
+				"z": 79616
+			},
+			"members": {},
+			"flags": {},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
 		"carastamo1": {
 			"min": {
 				"x": 4289,
@@ -1131,8 +1224,8 @@
 				"unique-ids": ["9d945e19-f9ba-3a33-89ea-53d3bbe5e700"]
 			},
 			"flags": {
-				"build": "allow",
 				"chest-access-group": "MEMBERS",
+				"build": "allow",
 				"build-group": "MEMBERS",
 				"interact": "allow",
 				"interact-group": "MEMBERS",
@@ -1159,8 +1252,8 @@
 			},
 			"flags": {
 				"sleep": "allow",
-				"build": "allow",
 				"chest-access-group": "MEMBERS",
+				"build": "allow",
 				"build-group": "MEMBERS",
 				"interact": "allow",
 				"sleep-group": "MEMBERS",
@@ -1173,6 +1266,23 @@
 			},
 			"type": "cuboid",
 			"priority": 1
+		},
+		"erynvorn-port": {
+			"min": {
+				"x": -9522,
+				"y": 0,
+				"z": 35068
+			},
+			"max": {
+				"x": -9405,
+				"y": 255,
+				"z": 35163
+			},
+			"members": {},
+			"flags": {},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
 		},
 		"beorn": {
 			"min": {
@@ -1192,6 +1302,23 @@
 				"build": "deny",
 				"build-group": "NON_MEMBERS"
 			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"mednarne": {
+			"min": {
+				"x": 56713,
+				"y": 0,
+				"z": 130361
+			},
+			"max": {
+				"x": 57391,
+				"y": 255,
+				"z": 130727
+			},
+			"members": {},
+			"flags": {},
 			"owners": {},
 			"type": "cuboid",
 			"priority": 0
@@ -1262,15 +1389,15 @@
 				"build-group": "MEMBERS",
 				"interact": "allow",
 				"chest-access": "allow",
-				"block-place": "allow",
 				"mob-spawning": "deny",
+				"block-place": "allow",
 				"sleep": "allow",
-				"build": "allow",
 				"chest-access-group": "MEMBERS",
+				"build": "allow",
 				"block-break": "allow",
-				"interact-group": "MEMBERS",
-				"sleep-group": "MEMBERS",
 				"block-place-group": "MEMBERS",
+				"sleep-group": "MEMBERS",
+				"interact-group": "MEMBERS",
 				"block-break-group": "MEMBERS"
 			},
 			"owners": {
@@ -1331,8 +1458,8 @@
 			"members": {},
 			"flags": {
 				"block-break": "deny",
-				"chest-access": "deny",
 				"pvp": "deny",
+				"chest-access": "deny",
 				"block-place": "deny"
 			},
 			"owners": {},
@@ -1359,8 +1486,8 @@
 				"mob-damage-group": "NON_MEMBERS",
 				"lighter": "deny",
 				"interact": "allow",
-				"chest-access": "deny",
 				"pvp": "allow",
+				"chest-access": "deny",
 				"tnt-group": "NON_MEMBERS",
 				"ride": "allow",
 				"lighter-group": "NON_MEMBERS",
@@ -1390,11 +1517,26 @@
 			},
 			"members": {},
 			"flags": {
+				"sleep": "allow",
+				"chest-access-group": "MEMBERS",
 				"build": "allow",
+				"blocked-cmds": [
+					"/tpa",
+					"/tppos",
+					"/teleport",
+					"/tpaccept",
+					"/warp",
+					"/tp"
+				],
 				"build-group": "MEMBERS",
-				"chest-access": "deny"
+				"interact": "allow",
+				"sleep-group": "MEMBERS",
+				"interact-group": "MEMBERS",
+				"chest-access": "allow"
 			},
-			"owners": {},
+			"owners": {
+				"unique-ids": ["6466632e-bc4e-3db6-bb01-67d60c54bf4b"]
+			},
 			"type": "cuboid",
 			"priority": 0
 		},
@@ -1462,8 +1604,8 @@
 				"block-break": "deny",
 				"interact": "allow",
 				"interact-group": "NON_MEMBERS",
-				"mob-spawning": "allow",
-				"block-place": "deny"
+				"block-place": "deny",
+				"mob-spawning": "allow"
 			},
 			"owners": {},
 			"type": "cuboid",
@@ -1506,14 +1648,31 @@
 				"unique-ids": ["2819f891-135b-34d0-aa1d-863b4dfe2868"]
 			},
 			"flags": {
-				"build": "allow",
 				"chest-access-group": "MEMBERS",
+				"build": "allow",
 				"blocked-cmds": ["/tpa", "/tppos", "/teleport", "/tpaccept", "/tp"],
 				"build-group": "MEMBERS",
 				"interact": "allow",
 				"interact-group": "MEMBERS",
 				"chest-access": "allow"
 			},
+			"owners": {},
+			"type": "cuboid",
+			"priority": 0
+		},
+		"edoras": {
+			"min": {
+				"x": 48373,
+				"y": 0,
+				"z": 53664
+			},
+			"max": {
+				"x": 48808,
+				"y": 255,
+				"z": 54020
+			},
+			"members": {},
+			"flags": {},
 			"owners": {},
 			"type": "cuboid",
 			"priority": 0
@@ -1555,9 +1714,9 @@
 				"build": "allow",
 				"blocked-cmds": ["/tpa", "/tppos", "/teleport", "/tpaccept", "/tp"],
 				"build-group": "MEMBERS",
-				"vehicle-destroy": "allow",
-				"damage-animals": "allow",
 				"interact": "allow",
+				"damage-animals": "allow",
+				"vehicle-destroy": "allow",
 				"pistons": "allow",
 				"pvp": "allow",
 				"ride": "allow"
@@ -1572,8 +1731,8 @@
 			"members": {},
 			"flags": {
 				"other-explosion": "deny",
-				"blocked-cmds": ["/'"],
 				"use": "allow",
+				"blocked-cmds": ["/'"],
 				"interact": "allow",
 				"tnt": "deny"
 			},
