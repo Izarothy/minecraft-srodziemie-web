@@ -8,11 +8,13 @@ import convertCoordinatesToLatLng from "~/lib/convertCoordinatesToLatLng";
 // leaflet
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
+import { useRouter } from "next/router";
 L.Icon.Default.imagePath = "images/";
 
 export default function WorldMap() {
 	const bounds = [[0, 0] as LatLngTuple, [125, 100] as LatLngTuple];
 	const maxBounds = [[-20, -25] as LatLngTuple, [170, 150] as LatLngTuple];
+	const isAdminView = useRouter().query.isAdminView === "true";
 
 	return (
 		<>
@@ -34,7 +36,7 @@ export default function WorldMap() {
 					console.log(
 						`Checking region: ${key}, isPrivate: ${String(privateRegions.includes(key))}`,
 					);
-					if (privateRegions.includes(key)) return null;
+					if (privateRegions.includes(key) && !isAdminView) return null;
 
 					if ("min" in val && "max" in val) {
 						const [minLatLong, maxLatLong] = convertCoordinatesToLatLng(
