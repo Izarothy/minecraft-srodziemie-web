@@ -17,7 +17,7 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 L.Icon.Default.imagePath = "images/";
 
-export default function Map() {
+export default function WorldMap() {
 	const bounds = [[0, 0] as LatLngTuple, [125, 100] as LatLngTuple];
 	const maxBounds = [[-20, -25] as LatLngTuple, [170, 150] as LatLngTuple];
 
