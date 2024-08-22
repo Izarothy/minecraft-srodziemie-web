@@ -2,14 +2,7 @@ import privateRegions from "data/privateRegions.json";
 import worldGuardRegions from "data/regions.json";
 import { CRS, type LatLngTuple } from "leaflet";
 import React from "react";
-import {
-	ImageOverlay,
-	MapContainer,
-	Marker,
-	Popup,
-	Rectangle,
-	Tooltip,
-} from "react-leaflet";
+import { ImageOverlay, MapContainer, Rectangle, Tooltip } from "react-leaflet";
 import convertCoordinatesToLatLng from "~/lib/convertCoordinatesToLatLng";
 
 // leaflet
