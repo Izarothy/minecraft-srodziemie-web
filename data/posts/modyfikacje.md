@@ -5,9 +5,9 @@ category: General
 
 Instrukcja obsługi Tawernowej Paczki Modów:
 
-- **[Mody obowiązkowe](https://bit.ly/4dWyFbh)** = mody konieczne do tego, by móc grać na serwerze, a także client-side'owe wspomagacze wydajności
+- **[Mody obowiązkowe](https://bit.ly/3PRNYs5)** = mody konieczne do tego, by móc grać na serwerze, a także client-side'owe wspomagacze wydajności
 
-- **[Mody dodatkowe](https://bit.ly/4efL9v5)** = działające mody opcjonalne, które poprawiają wydajność i pewne elementy rozgrywki:
+- **[Mody dodatkowe](https://bit.ly/40sUFXt)** = działające mody opcjonalne, które poprawiają wydajność i pewne elementy rozgrywki:
 
   - _Autowalk_ = umożliwia przełączanie trybu stania i sprintu, dzięki czemu nie trzeba trzymać W przez całą drogę
   - _Back Tools_ = dodaje lekką mechanikę wyświetlania ostatnio używanego narzędzia/broni na plecach graczy
