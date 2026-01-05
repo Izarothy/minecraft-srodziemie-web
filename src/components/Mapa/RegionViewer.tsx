@@ -172,7 +172,7 @@ export default function RegionViewer() {
 						Resetuj widok
 					</button>
 					<button
-						onClick={handleExport}
+						onClick={() => void handleExport()}
 						disabled={exporting}
 						className="w-full py-3 px-4 rounded-lg text-sm font-medium bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white transition shadow-lg shadow-emerald-900/20 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
 					>
