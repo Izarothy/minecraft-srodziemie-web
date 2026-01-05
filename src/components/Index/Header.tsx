@@ -56,11 +56,11 @@ const Header = () => {
               }}
               onMouseLeave={() => setTooltipShown(false)}
               onClick={() => {
-                copyToClipboard("minecraft-srodziemie.tasrv.com");
+                copyToClipboard("185.207.164.17:19001");
                 handleIPTooltip(setTooltipText, setTooltipShown);
               }}
             >
-              minecraft-srodziemie.tasrv.com
+              185.207.164.17:19001
               <ClipboardCopy />
             </button>
           </span>

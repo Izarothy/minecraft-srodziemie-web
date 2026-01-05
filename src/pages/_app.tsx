@@ -24,7 +24,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
           }
         `}
       </style>
-      {!router.asPath.includes("map") ? (
+      {!router.asPath.includes("map") && !router.asPath.includes("regiony") ? (
         <Layout>
           <Component {...pageProps} />
         </Layout>
