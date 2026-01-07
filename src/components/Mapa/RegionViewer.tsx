@@ -1,4 +1,4 @@
-import { CRS, type LatLngTuple } from "leaflet";
+import L, { CRS, type LatLngTuple } from "leaflet";
 import React, { useState, useCallback, useMemo, useEffect } from "react";
 import {
   ImageOverlay,
@@ -106,18 +106,22 @@ export default function RegionViewer() {
   const visible = regions.length - removed.size;
   const progress = Math.round((visible / regions.length) * 100) || 0;
 
-  // Handle region click
-  const handleRegionClick = useCallback(
-    (x: number, z: number) => {
+  // Handle left click - toggle visibility
+  const handleRegionClick = useCallback((x: number, z: number) => {
+    const key = `${x},${z}`;
+    setRemoved((prev) => {
+      const next = new Set(prev);
+      next.has(key) ? next.delete(key) : next.add(key);
+      return next;
+    });
+  }, []);
+
+  // Handle right click - delete (when authenticated)
+  const handleRegionRightClick = useCallback(
+    (x: number, z: number, e: L.LeafletMouseEvent) => {
+      e.originalEvent.preventDefault();
       if (isAuthenticated) {
         setDeleteTarget({ x, z });
-      } else {
-        const key = `${x},${z}`;
-        setRemoved((prev) => {
-          const next = new Set(prev);
-          next.has(key) ? next.delete(key) : next.add(key);
-          return next;
-        });
       }
     },
     [isAuthenticated]
@@ -241,7 +245,7 @@ export default function RegionViewer() {
                 Tryb administratora
               </p>
               <p className="text-xs text-zinc-500 mt-1">
-                Kliknij region, aby go usunac
+                PPM na region, aby go usunac
               </p>
             </div>
           )}
@@ -333,7 +337,7 @@ export default function RegionViewer() {
             </button>
             <p className="text-[10px] text-center text-zinc-600 mt-2">
               {isAuthenticated
-                ? "Kliknij region na mapie, aby go usunac."
+                ? "LPM: ukryj/pokaz | PPM: usun region"
                 : "Kliknij region na mapie, aby go przelaczac."}
             </p>
           </div>
@@ -362,21 +366,16 @@ export default function RegionViewer() {
                   key={key}
                   bounds={bounds}
                   pathOptions={{
-                    color: isAuthenticated
-                      ? "#ef4444"
-                      : isRemoved
-                        ? "#3f3f46"
-                        : "#10b981",
+                    color: isRemoved ? "#3f3f46" : "#10b981",
                     weight: isRemoved ? 0.5 : 0.8,
-                    fillColor: isAuthenticated
-                      ? "#ef4444"
-                      : isRemoved
-                        ? "#18181b"
-                        : "#10b981",
-                    fillOpacity: isRemoved ? 0 : isAuthenticated ? 0.3 : 0.4,
+                    fillColor: isRemoved ? "#18181b" : "#10b981",
+                    fillOpacity: isRemoved ? 0 : 0.4,
                     className: "transition-all duration-200",
                   }}
-                  eventHandlers={{ click: () => handleRegionClick(x, z) }}
+                  eventHandlers={{
+                    click: () => handleRegionClick(x, z),
+                    contextmenu: (e) => handleRegionRightClick(x, z, e),
+                  }}
                 >
                   <Tooltip
                     sticky
