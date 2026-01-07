@@ -8,11 +8,15 @@ export async function withFTPClient<T>(
   operation: (client: ftp.Client) => Promise<T>
 ): Promise<T> {
   if (!env.FTP_HOST || !env.FTP_USER || !env.FTP_PASSWORD) {
-    throw new Error("FTP credentials not configured");
+    throw new Error(
+      `FTP credentials not configured. HOST=${env.FTP_HOST ? "set" : "missing"}, USER=${env.FTP_USER ? "set" : "missing"}, PASS=${env.FTP_PASSWORD ? "set" : "missing"}`
+    );
   }
 
   const client = new ftp.Client();
   client.ftp.verbose = false;
+  // Timeout for serverless environment (Vercel has 10s default)
+  client.ftp.timeout = 8000;
 
   try {
     await client.access({
@@ -20,7 +24,10 @@ export async function withFTPClient<T>(
       port: 21,
       user: env.FTP_USER,
       password: env.FTP_PASSWORD,
+      secure: false,
     });
+    // Use passive mode for cloud/serverless environments
+    client.ftp.passive = true;
     return await operation(client);
   } finally {
     client.close();
