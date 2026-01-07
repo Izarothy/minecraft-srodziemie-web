@@ -1,4 +1,5 @@
 import { pageRouter } from "~/server/api/routers/pages";
+import { regionRouter } from "~/server/api/routers/regions";
 import { createTRPCRouter } from "~/server/api/trpc";
 
 /**
@@ -8,6 +9,7 @@ import { createTRPCRouter } from "~/server/api/trpc";
  */
 export const appRouter = createTRPCRouter({
   page: pageRouter,
+  region: regionRouter,
 });
 
 // export type definition of API

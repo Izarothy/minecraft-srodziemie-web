@@ -8,6 +8,10 @@ export const env = createEnv({
    */
   server: {
     NODE_ENV: z.enum(["development", "test", "production"]),
+    FTP_HOST: z.string().optional().default(""),
+    FTP_USER: z.string().optional().default(""),
+    FTP_PASSWORD: z.string().optional().default(""),
+    REGION_AUTH_TOKEN: z.string().optional().default(""),
   },
 
   /**
@@ -25,7 +29,10 @@ export const env = createEnv({
    */
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
-    // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
+    FTP_HOST: process.env.FTP_HOST,
+    FTP_USER: process.env.FTP_USER,
+    FTP_PASSWORD: process.env.FTP_PASSWORD,
+    REGION_AUTH_TOKEN: process.env.REGION_AUTH_TOKEN,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation.
