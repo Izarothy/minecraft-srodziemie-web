@@ -8,9 +8,10 @@ export const env = createEnv({
    */
   server: {
     NODE_ENV: z.enum(["development", "test", "production"]),
-    FTP_HOST: z.string().optional().default(""),
-    FTP_USER: z.string().optional().default(""),
-    FTP_PASSWORD: z.string().optional().default(""),
+    SFTP_HOST: z.string().optional().default(""),
+    SFTP_PORT: z.string().optional().default("22"),
+    SFTP_USER: z.string().optional().default(""),
+    SFTP_PASSWORD: z.string().optional().default(""),
     REGION_AUTH_TOKEN: z.string().optional().default(""),
   },
 
@@ -29,9 +30,10 @@ export const env = createEnv({
    */
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
-    FTP_HOST: process.env.FTP_HOST,
-    FTP_USER: process.env.FTP_USER,
-    FTP_PASSWORD: process.env.FTP_PASSWORD,
+    SFTP_HOST: process.env.SFTP_HOST,
+    SFTP_PORT: process.env.SFTP_PORT,
+    SFTP_USER: process.env.SFTP_USER,
+    SFTP_PASSWORD: process.env.SFTP_PASSWORD,
     REGION_AUTH_TOKEN: process.env.REGION_AUTH_TOKEN,
   },
   /**
