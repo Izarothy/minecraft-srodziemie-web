@@ -1,4 +1,4 @@
-import L, { CRS, type LatLngTuple } from "leaflet";
+import L, { CRS, type LatLngTuple, Canvas } from "leaflet";
 import React, { useState, useCallback, useMemo, useEffect } from "react";
 import {
   ImageOverlay,
@@ -30,6 +30,9 @@ const ORIGIN_Z = 730;
 const BLOCKS_PER_PIXEL = 128; // 2^7
 const REGION_BLOCKS = 512;
 const PIXELS_PER_REGION = 4; // 512 / 128
+
+// Canvas renderer for better performance with many regions
+const canvasRenderer = new Canvas({ padding: 0.5 });
 
 const MAP_BOUNDS: [LatLngTuple, LatLngTuple] = [
   [-MAP_HEIGHT, 0],
@@ -360,6 +363,8 @@ export default function RegionViewer() {
             inertia={true}
             inertiaDeceleration={2000}
             easeLinearity={0.15}
+            preferCanvas={true}
+            renderer={canvasRenderer}
           >
             <ImageOverlay url="/images/middle_earth.png" bounds={MAP_BOUNDS} />
             {regions.map(({ x, z }) => {
@@ -376,7 +381,6 @@ export default function RegionViewer() {
                     weight: isRemoved ? 0.5 : 0.8,
                     fillColor: isRemoved ? "#18181b" : "#10b981",
                     fillOpacity: isRemoved ? 0 : 0.4,
-                    className: "transition-all duration-200",
                   }}
                   eventHandlers={{
                     click: () => handleRegionClick(x, z),
