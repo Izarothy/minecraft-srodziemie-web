@@ -357,12 +357,6 @@ export default function RegionViewer() {
             className="h-full w-full bg-[#050505] outline-none"
             attributionControl={false}
             zoomControl={false}
-            zoomSnap={0.25}
-            zoomDelta={0.5}
-            wheelPxPerZoomLevel={120}
-            inertia={true}
-            inertiaDeceleration={2000}
-            easeLinearity={0.15}
             preferCanvas={true}
             renderer={canvasRenderer}
           >
