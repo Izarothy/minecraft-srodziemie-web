@@ -4,7 +4,8 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "sync:map": "node scripts/sync-map-image.mjs"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",

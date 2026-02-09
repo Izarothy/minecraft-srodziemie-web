@@ -1,10 +1,23 @@
 import { z } from "zod";
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
-import { listRegionFiles, deleteRegionFile } from "~/server/services/ftp";
+import { listRegionFiles, deleteRegionFile, fetchMapConfig } from "~/server/services/ftp";
 import { TRPCError } from "@trpc/server";
 import { env } from "~/env.mjs";
 
 export const regionRouter = createTRPCRouter({
+  mapConfig: publicProcedure.query(async () => {
+    try {
+      return await fetchMapConfig();
+    } catch (error) {
+      console.error("FTP mapConfig error:", error);
+      throw new TRPCError({
+        code: "INTERNAL_SERVER_ERROR",
+        message: "Failed to fetch map config from FTP server",
+        cause: error,
+      });
+    }
+  }),
+
   list: publicProcedure.query(async () => {
     try {
       const regions = await listRegionFiles();

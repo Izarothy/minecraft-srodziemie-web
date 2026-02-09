@@ -3,7 +3,7 @@ import { api } from "~/utils/api";
 import "~/styles/globals.css";
 import { Lexend } from "next/font/google";
 import Layout from "~/components/Layout/Layout";
-import { useRouter } from "next/router";
+import { useRouter } from "next/compat/router";
 
 const lexend = Lexend({
   weight: ["400", "500", "600", "700", "800"],
@@ -24,7 +24,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
           }
         `}
       </style>
-      {!router.asPath.includes("map") && !router.asPath.includes("regiony") ? (
+      {!router?.asPath?.includes("map") && !router?.asPath?.includes("regiony") ? (
         <Layout>
           <Component {...pageProps} />
         </Layout>

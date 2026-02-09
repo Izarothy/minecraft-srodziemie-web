@@ -10,59 +10,27 @@ import {
 import { useRouter } from "next/router";
 import { api } from "~/utils/api";
 import { DeleteConfirmModal } from "./DeleteConfirmModal";
+import { maps, defaultMapId, type MapConfig } from "~/config/maps";
 import "leaflet/dist/leaflet.css";
 
-/*
- * Coordinate mapping for LOTR Middle Earth dimension
- * Source: minecraft-lotr-map-overlay/lotr_mod/data/lotr/map/map.json
- * Map Image: 2000 x 1800 pixels
- * Origin: x=810, z=730 (Pixel coordinates where world 0,0 is located)
- * Scale Power: 7 => 2^7 = 128 blocks per pixel
- *
- * Region covers 512x512 blocks.
- * Region Size in Pixels = 512 / 128 = 4 pixels.
- */
-
-const MAP_WIDTH = 2000;
-const MAP_HEIGHT = 1800;
-const ORIGIN_X = 810;
-const ORIGIN_Z = 730;
-const BLOCKS_PER_PIXEL = 128; // 2^7
 const REGION_BLOCKS = 512;
-const PIXELS_PER_REGION = 4; // 512 / 128
 
 // Canvas renderer for better performance with many regions
 const canvasRenderer = new Canvas({ padding: 0.5 });
 
-const MAP_BOUNDS: [LatLngTuple, LatLngTuple] = [
-  [-MAP_HEIGHT, 0],
-  [0, MAP_WIDTH],
-];
+const mapOptions = Object.values(maps);
 
-function regionToBounds(
-  regionX: number,
-  regionZ: number
-): [LatLngTuple, LatLngTuple] {
-  const pixelX = ORIGIN_X + (regionX * REGION_BLOCKS) / BLOCKS_PER_PIXEL;
-  const pixelZ = ORIGIN_Z + (regionZ * REGION_BLOCKS) / BLOCKS_PER_PIXEL;
-
-  const lfX1 = pixelX;
-  const lfY1 = -pixelZ;
-
-  const lfX2 = pixelX + PIXELS_PER_REGION;
-  const lfY2 = -(pixelZ + PIXELS_PER_REGION);
-
-  return [
-    [lfY2, lfX1],
-    [lfY1, lfX2],
-  ];
-}
-
-const MapController = () => {
+const MapController = ({
+  originX,
+  originZ,
+}: {
+  originX: number;
+  originZ: number;
+}) => {
   const map = useMap();
   useEffect(() => {
-    map.setView([-ORIGIN_Z, ORIGIN_X], 0);
-  }, [map]);
+    map.setView([-originZ, originX], 0);
+  }, [map, originX, originZ]);
   return null;
 };
 
@@ -74,17 +42,69 @@ export default function RegionViewer() {
     typeof router.query.auth === "string" ? router.query.auth : null;
   const isAuthenticated = !!authToken;
 
+  // Map selection
+  const [selectedMapId, setSelectedMapId] = useState(defaultMapId);
+  const selectedMap = maps[selectedMapId] as MapConfig;
+  const cal = selectedMap.calibration;
+
+  const mapWidth = cal.width;
+  const mapHeight = cal.height;
+  const originX = cal.originX;
+  const originZ = cal.originZ;
+  const blocksPerPixel = cal.blocksPerPixel;
+  const pixelsPerRegion = REGION_BLOCKS / blocksPerPixel;
+
+  // Fetch map config from server (updates "current" map's origin if available)
+  const mapConfigQuery = api.region.mapConfig.useQuery(undefined, {
+    refetchOnWindowFocus: false,
+    staleTime: 300_000,
+    retry: 1,
+  });
+
+  // Override origin for "current" map if server config is available
+  const effectiveOriginX =
+    selectedMapId === "current" && mapConfigQuery.data
+      ? mapConfigQuery.data.originX
+      : originX;
+  const effectiveOriginZ =
+    selectedMapId === "current" && mapConfigQuery.data
+      ? mapConfigQuery.data.originZ
+      : originZ;
+
   // Fetch regions from FTP
   const {
     data,
-    isLoading,
-    error,
+    isLoading: regionsLoading,
+    error: regionsError,
     refetch,
   } = api.region.list.useQuery(undefined, {
     refetchOnWindowFocus: false,
     staleTime: 60000,
     retry: 2,
   });
+
+  const mapBounds = useMemo<[LatLngTuple, LatLngTuple]>(
+    () => [
+      [-mapHeight, 0],
+      [0, mapWidth],
+    ],
+    [mapWidth, mapHeight]
+  );
+
+  const regionToBounds = useCallback(
+    (regionX: number, regionZ: number): [LatLngTuple, LatLngTuple] => {
+      const pixelX =
+        effectiveOriginX + (regionX * REGION_BLOCKS) / blocksPerPixel;
+      const pixelZ =
+        effectiveOriginZ + (regionZ * REGION_BLOCKS) / blocksPerPixel;
+
+      return [
+        [-(pixelZ + pixelsPerRegion), pixelX],
+        [-pixelZ, pixelX + pixelsPerRegion],
+      ];
+    },
+    [effectiveOriginX, effectiveOriginZ, blocksPerPixel, pixelsPerRegion]
+  );
 
   // Delete mutation
   const deleteMutation = api.region.delete.useMutation({
@@ -145,15 +165,15 @@ export default function RegionViewer() {
     try {
       const img = new Image();
       img.crossOrigin = "anonymous";
-      img.src = "/images/middle_earth.png";
+      img.src = selectedMap.image;
       await new Promise<void>((resolve, reject) => {
         img.onload = () => resolve();
         img.onerror = reject;
       });
 
       const canvas = document.createElement("canvas");
-      canvas.width = MAP_WIDTH;
-      canvas.height = MAP_HEIGHT;
+      canvas.width = mapWidth;
+      canvas.height = mapHeight;
       const ctx = canvas.getContext("2d");
       if (!ctx) throw new Error("No context");
 
@@ -162,9 +182,11 @@ export default function RegionViewer() {
 
       regions.forEach(({ x, z }) => {
         if (removed.has(`${x},${z}`)) return;
-        const px = ORIGIN_X + (x * REGION_BLOCKS) / BLOCKS_PER_PIXEL;
-        const pz = ORIGIN_Z + (z * REGION_BLOCKS) / BLOCKS_PER_PIXEL;
-        ctx.fillRect(px, pz, PIXELS_PER_REGION, PIXELS_PER_REGION);
+        const px =
+          effectiveOriginX + (x * REGION_BLOCKS) / blocksPerPixel;
+        const pz =
+          effectiveOriginZ + (z * REGION_BLOCKS) / blocksPerPixel;
+        ctx.fillRect(px, pz, pixelsPerRegion, pixelsPerRegion);
       });
 
       const link = document.createElement("a");
@@ -179,7 +201,7 @@ export default function RegionViewer() {
   };
 
   // Loading state
-  if (isLoading) {
+  if (regionsLoading) {
     return (
       <div className="flex h-screen w-screen items-center justify-center bg-[#050505]">
         <div className="flex flex-col items-center gap-4">
@@ -193,12 +215,14 @@ export default function RegionViewer() {
   }
 
   // Error state
-  if (error) {
+  if (regionsError) {
     return (
       <div className="flex h-screen w-screen items-center justify-center bg-[#050505]">
         <div className="text-center">
           <p className="text-red-400 mb-2">Blad ladowania regionow</p>
-          <p className="text-sm text-zinc-500 mb-4">{error.message}</p>
+          <p className="text-sm text-zinc-500 mb-4">
+            {regionsError.message}
+          </p>
           <button
             onClick={() => void refetch()}
             className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 rounded-lg text-white transition"
@@ -252,6 +276,29 @@ export default function RegionViewer() {
               </p>
             </div>
           )}
+
+          {/* Map selector */}
+          <div className="px-6 pt-6">
+            <label className="block text-[10px] uppercase tracking-wider text-zinc-500 mb-2">
+              Wybierz mape
+            </label>
+            <select
+              value={selectedMapId}
+              onChange={(e) => setSelectedMapId(e.target.value)}
+              className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-3 py-2.5 text-sm text-zinc-200 outline-none focus:border-emerald-500 transition cursor-pointer appearance-none"
+              style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2371717a' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E")`,
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "right 12px center",
+              }}
+            >
+              {mapOptions.map((m) => (
+                <option key={m.id} value={m.id}>
+                  {m.name}
+                </option>
+              ))}
+            </select>
+          </div>
 
           {/* Stats */}
           <div className="p-6 space-y-6">
@@ -346,10 +393,11 @@ export default function RegionViewer() {
           </div>
         </aside>
 
-        {/* Map Area */}
+        {/* Map Area - key forces remount when switching maps */}
         <div className="flex-1 relative bg-black">
           <MapContainer
-            center={[-ORIGIN_Z, ORIGIN_X]}
+            key={selectedMapId}
+            center={[-effectiveOriginZ, effectiveOriginX]}
             zoom={0}
             minZoom={-2}
             maxZoom={4}
@@ -360,7 +408,7 @@ export default function RegionViewer() {
             preferCanvas={true}
             renderer={canvasRenderer}
           >
-            <ImageOverlay url="/images/middle_earth.png" bounds={MAP_BOUNDS} />
+            <ImageOverlay url={selectedMap.image} bounds={mapBounds} />
             {regions.map(({ x, z }) => {
               const key = `${x},${z}`;
               const isRemoved = removed.has(key);
@@ -392,13 +440,16 @@ export default function RegionViewer() {
                 </Rectangle>
               );
             })}
-            <MapController />
+            <MapController
+              originX={effectiveOriginX}
+              originZ={effectiveOriginZ}
+            />
           </MapContainer>
 
           {/* Floating Map Controls */}
           <div className="absolute top-6 right-6 z-[400] flex flex-col gap-2">
             <div className="bg-zinc-900/90 backdrop-blur border border-zinc-800 rounded-lg p-2 text-zinc-400 text-xs font-mono shadow-xl">
-              MAP: {MAP_WIDTH}x{MAP_HEIGHT}
+              MAP: {mapWidth}x{mapHeight}
             </div>
           </div>
         </div>
