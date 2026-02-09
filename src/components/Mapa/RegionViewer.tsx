@@ -20,6 +20,11 @@ const canvasRenderer = new Canvas({ padding: 0.5 });
 
 const mapOptions = Object.values(maps);
 
+interface Region {
+  x: number;
+  z: number;
+}
+
 const MapController = ({
   originX,
   originZ,
@@ -34,6 +39,37 @@ const MapController = ({
   return null;
 };
 
+function useStaticRegions(path: string | undefined, enabled: boolean) {
+  const [data, setData] = useState<Region[] | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<Error | null>(null);
+
+  useEffect(() => {
+    if (!enabled || !path) {
+      setData(null);
+      return;
+    }
+    setIsLoading(true);
+    setError(null);
+
+    fetch(path)
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.json() as Promise<Region[]>;
+      })
+      .then((regions) => {
+        setData(regions);
+        setIsLoading(false);
+      })
+      .catch((err: unknown) => {
+        setError(err instanceof Error ? err : new Error(String(err)));
+        setIsLoading(false);
+      });
+  }, [path, enabled]);
+
+  return { data, isLoading, error };
+}
+
 export default function RegionViewer() {
   const router = useRouter();
 
@@ -46,6 +82,7 @@ export default function RegionViewer() {
   const [selectedMapId, setSelectedMapId] = useState(defaultMapId);
   const selectedMap = maps[selectedMapId] as MapConfig;
   const cal = selectedMap.calibration;
+  const isFtpMap = selectedMap.dataSource === "ftp";
 
   const mapWidth = cal.width;
   const mapHeight = cal.height;
@@ -59,29 +96,38 @@ export default function RegionViewer() {
     refetchOnWindowFocus: false,
     staleTime: 300_000,
     retry: 1,
+    enabled: isFtpMap,
   });
 
-  // Override origin for "current" map if server config is available
+  // Override origin for FTP map if server config is available
   const effectiveOriginX =
-    selectedMapId === "current" && mapConfigQuery.data
-      ? mapConfigQuery.data.originX
-      : originX;
+    isFtpMap && mapConfigQuery.data ? mapConfigQuery.data.originX : originX;
   const effectiveOriginZ =
-    selectedMapId === "current" && mapConfigQuery.data
-      ? mapConfigQuery.data.originZ
-      : originZ;
+    isFtpMap && mapConfigQuery.data ? mapConfigQuery.data.originZ : originZ;
 
-  // Fetch regions from FTP
-  const {
-    data,
-    isLoading: regionsLoading,
-    error: regionsError,
-    refetch,
-  } = api.region.list.useQuery(undefined, {
+  // Fetch regions from FTP (only for ftp maps)
+  const ftpQuery = api.region.list.useQuery(undefined, {
     refetchOnWindowFocus: false,
     staleTime: 60000,
     retry: 2,
+    enabled: isFtpMap,
   });
+
+  // Fetch regions from static JSON (only for static maps)
+  const staticQuery = useStaticRegions(
+    selectedMap.staticDataPath,
+    !isFtpMap
+  );
+
+  // Unified region data
+  const regionsLoading = isFtpMap ? ftpQuery.isLoading : staticQuery.isLoading;
+  const regionsError = isFtpMap ? ftpQuery.error : staticQuery.error;
+  const regionsData: Region[] = useMemo(() => {
+    if (isFtpMap) return ftpQuery.data?.regions ?? [];
+    return staticQuery.data ?? [];
+  }, [isFtpMap, ftpQuery.data, staticQuery.data]);
+
+  const refetch = isFtpMap ? ftpQuery.refetch : undefined;
 
   const mapBounds = useMemo<[LatLngTuple, LatLngTuple]>(
     () => [
@@ -106,11 +152,11 @@ export default function RegionViewer() {
     [effectiveOriginX, effectiveOriginZ, blocksPerPixel, pixelsPerRegion]
   );
 
-  // Delete mutation
+  // Delete mutation (only for FTP maps)
   const deleteMutation = api.region.delete.useMutation({
     onSuccess: () => {
       setDeleteTarget(null);
-      void refetch();
+      void refetch?.();
     },
   });
 
@@ -120,14 +166,18 @@ export default function RegionViewer() {
     z: number;
   } | null>(null);
 
-  // Local "removed" state for visual toggling (non-delete mode)
+  // Local "removed" state for visual toggling
   const [removed, setRemoved] = useState<Set<string>>(new Set());
   const [exporting, setExporting] = useState(false);
 
-  const regions = useMemo(() => data?.regions ?? [], [data]);
+  // Reset removed set when switching maps
+  useEffect(() => {
+    setRemoved(new Set());
+  }, [selectedMapId]);
 
-  const visible = regions.length - removed.size;
-  const progress = Math.round((visible / regions.length) * 100) || 0;
+  const visible = regionsData.length - removed.size;
+  const progress =
+    Math.round((visible / regionsData.length) * 100) || 0;
 
   // Handle left click - toggle visibility
   const handleRegionClick = useCallback((x: number, z: number) => {
@@ -139,15 +189,15 @@ export default function RegionViewer() {
     });
   }, []);
 
-  // Handle right click - delete (when authenticated)
+  // Handle right click - delete (only when authenticated + FTP map)
   const handleRegionRightClick = useCallback(
     (x: number, z: number, e: L.LeafletMouseEvent) => {
       e.originalEvent.preventDefault();
-      if (isAuthenticated) {
+      if (isAuthenticated && isFtpMap) {
         setDeleteTarget({ x, z });
       }
     },
-    [isAuthenticated]
+    [isAuthenticated, isFtpMap]
   );
 
   const handleConfirmDelete = useCallback(() => {
@@ -180,7 +230,7 @@ export default function RegionViewer() {
       ctx.drawImage(img, 0, 0);
       ctx.fillStyle = "rgba(16, 185, 129, 0.5)";
 
-      regions.forEach(({ x, z }) => {
+      regionsData.forEach(({ x, z }) => {
         if (removed.has(`${x},${z}`)) return;
         const px =
           effectiveOriginX + (x * REGION_BLOCKS) / blocksPerPixel;
@@ -207,7 +257,9 @@ export default function RegionViewer() {
         <div className="flex flex-col items-center gap-4">
           <div className="h-12 w-12 animate-spin rounded-full border-4 border-emerald-500/30 border-t-emerald-500" />
           <p className="text-sm font-medium text-zinc-400">
-            Ladowanie regionow z FTP...
+            {isFtpMap
+              ? "Ladowanie regionow z FTP..."
+              : "Ladowanie regionow..."}
           </p>
         </div>
       </div>
@@ -223,12 +275,14 @@ export default function RegionViewer() {
           <p className="text-sm text-zinc-500 mb-4">
             {regionsError.message}
           </p>
-          <button
-            onClick={() => void refetch()}
-            className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 rounded-lg text-white transition"
-          >
-            Sprobuj ponownie
-          </button>
+          {refetch && (
+            <button
+              onClick={() => void refetch()}
+              className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 rounded-lg text-white transition"
+            >
+              Sprobuj ponownie
+            </button>
+          )}
         </div>
       </div>
     );
@@ -253,7 +307,7 @@ export default function RegionViewer() {
           </div>
 
           {/* Admin indicator */}
-          {isAuthenticated && (
+          {isAuthenticated && isFtpMap && (
             <div className="p-4 mx-4 mt-4 bg-red-500/10 border border-red-500/30 rounded-lg">
               <p className="text-red-400 text-sm font-medium flex items-center gap-2">
                 <svg
@@ -386,7 +440,7 @@ export default function RegionViewer() {
               )}
             </button>
             <p className="text-[10px] text-center text-zinc-600 mt-2">
-              {isAuthenticated
+              {isAuthenticated && isFtpMap
                 ? "LPM: ukryj/pokaz | PPM: usun region"
                 : "Kliknij region na mapie, aby go przelaczac."}
             </p>
@@ -409,7 +463,7 @@ export default function RegionViewer() {
             renderer={canvasRenderer}
           >
             <ImageOverlay url={selectedMap.image} bounds={mapBounds} />
-            {regions.map(({ x, z }) => {
+            {regionsData.map(({ x, z }) => {
               const key = `${x},${z}`;
               const isRemoved = removed.has(key);
               const bounds = regionToBounds(x, z);

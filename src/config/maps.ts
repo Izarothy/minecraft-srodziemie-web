@@ -10,6 +10,8 @@ export type MapConfig = {
   id: string;
   name: string;
   image: string;
+  dataSource: "static" | "ftp";
+  staticDataPath?: string;
   calibration: MapCalibration;
 };
 
@@ -18,6 +20,8 @@ export const maps: Record<string, MapConfig> = {
     id: "archive",
     name: "Archiwum (stary serwer)",
     image: "/images/middle_earth.png",
+    dataSource: "static",
+    staticDataPath: "/data/archivedRegions.json",
     calibration: {
       width: 2000,
       height: 1800,
@@ -30,6 +34,7 @@ export const maps: Record<string, MapConfig> = {
     id: "current",
     name: "Nowy serwer",
     image: "/images/lotrModMap.png",
+    dataSource: "ftp",
     calibration: {
       width: 3200,
       height: 4000,
