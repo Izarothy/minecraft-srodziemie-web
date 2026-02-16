@@ -11,6 +11,7 @@ export type MapConfig = {
   name: string;
   image: string;
   dataSource: "static" | "ftp";
+  useRemoteCalibration?: boolean;
   staticDataPath?: string;
   calibration: MapCalibration;
 };
@@ -33,14 +34,15 @@ export const maps: Record<string, MapConfig> = {
   current: {
     id: "current",
     name: "Nowy serwer",
-    image: "/images/lotrModMap.png",
+    image: "/images/lotrModMapNew.png",
     dataSource: "ftp",
+    useRemoteCalibration: false,
     calibration: {
-      width: 3200,
-      height: 4000,
+      width: 2000,
+      height: 1800,
       originX: 810,
       originZ: 730,
-      blocksPerPixel: 256, // scale_power = 8
+      blocksPerPixel: 256, // same scale as lotrModMap.png; new image is a crop
     },
   },
 };

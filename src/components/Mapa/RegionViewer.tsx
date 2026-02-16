@@ -83,27 +83,75 @@ export default function RegionViewer() {
   const selectedMap = maps[selectedMapId] as MapConfig;
   const cal = selectedMap.calibration;
   const isFtpMap = selectedMap.dataSource === "ftp";
+  const useRemoteCalibration =
+    selectedMap.useRemoteCalibration !== undefined
+      ? selectedMap.useRemoteCalibration
+      : isFtpMap;
+  const [imageSize, setImageSize] = useState<{
+    width: number;
+    height: number;
+  } | null>(null);
 
-  const mapWidth = cal.width;
-  const mapHeight = cal.height;
   const originX = cal.originX;
   const originZ = cal.originZ;
-  const blocksPerPixel = cal.blocksPerPixel;
-  const pixelsPerRegion = REGION_BLOCKS / blocksPerPixel;
 
   // Fetch map config from server (updates "current" map's origin if available)
   const mapConfigQuery = api.region.mapConfig.useQuery(undefined, {
     refetchOnWindowFocus: false,
     staleTime: 300_000,
     retry: 1,
-    enabled: isFtpMap,
+    enabled: isFtpMap && useRemoteCalibration,
   });
 
   // Override origin for FTP map if server config is available
   const effectiveOriginX =
-    isFtpMap && mapConfigQuery.data ? mapConfigQuery.data.originX : originX;
+    isFtpMap && useRemoteCalibration && mapConfigQuery.data
+      ? mapConfigQuery.data.originX
+      : originX;
   const effectiveOriginZ =
-    isFtpMap && mapConfigQuery.data ? mapConfigQuery.data.originZ : originZ;
+    isFtpMap && useRemoteCalibration && mapConfigQuery.data
+      ? mapConfigQuery.data.originZ
+      : originZ;
+  const effectiveBlocksPerPixel =
+    isFtpMap && useRemoteCalibration && mapConfigQuery.data
+      ? mapConfigQuery.data.blocksPerPixel
+      : cal.blocksPerPixel;
+  const sourceWidth =
+    isFtpMap && useRemoteCalibration && mapConfigQuery.data
+      ? mapConfigQuery.data.imageWidth
+      : cal.width;
+  const sourceHeight =
+    isFtpMap && useRemoteCalibration && mapConfigQuery.data
+      ? mapConfigQuery.data.imageHeight
+      : cal.height;
+  const displayWidth = imageSize?.width ?? sourceWidth;
+  const displayHeight = imageSize?.height ?? sourceHeight;
+  const scaleX = displayWidth / sourceWidth;
+  const scaleZ = displayHeight / sourceHeight;
+  const pixelsPerRegionX = (REGION_BLOCKS / effectiveBlocksPerPixel) * scaleX;
+  const pixelsPerRegionZ = (REGION_BLOCKS / effectiveBlocksPerPixel) * scaleZ;
+  const displayOriginX = effectiveOriginX * scaleX;
+  const displayOriginZ = effectiveOriginZ * scaleZ;
+
+  useEffect(() => {
+    let cancelled = false;
+    setImageSize(null);
+
+    const img = new Image();
+    img.src = selectedMap.image;
+    img.onload = () => {
+      if (!cancelled) {
+        setImageSize({
+          width: img.naturalWidth,
+          height: img.naturalHeight,
+        });
+      }
+    };
+
+    return () => {
+      cancelled = true;
+    };
+  }, [selectedMap.image]);
 
   // Fetch regions from FTP (only for ftp maps)
   const ftpQuery = api.region.list.useQuery(undefined, {
@@ -131,25 +179,35 @@ export default function RegionViewer() {
 
   const mapBounds = useMemo<[LatLngTuple, LatLngTuple]>(
     () => [
-      [-mapHeight, 0],
-      [0, mapWidth],
+      [-displayHeight, 0],
+      [0, displayWidth],
     ],
-    [mapWidth, mapHeight]
+    [displayWidth, displayHeight]
   );
 
   const regionToBounds = useCallback(
     (regionX: number, regionZ: number): [LatLngTuple, LatLngTuple] => {
       const pixelX =
-        effectiveOriginX + (regionX * REGION_BLOCKS) / blocksPerPixel;
+        (effectiveOriginX + (regionX * REGION_BLOCKS) / effectiveBlocksPerPixel) *
+        scaleX;
       const pixelZ =
-        effectiveOriginZ + (regionZ * REGION_BLOCKS) / blocksPerPixel;
+        (effectiveOriginZ + (regionZ * REGION_BLOCKS) / effectiveBlocksPerPixel) *
+        scaleZ;
 
       return [
-        [-(pixelZ + pixelsPerRegion), pixelX],
-        [-pixelZ, pixelX + pixelsPerRegion],
+        [-(pixelZ + pixelsPerRegionZ), pixelX],
+        [-pixelZ, pixelX + pixelsPerRegionX],
       ];
     },
-    [effectiveOriginX, effectiveOriginZ, blocksPerPixel, pixelsPerRegion]
+    [
+      effectiveOriginX,
+      effectiveOriginZ,
+      effectiveBlocksPerPixel,
+      scaleX,
+      scaleZ,
+      pixelsPerRegionX,
+      pixelsPerRegionZ,
+    ]
   );
 
   // Delete mutation (only for FTP maps)
@@ -222,21 +280,23 @@ export default function RegionViewer() {
       });
 
       const canvas = document.createElement("canvas");
-      canvas.width = mapWidth;
-      canvas.height = mapHeight;
+      canvas.width = displayWidth;
+      canvas.height = displayHeight;
       const ctx = canvas.getContext("2d");
       if (!ctx) throw new Error("No context");
 
-      ctx.drawImage(img, 0, 0);
+      ctx.drawImage(img, 0, 0, displayWidth, displayHeight);
       ctx.fillStyle = "rgba(16, 185, 129, 0.5)";
 
       regionsData.forEach(({ x, z }) => {
         if (removed.has(`${x},${z}`)) return;
         const px =
-          effectiveOriginX + (x * REGION_BLOCKS) / blocksPerPixel;
+          (effectiveOriginX + (x * REGION_BLOCKS) / effectiveBlocksPerPixel) *
+          scaleX;
         const pz =
-          effectiveOriginZ + (z * REGION_BLOCKS) / blocksPerPixel;
-        ctx.fillRect(px, pz, pixelsPerRegion, pixelsPerRegion);
+          (effectiveOriginZ + (z * REGION_BLOCKS) / effectiveBlocksPerPixel) *
+          scaleZ;
+        ctx.fillRect(px, pz, pixelsPerRegionX, pixelsPerRegionZ);
       });
 
       const link = document.createElement("a");
@@ -451,7 +511,7 @@ export default function RegionViewer() {
         <div className="flex-1 relative bg-black">
           <MapContainer
             key={selectedMapId}
-            center={[-effectiveOriginZ, effectiveOriginX]}
+            center={[-displayOriginZ, displayOriginX]}
             zoom={0}
             minZoom={-2}
             maxZoom={4}
@@ -495,15 +555,15 @@ export default function RegionViewer() {
               );
             })}
             <MapController
-              originX={effectiveOriginX}
-              originZ={effectiveOriginZ}
+              originX={displayOriginX}
+              originZ={displayOriginZ}
             />
           </MapContainer>
 
           {/* Floating Map Controls */}
           <div className="absolute top-6 right-6 z-[400] flex flex-col gap-2">
             <div className="bg-zinc-900/90 backdrop-blur border border-zinc-800 rounded-lg p-2 text-zinc-400 text-xs font-mono shadow-xl">
-              MAP: {mapWidth}x{mapHeight}
+              MAP: {displayWidth}x{displayHeight}
             </div>
           </div>
         </div>
